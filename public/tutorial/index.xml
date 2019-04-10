@@ -6,20 +6,36 @@
     <description>Recent content in Overview on Academic</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 09 Sep 2018 00:00:00 -0600</lastBuildDate>
+    <lastBuildDate>Sun, 09 Sep 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tutorial/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Example Page</title>
-      <link>/tutorial/example/</link>
-      <pubDate>Sun, 09 Sep 2018 00:00:00 -0600</pubDate>
+      <title>Week One</title>
+      <link>/tutorial/week-one/</link>
+      <pubDate>Sun, 09 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tutorial/example/</guid>
+      <guid>/tutorial/week-one/</guid>
+      <description>Monday 1th &amp;hellip;
+Tuesday 2th &amp;hellip;
+Wednesday 3th &amp;hellip;
+Thrusday 4th Independence Day - No Class
+Friday 5th &amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Week Two</title>
+      <link>/tutorial/week-two/</link>
+      <pubDate>Sun, 09 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tutorial/week-two/</guid>
       <description>In this tutorial, I&amp;rsquo;ll share my top 10 tips for getting started with Academic:
-Tip 1 &amp;hellip;
-Tip 2 &amp;hellip;</description>
+Monday 8th &amp;hellip;
+Tuesday 9th &amp;hellip;
+Wednesday 10th &amp;hellip;
+Thrusday 11th &amp;hellip;
+Friday 12th &amp;hellip;</description>
     </item>
     
   </channel>

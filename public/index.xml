@@ -115,20 +115,62 @@ rm Untitled.md
     </item>
     
     <item>
-      <title>Example Page</title>
-      <link>/tutorial/example/</link>
-      <pubDate>Sun, 09 Sep 2018 00:00:00 -0600</pubDate>
+      <title>Week One</title>
+      <link>/tutorial/week-one/</link>
+      <pubDate>Sun, 09 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tutorial/example/</guid>
+      <guid>/tutorial/week-one/</guid>
+      <description>
+
+&lt;h2 id=&#34;monday-1th&#34;&gt;Monday 1th&lt;/h2&gt;
+
+&lt;p&gt;&amp;hellip;&lt;/p&gt;
+
+&lt;h2 id=&#34;tuesday-2th&#34;&gt;Tuesday 2th&lt;/h2&gt;
+
+&lt;p&gt;&amp;hellip;&lt;/p&gt;
+
+&lt;h2 id=&#34;wednesday-3th&#34;&gt;Wednesday 3th&lt;/h2&gt;
+
+&lt;p&gt;&amp;hellip;&lt;/p&gt;
+
+&lt;h2 id=&#34;thrusday-4th&#34;&gt;Thrusday 4th&lt;/h2&gt;
+
+&lt;p&gt;Independence Day - No Class&lt;/p&gt;
+
+&lt;h2 id=&#34;friday-5th&#34;&gt;Friday 5th&lt;/h2&gt;
+
+&lt;p&gt;&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Week Two</title>
+      <link>/tutorial/week-two/</link>
+      <pubDate>Sun, 09 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tutorial/week-two/</guid>
       <description>
 
 &lt;p&gt;In this tutorial, I&amp;rsquo;ll share my top 10 tips for getting started with Academic:&lt;/p&gt;
 
-&lt;h2 id=&#34;tip-1&#34;&gt;Tip 1&lt;/h2&gt;
+&lt;h2 id=&#34;monday-8th&#34;&gt;Monday 8th&lt;/h2&gt;
 
 &lt;p&gt;&amp;hellip;&lt;/p&gt;
 
-&lt;h2 id=&#34;tip-2&#34;&gt;Tip 2&lt;/h2&gt;
+&lt;h2 id=&#34;tuesday-9th&#34;&gt;Tuesday 9th&lt;/h2&gt;
+
+&lt;p&gt;&amp;hellip;&lt;/p&gt;
+
+&lt;h2 id=&#34;wednesday-10th&#34;&gt;Wednesday 10th&lt;/h2&gt;
+
+&lt;p&gt;&amp;hellip;&lt;/p&gt;
+
+&lt;h2 id=&#34;thrusday-11th&#34;&gt;Thrusday 11th&lt;/h2&gt;
+
+&lt;p&gt;&amp;hellip;&lt;/p&gt;
+
+&lt;h2 id=&#34;friday-12th&#34;&gt;Friday 12th&lt;/h2&gt;
 
 &lt;p&gt;&amp;hellip;&lt;/p&gt;
 </description>

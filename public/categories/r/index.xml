@@ -6,10 +6,49 @@
     <description>Recent content in R on Academic</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 23 Jul 2015 21:13:14 -0500</lastBuildDate>
+    <lastBuildDate>Sun, 09 Sep 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/r/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Overview</title>
+      <link>/tutorial/</link>
+      <pubDate>Sun, 09 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tutorial/</guid>
+      <description>This feature can be used for publishing content such as:
+ Project or software documentation Online courses Tutorials  The parent folder may be renamed, for example, to docs for project documentation or course for creating an online course.
+To disable this feature, either delete the parent folder, or set draft = true in the front matter of all its pages.
+After renaming or deleting the parent folder, you may wish to update any [[menu.</description>
+    </item>
+    
+    <item>
+      <title>Week One</title>
+      <link>/tutorial/week-one/</link>
+      <pubDate>Sun, 09 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tutorial/week-one/</guid>
+      <description>Monday 1th &amp;hellip;
+Tuesday 2th &amp;hellip;
+Wednesday 3th &amp;hellip;
+Thrusday 4th Independence Day - No Class
+Friday 5th &amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Week Two</title>
+      <link>/tutorial/week-two/</link>
+      <pubDate>Sun, 09 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tutorial/week-two/</guid>
+      <description>In this tutorial, I&amp;rsquo;ll share my top 10 tips for getting started with Academic:
+Monday 8th &amp;hellip;
+Tuesday 9th &amp;hellip;
+Wednesday 10th &amp;hellip;
+Thrusday 11th &amp;hellip;
+Friday 12th &amp;hellip;</description>
+    </item>
     
     <item>
       <title>Hello R Markdown</title>

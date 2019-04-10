@@ -1,12 +1,16 @@
 ---
-date: "2018-09-09T00:00:00-06:00"
-draft: false
+title: Overview
+author: Leonardo Palomera
+date: '2018-09-09'
+categories:
+  - Science Discovery
+  - R
+draft: no
 menu:
   tutorial:
     name: Overview
     weight: 1
-title: Overview
-toc: true
+toc: yes
 type: docs
 ---
 

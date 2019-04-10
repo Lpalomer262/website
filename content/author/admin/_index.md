@@ -5,38 +5,38 @@ bio: My research interests include distributed robotics, mobile computing and pr
   matter.
 education:
   courses:
-  - course: PhD in Artificial Intelligence
-    institution: Stanford University
+  - course: MS Economics
+    institution: University of Southern California
+    year: 2015
+  - course: Certificate in Applied Bio-Statistics
+    institution: Rice Univerity
     year: 2012
-  - course: MEng in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2009
-  - course: BSc in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2008
+  - course: BS Statistics; BS Mathematical Economics & Economic Theory
+    institution: California State University, Long Beach
+    year: 2014
 email: ""
 interests:
-- Artificial Intelligence
-- Computational Linguistics
-- Information Retrieval
-name: Nelson Bighetti
+- Computational Statistics
+- Game Theory
+- 
+name: Leonardo Palomera
 organizations:
-- name: Stanford University
-  url: ""
-role: Professor of Artificial Intelligence
+- name: Ankura
+  url: "https://ankura.com"
+role: Data Scientist
 social:
 - icon: envelope
   icon_pack: fas
   link: '#contact'
 - icon: twitter
   icon_pack: fab
-  link: https://twitter.com/GeorgeCushen
-- icon: google-scholar
-  icon_pack: ai
-  link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
+  link: https://twitter.com/Lpalomer
+#' - icon: google-scholar
+#'   icon_pack: ai
+#'   link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
 - icon: github
   icon_pack: fab
-  link: https://github.com/gcushen
+  link: https://github.com/Lpalomer262
 superuser: true
 user_groups:
 - Researchers
