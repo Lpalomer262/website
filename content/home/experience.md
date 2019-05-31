@@ -25,24 +25,26 @@ date_format = "Jan 2006"
   date_start = "2018-08-10"
   date_end = ""
   description = """
-Leonardo is a consultant in a Complex Data and Statistical Analysis practice based in Los Angeles and has worked on domestic and international projects. He focuses on collecting, cleaning, analyzing, and producing data for companies and/or law firms to be able to gain an understanding of the underlying issues in corporate litigation matters. 
-  Specialization include:
-  
-  * Statistical & Data‐Intensive Analytical Programmer with R, SQL, Python
-  * Areas of expertise includes Probability Theory and Modern Regression, and Econometric theory
-  * Deploying web based dashboards & applications, Shiny 
+At Ankura, previously, [Navigant Inc.](https://www.navigant.com), Leonardo specializes in data analytics to answer a wide variety of questions at the forefront of a given corporate lawsuit in statistics, economics, and data management. In litigation consulting, Leonardo gets to look backwards and offer a detailed analysis of what happened. On the technical side, Leonardo uses R statistics software daily at Ankura to develop algorithms, bring structure to formless data, and perform a wide variety of economic and statistical analyses.
+
+* Communicate with clients daily to discuss analyses, structure work plans and budgets, and develop case strategy.
+ 
+* In primarily R (but occasionally SQL and Excel), design multi-phase analyses (commonly relying on the successful. integration of 10 to 20 scripts) to solve complex economic and statistical questions in legal disputes; create reports and internal reporting tools using R Markdown and Shiny Web Apps.
+ 
+* Develop personalized functions and algorithms in R for broad company use to expedite a plethora of processes, including structuring, aggregating, and visualizing data.
+ 
   """
 
 
 [[experience]]
   title = "Data Science Lecturer"
   company = "University of Colorado - Boulder"
-  company_url = "https://www.colorado.edu"
+  company_url = "https://www.colorado.edu/sciencediscovery/programs/high-school-stem-academies-cu-boulder"
   location = "Boulder, Colorado"
   date_start = "2019-06-01"
   date_end = "2019-08-31"
   description = """
-  Leonardo is introducing "An Introduction to Data Science" to CU - Boulders Curriculm
+  Leonardo launches "Artificial Intelligence and Big Data," an Introduction to Data Science course to CU - Boulders Science Discovery's Curriculum.
   """
 
 
@@ -55,7 +57,7 @@ Leonardo is a consultant in a Complex Data and Statistical Analysis practice bas
   date_start = "2014-05-01"
   date_end = "2018-08-31"
   description = """
-  Leonardo taught Introductory Economics at the University of California, Los Angeles to incoming international freshman
+  Leonardo taught, international freshmenm, Introductory Economics at the University of California, Los Angeles.
   """
 
 +++

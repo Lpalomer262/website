@@ -1,24 +1,23 @@
 ---
 authors:
 - admin
-bio: My research interests include distributed robotics, mobile computing and programmable
-  matter.
+bio: 
 education:
   courses:
   - course: MS Economics
     institution: University of Southern California
     year: 2015
-  - course: Certificate in Applied Bio-Statistics
-    institution: Rice Univerity
-    year: 2012
   - course: BS Statistics; BS Mathematical Economics & Economic Theory
     institution: California State University, Long Beach
     year: 2014
-email: ""
+  - course: Certificate in Applied Bio-Statistics
+    institution: Rice Unversity
+    year: 2012
+email: "Lpalomer26.2@gamil.com"
 interests:
 - Computational Statistics
 - Game Theory
-- 
+- Running Analytics 
 name: Leonardo Palomera
 organizations:
 - name: Ankura
@@ -43,6 +42,4 @@ user_groups:
 - Visitors
 ---
 
-Nelson Bighetti is a professor of artificial intelligence at the Stanford AI Lab. His research interests include distributed robotics, mobile computing and programmable matter. He leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate. 
+Leonardo Palomera’s, through his professional and academic experiences, has become a specialist in data analytics for a variety of subject matters including: Economics, Statistics, and Finance; a passionate instructor who can comprehensively teach and understand difficult subjects; and a successful scholar who is ready to make a change and deliver business insights worldwide. 

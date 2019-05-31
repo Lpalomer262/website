@@ -8,20 +8,12 @@ categories:
 draft: no
 menu:
   tutorial:
-    name: Overview
+    name: Course Overview
     weight: 1
 toc: yes
 type: docs
 ---
 
-This feature can be used for publishing content such as:
 
-* **Project or software documentation**
-* **Online courses**
-* **Tutorials**
 
-The parent folder may be renamed, for example, to `docs` for project documentation or `course` for creating an online course.
-
-To disable this feature, either delete the parent folder, or set `draft = true` in the front matter of all its pages. 
-
-After renaming or deleting the parent folder, you may wish to update any `[[menu.main]]` menu links to it in the `config.toml`. 
+Ever wonder how the Netflix recommendation engine works or how Amazon.com determines what items “you may also like?” All these things are driven by training a computer how to learn using the large datasets. The data science course is a practical introduction to the interdisciplinary field of data science and machine learning which is at the intersection of computer science, statistics, and business. You will learn to use R to help you acquire, parse and model your data. A significant portion of the course will be a hands-on approach to the fundamental modeling techniques and machine learning algorithms that enable you to build robust predictive models of real-world data and test their validity.

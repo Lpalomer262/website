@@ -1,21 +1,40 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on Academic</title>
+    <title>Categories on Twenty-Six.Two</title>
     <link>/categories/</link>
-    <description>Recent content in Categories on Academic</description>
+    <description>Recent content in Categories on Twenty-Six.Two</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Mon, 01 Apr 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Boston Marathon</title>
+      <link>/categories/boston-marathon/</link>
+      <pubDate>Mon, 01 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/boston-marathon/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>R</title>
       <link>/categories/r/</link>
-      <pubDate>Sun, 09 Sep 2018 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 01 Jul 2019 00:00:00 +0000</pubDate>
       
       <guid>/categories/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Running</title>
+      <link>/categories/running/</link>
+      <pubDate>Mon, 01 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/running/</guid>
       <description></description>
     </item>
     

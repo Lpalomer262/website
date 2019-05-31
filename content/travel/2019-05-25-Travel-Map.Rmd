@@ -1,0 +1,73 @@
+---
+title: Travel Documentary 
+author: Leonardo D. Palomera
+date: '2019-05-27'
+categories:
+  - R
+tags:
+  - Travel
+  - Visualization
+output: html_document
+runtime: shiny
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE)
+source("../../../../projects/projects/travelMap/scripts/000_source.R")
+travel <- read_rds("../../../../projects/projects/travelMap/inputs/001_travel.rds")
+```
+
+# Don’t listen to what they say. Go see.
+
+I've been stumbling my way around the world for seven years & counting. Via an interactive map, see all the places I've visited with just a few small stories to reminisce about. 
+
+```{r, eval=TRUE, echo=FALSE}
+
+leaflet(data = travel) %>%
+  addTiles() %>%
+  addMarkers(
+    lng = ~ lon,
+    lat = ~ lat,
+    popup = ~ detail, #' CREATE A FIELD WITH DESCRIPTIONS
+    label = ~ place)
+
+```
+
+```{r, echo=FALSE, eval=FALSE}
+
+shinyApp(
+  ui = fluidPage(
+    selectInput("continent", 
+                "Countient:",
+                c("North America",
+                  "South America",
+                  "Europe",
+                  "Asia",
+                  "Oceania",
+                  "Africa"
+                  )),
+    leafletOutput("mymap")
+  ),
+  server = function(input, output) {
+    output$mymap <- renderLeaflet({
+      
+      leaflet(data = travel %>%
+                filter(continent %in% input$continent) #' FILTER FOR ONLY THE CONTINATE IN QUESTION
+              ) %>%
+        addTiles() %>%
+        addMarkers(
+          lng = ~ lon,
+          lat = ~ lat,
+          popup = ~ detail, #' CREATE A FIELD WITH DESCRIPTIONS OR IMPORTANT EVENTS
+          label = ~ place)
+    })
+    
+  }
+)
+
+#' BLOGDOWN PACKAGES ARE FOR STATIC WEBSITES, WHICH MEANS YOU CAN ONLY GENERATE
+#' STATIC PAGES. YOU'LL HAVE TO PUBLIC THE SHINY APP ON A SERVER WHERE R & SHINY SERVERS ARE AVAILABLE
+
+```
+
+

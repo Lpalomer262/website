@@ -1,0 +1,26 @@
+---
+title: Bucket List
+author: Leonardo D. Palomera
+date: '2019-05-27'
+categories:
+  - R
+output: html_document
+---
+
+Creating a bucket list of places you want to go to or things you want to do can be very helpful tool towards attaining your life goals. 
+
+## Travel 
+
+1. Step foot on every continent
+2. Running of the Bulls - Pamplona, Spain
+3. Move / Work in a different country
+
+
+## Running
+1. Finish all Abbott World Marathon Majors
++ Tokyo
++ London
++ ~~Boston~~
++ Berlin
++ Chicago
++ New York City

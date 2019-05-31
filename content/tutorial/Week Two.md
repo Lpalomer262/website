@@ -6,7 +6,7 @@ categories:
   - R
   - Science Discovery
 draft: no
-linktitle: Week Two
+linktitle: Week Two Agenda
 menu:
   tutorial:
     parent: Schedual
@@ -15,24 +15,42 @@ toc: yes
 type: docs
 ---
 
-In this tutorial, I'll share my top 10 tips for getting started with Academic:
+### Monday July 8th, 2019
+#### AM: Introduction to Data Science
+ * (Movie) Titanic
+Machine Learning - Titanic
 
-## Monday 8th
+#### PM: Communicating Data
+* Introduction to Web Design in R
+   + Resume Building Workshop 
+* (Movie) Moneyball
 
-...
+### Tuesday July 9th, 2019
+#### Continue Introduction to Data Science
+* Tidy Tuesday (Instructors Choice of Options)
+   +  Kobe Bryant Shot Selection
+* Visualization
 
-## Tuesday 9th
+### Wednesday July 10th, 2019
+#### AM: Continue – Introduction to Web Design in R 
+#### PM: Continue Introduction to Statistics
+* TBD (Netflix Algorithm)
+* SVD v. PCA
 
-...
+### Thursday July 11th, 2019
+#### AM:
+* Practice PCA Independently.
+* Write own Narrative
 
-## Wednesday 10th
+#### PM: Finalize – Introduction to Web Design in R
+* Publish Site to the Web
 
-...
+### Friday July 12th, 2019
+#### AM: 
+* Exposition Prep & Set-Up
 
-## Thrusday 11th
+#### PM: 
+* Exposition Presentation
+* Final Refelections 
 
-...
-
-## Friday 12th
-
-...
+head(mtcars)

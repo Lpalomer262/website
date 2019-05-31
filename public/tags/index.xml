@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Academic</title>
+    <title>Tags on Twenty-Six.Two</title>
     <link>/tags/</link>
-    <description>Recent content in Tags on Academic</description>
+    <description>Recent content in Tags on Twenty-Six.Two</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 20 Apr 2016 00:00:00 -0600</lastBuildDate>
+    <lastBuildDate>Mon, 01 Apr 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Academic</title>
       <link>/tags/academic/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 -0600</pubDate>
+      <pubDate>Mon, 01 Apr 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/academic/</guid>
       <description></description>
@@ -41,7 +41,7 @@
     <item>
       <title>R Markdown</title>
       <link>/tags/r-markdown/</link>
-      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
+      <pubDate>Mon, 01 Apr 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/r-markdown/</guid>
       <description></description>
@@ -57,20 +57,20 @@
     </item>
     
     <item>
-      <title>plot</title>
-      <link>/tags/plot/</link>
-      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
+      <title>Travel</title>
+      <link>/tags/travel/</link>
+      <pubDate>Mon, 01 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>/tags/plot/</guid>
+      <guid>/tags/travel/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>regression</title>
-      <link>/tags/regression/</link>
-      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
+      <title>Visualization</title>
+      <link>/tags/visualization/</link>
+      <pubDate>Mon, 27 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>/tags/regression/</guid>
+      <guid>/tags/visualization/</guid>
       <description></description>
     </item>
     

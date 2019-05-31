@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Travel on Twenty-Six.Two</title>
+    <link>/categories/travel/</link>
+    <description>Recent content in Travel on Twenty-Six.Two</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 09 Sep 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/travel/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>/map/</link>
+      <pubDate>Sun, 09 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/map/</guid>
+      <description>source(&amp;ldquo;../../projects/projects/travelMap/scripts/000_source.R&amp;rdquo;) travel &amp;lt;- read_rds(path = &amp;ldquo;../../projects/projects/travelMap/inputs/001_travel.rds&amp;rdquo;)
+glimpse(travel)</description>
+    </item>
+    
+  </channel>
+</rss>
