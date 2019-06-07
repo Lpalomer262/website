@@ -6,10 +6,22 @@
     <description>Recent content in Posts on Twenty-Six.Two</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 01 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 15 Apr 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Run Like a Girl</title>
+      <link>/post/boston_run_like_a_girl/xxx_run_like_a_girl/</link>
+      <pubDate>Mon, 15 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/boston_run_like_a_girl/xxx_run_like_a_girl/</guid>
+      <description>TLDR;  An analysis of more than 75,000 Boston Marathon race-records during the period 2014–2016;
+ How do runners pace the Boston Marathon? Where are the fastest and slowest sections of the race?
+ How does the pacing of elites compare to recreational runners and those running a personal-best?
+ Putting what we learn into practice, we create optimal pacing charts for recreational runners that are tailored for Boston.</description>
+    </item>
     
     <item>
       <title>Pacing Boston</title>

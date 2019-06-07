@@ -57,7 +57,7 @@ At Ankura, previously, [Navigant Inc.](https://www.navigant.com), Leonardo speci
   date_start = "2014-05-01"
   date_end = "2018-08-31"
   description = """
-  Leonardo taught, international freshmenm, Introductory Economics at the University of California, Los Angeles.
+  Leonardo taught, international freshmen, Introductory Economics at the University of California, Los Angeles.
   """
 
 +++

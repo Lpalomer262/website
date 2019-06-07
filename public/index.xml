@@ -98,6 +98,269 @@
     </item>
     
     <item>
+      <title>Run Like a Girl</title>
+      <link>/post/boston_run_like_a_girl/xxx_run_like_a_girl/</link>
+      <pubDate>Mon, 15 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/boston_run_like_a_girl/xxx_run_like_a_girl/</guid>
+      <description>
+
+
+&lt;div id=&#34;tldr&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;TLDR;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;An analysis of more than 75,000 Boston Marathon race-records during the period 2014–2016;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;How do runners pace the Boston Marathon? Where are the fastest and slowest sections of the race?&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;How does the pacing of elites compare to recreational runners and those running a personal-best?&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Putting what we learn into practice, we create optimal pacing charts for recreational runners that are tailored for Boston.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;introduction&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;In this post we present a similar analysis for the Boston course. This time it is based on more than 70,000 individual race-records for Boston runners, from the period 2014–2016, excluding 2013. These race-records include 5km (approx. 3.1 miles) split-times and therefore allow us to analyse pacing at regular intervals.&lt;/p&gt;
+&lt;p&gt;To start, the chart below shows the average pacing (minutes per mile) for non-elite (recreational/regular) runners. The ‘ribbon plot’ shows the average pace per race segment (the marked centre line) and the average pacing for men and women. The chart also shows the course profile. As an aside the pacing ribbon has been left-shifted to the halfway point of each race segment for better visual alignment. For example, the first marker, which is plotted at the 2.5km (1.5m) mark actually reflects the pacing for the segment from the startline to the 5km/3.1m point.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/boston_run_like_a_girl/xxx_run_like_a_girl_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;boston_mean_paces &amp;lt;- 
+  boston_long_5k_42.2k %&amp;gt;% group_by(km_pretty) %&amp;gt;%
+  summarise(
+    average = mean(mi_pace, na.rm = TRUE),
+    male =
+      mean(if_else(m_f == &amp;quot;Male&amp;quot;, mi_pace, NA_real_), na.rm = TRUE),
+    female =
+      mean(if_else(m_f == &amp;quot;Female&amp;quot;, mi_pace, NA_real_), na.rm = TRUE)
+  ) %&amp;gt;% 
+  ungroup() %&amp;gt;%
+  gather(&amp;quot;type&amp;quot;, &amp;quot;pace&amp;quot;, -km_pretty)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;On average we can see that the typical Boston marathoner starts at a pace of about 8 minutes and 15 seconds per mile but gradually slows to finish up running at around 10 minutes per mile by the end of the race; most do manage a final ‘sprint’ of sorts to the finish-line. The steep starting descent clearly doesn’t help when it comes to runners controlling their opening pace and fast-starts are known to be problematic later in the race. It’s a hilly course in general but the real hills start around the 15 mile mark and this shows the pacing above, with pacing slowing consistently througout the Newton Hills and beyond. Clearly, the average Boston runner starts outs fast and then spends the rest of their race paying for it as they gradually slow, completing a positive split with the second half of the race approximately 14% slower than then first.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;boston_long_5k_42.2k %&amp;gt;% group_by(km_pretty) %&amp;gt;% 
+  summarise(mi_pace_mean = mean(mi_pace, na.rm = TRUE)) %&amp;gt;%
+  ggplot(aes(km_pretty, mi_pace_mean, group = 1)) +
+  geom_line(linetype = &amp;quot;dashed&amp;quot;) +
+  geom_point() &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/boston_run_like_a_girl/xxx_run_like_a_girl_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;A word of caution here, pacing above includes people who hit the dreaded wall in the second half of the race. This means that some of the slow down shown will be exagerated, at least somewhat, by these poor souls.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;perfect-pacing-for-boston&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Perfect pacing for Boston&lt;/h2&gt;
+&lt;p&gt;We have found a fairly consistent pattern when it comes to how recreational runners pace Boston. Relative pace varies predictably across a broad field of runners, as it is influenced by growing fatigue, the significant undulations of the course, the noise of the crowd, the excitement of the start etc. It is a consistent pattern but, presumably, it is not a very optimal one. Certainly one lesson seems to be that, on average, runners start fast, probably too fast, The pay-back is a considerable slowing of pace as the race continues. The pacing range for recreational runners is particularly wide, from starts that are about 8–9% faster than average race-pace, to finishes that are 10–12% slower. This makes for an overall pacing range of 20% or more.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(boston_mean_paces, 
+       aes(km_pretty, pace, group = type, color = type)) + 
+  geom_line()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/boston_run_like_a_girl/xxx_run_like_a_girl_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;pace_km &amp;lt;- boston %&amp;gt;% 
+  mutate(pace_km = km_42.2 / 42.2195) %&amp;gt;%
+  select(boston_key, km_42.2, pace_km)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This begs the question: what is the optimal pacing profile for Boston? The conventional wisdom is that more even pacing is the way to go and so there is considerable room for improvement for the average runner in this regard. Easier said than done! And surely perfectly even pacing on a hilly course like Boston is not optimal anyway? To arrive an an optimal pacing profile we might start by isolating the pacing profiles of the very best runners, and to do this we will consider two groups of strong runners: those running a personal best (PB), regardless of finish-time, and elites.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;boston_paces_pct &amp;lt;- boston_long_5k_42.2k %&amp;gt;% 
+  left_join(
+    pace_km, by = &amp;quot;boston_key&amp;quot;
+  ) %&amp;gt;%
+  #&amp;#39; CALCULATE RELATIVE PERCENTAGE PER KM
+  mutate(
+    pace_5k_mean = 5 * pace_km,
+    relative_pacing = ((split_sec -  pace_5k_mean) / pace_5k_mean) * 100,
+    relative_pacing = 
+      if_else(km == &amp;quot;km_42.2&amp;quot;,
+              ((split_sec - (2.195 * pace_km)) /
+                (2.195 * pace_km)) * 100,
+              relative_pacing))
+
+boston_percent_overall &amp;lt;- boston_paces_pct %&amp;gt;%
+  # CALCULATE AVERAGES BY GROUP: OVERALL, MALE, FEMALE
+  group_by(km_pretty) %&amp;gt;%
+  summarise(
+    average = mean(relative_pacing, na.rm = TRUE),
+    male =
+      mean(if_else(m_f == &amp;quot;Male&amp;quot;, relative_pacing, NA_real_), na.rm = TRUE),
+    female =
+      mean(if_else(m_f == &amp;quot;Female&amp;quot;, relative_pacing, NA_real_), na.rm = TRUE)
+  ) %&amp;gt;% 
+  ungroup() %&amp;gt;%
+  gather(&amp;quot;type&amp;quot;, &amp;quot;percent_overall&amp;quot;, - km_pretty)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(boston_percent_overall, 
+       aes(km_pretty, percent_overall, group = type, color = type)) + 
+  geom_line()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/boston_run_like_a_girl/xxx_run_like_a_girl_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;div id=&#34;pacing-for-a-personal-best&#34; class=&#34;section level5&#34;&gt;
+&lt;h5&gt;Pacing for a Personal-Best&lt;/h5&gt;
+&lt;p&gt;Our dataset includes runners who have run more than one marathon and for these runners we can identify PB times from their set of times; essentially we treat their fastest time among their set of races as their PB. For the purpose of this study we will consider those runners who have run at least 3 Boston marathons. There are almost 10,000 such runners in our dataset and they have run an average of just over 4 Boston Marathons each. For each of these runners we can identify their ‘personal-best’ as their fastest Boston time. Of course this might not be their true personal best, since it depends entirely on the window of data that we have access too, but it at least counts as a good time for these runners at Boston.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;boston_percent_returners &amp;lt;- boston_paces_pct %&amp;gt;%
+  inner_join(boston_returners, by = &amp;quot;boston_key&amp;quot;) %&amp;gt;%
+  # CALCULATE AVERAGES BY GROUP: OVERALL, MALE, FEMALE
+  group_by(km_pretty) %&amp;gt;%
+  summarise(
+    average = mean(relative_pacing, na.rm = TRUE),
+    male =
+      mean(if_else(m_f == &amp;quot;Male&amp;quot;, relative_pacing, NA_real_), na.rm = TRUE),
+    female =
+      mean(if_else(m_f == &amp;quot;Female&amp;quot;, relative_pacing, NA_real_), na.rm = TRUE)
+  ) %&amp;gt;%
+  ungroup() %&amp;gt;%
+  gather(&amp;quot;type&amp;quot;, &amp;quot;percent_returner&amp;quot;, -km_pretty)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(boston_percent_returners, 
+       aes(km_pretty, percent_returner, group = type, color = type)) + 
+  geom_line()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/boston_run_like_a_girl/xxx_run_like_a_girl_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Next, we can compute the pacing profiles for these PB runners as before to the get the chart below. On the face of it, we see a similar shape to the pacing profile of the regular runners we looked at earlier: PBs start faster and finish slower than their average race pace, just like regular runners. However, the key difference is that, compared to regular runners, those running a PB start a little slower and finish a little faster. For example, the average PB runner starts only 4% faster than their average race pace, holds this pace for the first 9 miles or so and then starts to skow. But they don’t slow as much as regular runners. Yes, we can still see the effect of the Newton Hills but they slow to only about 5% slower than their average race-pace. In other words, the pace variation for runners completing a PB tends to fall within a range of just 9% (from -4% at the start to 5% at the end) compared to more than 20% from regular runners.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;boston_percent_elites &amp;lt;- boston_paces_pct %&amp;gt;%
+  filter(elites == &amp;quot;Elite&amp;quot;) %&amp;gt;%
+  # CALCULATE AVERAGES BY GROUP: OVERALL, MALE, FEMALE
+  group_by(km_pretty) %&amp;gt;%
+  summarise(
+    average = mean(relative_pacing, na.rm = TRUE),
+    male =
+      mean(if_else(m_f == &amp;quot;Male&amp;quot;, relative_pacing, NA_real_), na.rm = TRUE),
+    female =
+      mean(if_else(m_f == &amp;quot;Female&amp;quot;, relative_pacing, NA_real_), na.rm = TRUE)
+  ) %&amp;gt;% 
+  ungroup() %&amp;gt;%
+  gather(&amp;quot;type&amp;quot;, &amp;quot;percent_elites&amp;quot;, - km_pretty)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;conclusion&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;Of course the notion that elites pace perfectly in every race is probably too strong an assumption to make. In any given race there will be many factors that influence their pacing: course conditions, the competition, how they feel on the day etc. However, on average, when pacing is analysed over many runners and a number of years, a strong pattern emerges and it is this pattern that might be important when it comes to informing the pacing of other runners.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(boston_percent_elites, aes(km_pretty, percent_elites, group = type, color = type)) +
+  geom_line()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/boston_run_like_a_girl/xxx_run_like_a_girl_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;The hope is that the pacing tables produced from this profile may allow recreational or first time runners at Boston to replicate this ‘perfect’ pacing profile in their own races and for their running ability and target times. Doing so may help to produce better performance on the day.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;pacing_boston &amp;lt;- function(projected_time = 180){
+  
+  #&amp;#39; DOUBLE CHECK THAT ALL VALUES IN THE FUNCTION ARE NUMBER
+  stopifnot(is.numeric(projected_time))
+  
+  pace_chart &amp;lt;- projected_time %&amp;gt;% 
+    as_tibble() %&amp;gt;%
+    rename(goal_pace_min = value) %&amp;gt;% 
+    mutate(goal_pace_sec = period_to_seconds(minutes(goal_pace_min))) %&amp;gt;%
+    mutate(split_5k_even  = goal_pace_sec * (5/42.2),
+           split_10k_even = goal_pace_sec * (10/42.2),
+           split_15k_even = goal_pace_sec * (15/42.2),
+           split_20k_even = goal_pace_sec * (20/42.2),
+           split_25k_even = goal_pace_sec * (25/42.2),
+           split_30k_even = goal_pace_sec * (30/42.2),
+           split_35k_even = goal_pace_sec * (35/42.2),
+           split_40k_even = goal_pace_sec * (40/42.2)) %&amp;gt;%
+    gather(-goal_pace_min,-goal_pace_sec, key = &amp;quot;split_even&amp;quot;, value = &amp;quot;pace_seconds&amp;quot;) %&amp;gt;%
+    mutate(km_pretty = 
+             paste(&amp;quot;km&amp;quot;, str_replace_all(split_even, &amp;quot;split\\_|k\\_even&amp;quot;, &amp;quot;&amp;quot;), sep = &amp;quot; &amp;quot;)) %&amp;gt;%
+    mutate(km_pretty =  factor(km_pretty, 
+                               levels = c(&amp;quot;km 5&amp;quot;, &amp;quot;km 10&amp;quot;, &amp;quot;km 15&amp;quot;, &amp;quot;km 20&amp;quot;,
+                                          &amp;quot;km 25&amp;quot;, &amp;quot;km 30&amp;quot;, &amp;quot;km 35&amp;quot;, &amp;quot;km 40&amp;quot;, 
+                                          &amp;quot;km 42.2&amp;quot;)))
+  
+  
+  pace_chart_est &amp;lt;- pace_chart %&amp;gt;%
+    left_join(
+      percent_aggregate %&amp;gt;% 
+        filter(type == &amp;quot;female&amp;quot;) %&amp;gt;% 
+        #&amp;#39; REMOVE THE OVERALL RUNNER SINCE WE DONT CARE FOR PEOPLE TO FOLLOW THEIR PACE
+        filter(!(runner_class %in% c(&amp;quot;Overall&amp;quot;, &amp;quot;Returner&amp;quot;))) %&amp;gt;%
+        #&amp;#39; FOR NOW, LETS ONLY HAVE A SINGLE OPTION
+        select(-type) ,
+      by = &amp;quot;km_pretty&amp;quot;) %&amp;gt;%
+    #&amp;#39; CALCULATE ESTIMATED SPLITS BASED ON [[AVERAGE ELITES]]
+    mutate(pace_estimates = pace_seconds + (pace_seconds * (percent_change / 100)))
+  
+  #&amp;#39; CALCULATE 5K SPLITS (POTENTAL RESEARCH PROJECT)
+  pace_chart_goal &amp;lt;- pace_chart_est %&amp;gt;%
+    mutate(split_goal = str_replace_all(split_even, &amp;quot;even&amp;quot;, &amp;quot;mark&amp;quot;)) %&amp;gt;%
+    select(split_goal, runner_class, goal_pace_min, goal_pace_sec, pace_estimates) %&amp;gt;%
+    spread(key = split_goal, value = pace_estimates) %&amp;gt;%
+    mutate(goal_pace_time = as.character(seconds_to_period(goal_pace_sec))) %&amp;gt;%
+    #&amp;#39; ORGANIZE
+    select(goal_pace_time, goal_pace_min, runner_class, split_5k_mark, everything(), goal_pace_sec)
+  
+  pace_chart_5k_splits &amp;lt;- pace_chart_goal %&amp;gt;%
+    mutate_at(.vars = vars(contains(&amp;quot;k&amp;quot;)), seconds_to_period)
+  
+  
+  #&amp;#39; CALCULATE MILE PACES SPLITS 
+  pace_chart_wide &amp;lt;- pace_chart_est %&amp;gt;%
+    arrange(goal_pace_min, km_pretty) %&amp;gt;%
+    group_by(goal_pace_min, runner_class) %&amp;gt;%
+    mutate(pace_estimates_lag = lag(pace_estimates)) %&amp;gt;%
+    ungroup() %&amp;gt;% 
+    mutate(pace_splits = if_else(is.na(pace_estimates_lag),
+                                 pace_estimates, pace_estimates - pace_estimates_lag)) %&amp;gt;%
+    mutate(split_goal = str_replace_all(split_even, &amp;quot;even&amp;quot;, &amp;quot;goal&amp;quot;)) %&amp;gt;%
+    select(split_goal, runner_class, goal_pace_min, goal_pace_sec, pace_splits) %&amp;gt;%
+    spread(key = split_goal, value = pace_splits) %&amp;gt;%
+    mutate(goal_pace_time = as.character(seconds_to_period(goal_pace_sec))) %&amp;gt;%
+    #&amp;#39; ORGANIZE
+    select(goal_pace_time, goal_pace_min, runner_class, goal_pace_sec, split_5k_goal, everything(), goal_pace_sec)
+  
+  pace_chart_5k &amp;lt;- pace_chart_wide  %&amp;gt;%
+    mutate_at(.vars = vars(contains(&amp;quot;k&amp;quot;)), seconds_to_period) %&amp;gt;%
+    rename_all(~ str_replace_all(., &amp;quot;goal$&amp;quot;, &amp;quot;pace&amp;quot;)) %&amp;gt;%
+    mutate(split = &amp;quot;5k&amp;quot;) 
+  
+  pace_chart_mi &amp;lt;- pace_chart_wide %&amp;gt;%
+    mutate_at(.vars = vars(contains(&amp;quot;k&amp;quot;)), ~ seconds_to_period(. / 3.1)) %&amp;gt;%
+    rename_all(~ str_replace_all(., &amp;quot;goal$&amp;quot;, &amp;quot;mi_pace&amp;quot;)) %&amp;gt;%
+    mutate(split = &amp;quot;Mile&amp;quot;)
+  
+  pace_chart_combine &amp;lt;- pace_chart_5k_splits %&amp;gt;%
+    select(goal_pace_time, contains(&amp;quot;mark&amp;quot;)) %&amp;gt;%
+    mutate_at(vars(contains(&amp;quot;mark&amp;quot;)), time_to_character) %&amp;gt;%
+    #&amp;#39; JOIN IN 5K PACE INFORMATION
+    full_join(
+      pace_chart_5k %&amp;gt;%
+        select(goal_pace_time, contains(&amp;quot;k_pace&amp;quot;)) %&amp;gt;%
+        mutate_at(vars(contains(&amp;quot;pace&amp;quot;)), time_to_character),
+    by = &amp;quot;goal_pace_time&amp;quot;
+    ) %&amp;gt;%
+    #&amp;#39; JOIN IN MILE PACE INFORMATION
+    full_join(
+      pace_chart_mi %&amp;gt;%
+        select(goal_pace_time, contains(&amp;quot;mi_pace&amp;quot;)) %&amp;gt;%
+        mutate_at(vars(contains(&amp;quot;mi_pace&amp;quot;)), time_to_character), 
+      by = &amp;quot;goal_pace_time&amp;quot;
+    ) %&amp;gt;% 
+    gather(&amp;quot;split&amp;quot;, &amp;quot;time&amp;quot;, -goal_pace_time) %&amp;gt;%
+    mutate(type = case_when(
+      str_detect(split, &amp;quot;mark&amp;quot;) ~ &amp;quot;Mark&amp;quot;, 
+      str_detect(split, &amp;quot;mi_pace&amp;quot;) ~ &amp;quot;Mile&amp;quot;,
+      str_detect(split, &amp;quot;pace&amp;quot;) ~ &amp;quot;5k&amp;quot;,
+      TRUE ~ NA_character_
+    )) %&amp;gt;%
+    mutate(split = str_extract(split, &amp;quot;[0-9]{1,2}k&amp;quot;)) %&amp;gt;% 
+    mutate(split = factor(split, levels = c(paste0(seq(5,40,5), &amp;quot;k&amp;quot;))),
+           type = factor(type, levels = c(&amp;quot;Mark&amp;quot;, &amp;quot;5k&amp;quot;, &amp;quot;Mile&amp;quot;)))
+  
+  pace_chart_combine &amp;lt;- pace_chart_combine %&amp;gt;% 
+    spread(split, time) %&amp;gt;%
+    select(-goal_pace_time)
+  
+  pace_chart_combine
+}
+
+  
+  
+
+pace_description &amp;lt;- function(projected_time){
+  
+  projected_time %&amp;gt;% 
+    as_tibble() %&amp;gt;%
+    rename(goal_pace_min = value) %&amp;gt;%
+    mutate(goal_pace_sec =  goal_pace_min * 60, 
+           distance = 42.195,
+           goal_pace = 
+             paste(trunc(goal_pace_min / 60),
+                   ifelse(goal_pace_min %% 60 &amp;lt; 10, 
+                          paste0(0, round(goal_pace_min %% 60)), 
+                          as.character(round(goal_pace_min %% 60))), sep = &amp;quot;.&amp;quot;)) %&amp;gt;% #&amp;#39; MINUTES
+    pace_calculator(distance = &amp;quot;distince&amp;quot;, metric = &amp;quot;km&amp;quot;, seconds = &amp;quot;goal_pace_sec&amp;quot;) %&amp;gt;%
+    #&amp;#39; REMOVE UNNESSECARY FIELDS
+    select(goal_pace_min, mi_pace, mph, km_pace, kph)
+  
+  
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>An example preprint / working paper</title>
       <link>/publication/preprint/</link>
       <pubDate>Sun, 07 Apr 2019 00:00:00 -0600</pubDate>
@@ -685,189 +948,6 @@ Machine Learning - Titanic&lt;/li&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 
-</description>
-    </item>
-    
-    <item>
-      <title>Slides</title>
-      <link>/slides/example/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/slides/example/</guid>
-      <description>
-
-&lt;h1 id=&#34;welcome-to-slides&#34;&gt;Welcome to Slides&lt;/h1&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://sourcethemes.com/academic/&#34; target=&#34;_blank&#34;&gt;Academic&lt;/a&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Efficiently write slides in Markdown&lt;/li&gt;
-&lt;li&gt;3-in-1: Create, Present, and Publish your slides&lt;/li&gt;
-&lt;li&gt;Supports speaker notes&lt;/li&gt;
-&lt;li&gt;Mobile friendly slides&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;controls&#34;&gt;Controls&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Next: &lt;code&gt;Right Arrow&lt;/code&gt; or &lt;code&gt;Space&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Previous: &lt;code&gt;Left Arrow&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Start: &lt;code&gt;Home&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Finish: &lt;code&gt;End&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Overview: &lt;code&gt;Esc&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Speaker notes: &lt;code&gt;S&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Fullscreen: &lt;code&gt;F&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Zoom: &lt;code&gt;Alt + Click&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/hakimel/reveal.js#pdf-export&#34; target=&#34;_blank&#34;&gt;PDF Export&lt;/a&gt;: &lt;code&gt;E&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;code-highlighting&#34;&gt;Code Highlighting&lt;/h2&gt;
-
-&lt;p&gt;Inline code: &lt;code&gt;variable&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Code block:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;porridge = &amp;quot;blueberry&amp;quot;
-if porridge == &amp;quot;blueberry&amp;quot;:
-    print(&amp;quot;Eating...&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;math&#34;&gt;Math&lt;/h2&gt;
-
-&lt;p&gt;In-line math: $x + y = z$&lt;/p&gt;
-
-&lt;p&gt;Block math:&lt;/p&gt;
-
-&lt;p&gt;$$
-f\left( x \right) = \;\frac{{2\left( {x + 4} \right)\left( {x - 4} \right)}}{{\left( {x + 4} \right)\left( {x + 1} \right)}}
-$$&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;fragments&#34;&gt;Fragments&lt;/h2&gt;
-
-&lt;p&gt;Make content appear incrementally&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{{% fragment %}} One {{% /fragment %}}
-{{% fragment %}} **Two** {{% /fragment %}}
-{{% fragment %}} Three {{% /fragment %}}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Press &lt;code&gt;Space&lt;/code&gt; to play!&lt;/p&gt;
-
-&lt;p&gt;&lt;span class=&#34;fragment &#34; &gt;
-  One
-&lt;/span&gt;
-&lt;span class=&#34;fragment &#34; &gt;
-  &lt;strong&gt;Two&lt;/strong&gt;
-&lt;/span&gt;
-&lt;span class=&#34;fragment &#34; &gt;
-  Three
-&lt;/span&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;A fragment can accept two optional parameters:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;class&lt;/code&gt;: use a custom style (requires definition in custom CSS)&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;weight&lt;/code&gt;: sets the order in which a fragment appears&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;speaker-notes&#34;&gt;Speaker Notes&lt;/h2&gt;
-
-&lt;p&gt;Add speaker notes to your presentation&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;{{% speaker_note %}}
-- Only the speaker can read these notes
-- Press `S` key to view
-{{% /speaker_note %}}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Press the &lt;code&gt;S&lt;/code&gt; key to view the speaker notes!&lt;/p&gt;
-
-&lt;aside class=&#34;notes&#34;&gt;
-  &lt;ul&gt;
-&lt;li&gt;Only the speaker can read these notes&lt;/li&gt;
-&lt;li&gt;Press &lt;code&gt;S&lt;/code&gt; key to view&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;/aside&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;themes&#34;&gt;Themes&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;black: Black background, white text, blue links (default)&lt;/li&gt;
-&lt;li&gt;white: White background, black text, blue links&lt;/li&gt;
-&lt;li&gt;league: Gray background, white text, blue links&lt;/li&gt;
-&lt;li&gt;beige: Beige background, dark text, brown links&lt;/li&gt;
-&lt;li&gt;sky: Blue background, thin dark text, blue links&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;ul&gt;
-&lt;li&gt;night: Black background, thick white text, orange links&lt;/li&gt;
-&lt;li&gt;serif: Cappuccino background, gray text, brown links&lt;/li&gt;
-&lt;li&gt;simple: White background, black text, blue links&lt;/li&gt;
-&lt;li&gt;solarized: Cream-colored background, dark green text, blue links&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-
-&lt;section data-noprocess data-shortcode-slide
-  
-      
-      data-background-image=&#34;/img/boards.jpg&#34;
-  &gt;
-
-
-&lt;h2 id=&#34;custom-slide&#34;&gt;Custom Slide&lt;/h2&gt;
-
-&lt;p&gt;Customize the slide style and background&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;{{&amp;lt; slide background-image=&amp;quot;/img/boards.jpg&amp;quot; &amp;gt;}}
-{{&amp;lt; slide background-color=&amp;quot;#0000FF&amp;quot; &amp;gt;}}
-{{&amp;lt; slide class=&amp;quot;my-style&amp;quot; &amp;gt;}}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;custom-css-example&#34;&gt;Custom CSS Example&lt;/h2&gt;
-
-&lt;p&gt;Let&amp;rsquo;s make headers navy colored.&lt;/p&gt;
-
-&lt;p&gt;Create &lt;code&gt;assets/css/reveal_custom.css&lt;/code&gt; with:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.reveal section h1,
-.reveal section h2,
-.reveal section h3 {
-  color: navy;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&#34;questions&#34;&gt;Questions?&lt;/h1&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://discourse.gohugo.io&#34; target=&#34;_blank&#34;&gt;Ask&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://sourcethemes.com/academic/docs/&#34; target=&#34;_blank&#34;&gt;Documentation&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
