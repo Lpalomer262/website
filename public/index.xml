@@ -98,11 +98,33 @@
     </item>
     
     <item>
+      <title>Reflection - The Boston Marathon</title>
+      <link>/post/boston/2019_reflection/</link>
+      <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/boston/2019_reflection/</guid>
+      <description>
+
+
+&lt;p&gt;As of today April 2019, I have finished six marathons. No matter how the preceding 26.2 miles have played out, I’m always thankful that my body has withstood the distance and my mind has managed its aversion to suffering. It also feels good to stop. Unlike each of the six marathons I’d run before, my feeling upon crossing the finish line in this year’s Boston Marathon was joy.&lt;/p&gt;
+&lt;p&gt;Running a marathon is a little bit like coaching a group of synchronized swimmers: there are endless variables to manipulate and coordinate, and when they all come together, it’s a beautiful thing. But one small blip can throw the whole performance off. Some elements of marathoning—like pacing plans, racing flats, and fueling strategies—are under the control of the racer and easily fine-tuned in advance.&lt;/p&gt;
+&lt;p&gt;Others—like weather conditions, side stitches, and an erratic pace fuel by adrenaline—are maddeningly out of our control. All we can do is prepare our best, hope for minimal surprises on race day, and manage those that arise as well as we can.&lt;/p&gt;
+&lt;p&gt;Boston is such a memorable course, but I can’t say I remember much of it. Of course, the Wellesley Scream Tunnel, tuning left on Boylston St, creasing Heartbreak Hill are instances in which I remember contemplating but nothing special. My most memorable moments are as followed.&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;During the first nutrition stations, I fumbled a Cliff “Shot” Energy. Looking back, mentally, that moment could have crushed my concentration and focus going forward. To my surprise, seconds later I notice a “Shot” dangling in front of me. The runner next must have heard my heavy sigh as I fell back in line with the pack. After some none verbal exchanges of expressions, I accepted his gift and we back to racing. Fortunately, we finished seconds apart and I was able to properly thank him, a hug and un-coherent few words.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;I felt strong through the hillier sections Boston has to offer. And with all due respect to “Heartbreak Hill,” it wasn’t as tough as people said. I do however remember Wayne Leonard, a project manager whom I’ve worked with since moving to Denver, running alongside me. His attempt to take a picture while sprinting uphill was comical to say the least. I think for the first time during the race, I smiled and knew the worst sections were behind me.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The same reasons that make the marathon so hard to nail, and so crushing when we don’t, make a good marathon immensely satisfying. It’s not often that all of the main variables align exactly when they need to: a healthy, fit, and rested body; a crisp, still day; similarly matched competitors to work and battle with; a well-executed race plan; and minimal road bumps over a 26.2-mile. I was happy to cross the finish line at 2:45:33, a personal best of nearly 10 minutes.&lt;/p&gt;
+&lt;p&gt;A special thanks to &lt;a href=&#34;https://www.instagram.com/luisreyguevara/&#34;&gt;Luis Guevara&lt;/a&gt; and &lt;a href=&#34;https://www.instagram.com/corredaniel/&#34;&gt;Daniel Herrera&lt;/a&gt; for making a memorable course and scratching one of six off the bucket list.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Run Like a Girl</title>
-      <link>/post/boston_run_like_a_girl/xxx_run_like_a_girl/</link>
+      <link>/post/boston/run_like_a_girl/</link>
       <pubDate>Mon, 15 Apr 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/boston_run_like_a_girl/xxx_run_like_a_girl/</guid>
+      <guid>/post/boston/run_like_a_girl/</guid>
       <description>
 
 
@@ -119,14 +141,14 @@
 &lt;h2&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;In this post we present a similar analysis for the Boston course. This time it is based on more than 70,000 individual race-records for Boston runners, from the period 2014–2016, excluding 2013. These race-records include 5km (approx. 3.1 miles) split-times and therefore allow us to analyse pacing at regular intervals.&lt;/p&gt;
 &lt;p&gt;To start, the chart below shows the average pacing (minutes per mile) for non-elite (recreational/regular) runners. The ‘ribbon plot’ shows the average pace per race segment (the marked centre line) and the average pacing for men and women. The chart also shows the course profile. As an aside the pacing ribbon has been left-shifted to the halfway point of each race segment for better visual alignment. For example, the first marker, which is plotted at the 2.5km (1.5m) mark actually reflects the pacing for the segment from the startline to the 5km/3.1m point.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/boston_run_like_a_girl/xxx_run_like_a_girl_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/boston/Run_Like_A_Girl_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;boston_mean_paces &amp;lt;- 
   boston_long_5k_42.2k %&amp;gt;% group_by(km_pretty) %&amp;gt;%
   summarise(
-    average = mean(mi_pace, na.rm = TRUE),
-    male =
+    #&amp;#39; average = mean(mi_pace, na.rm = TRUE),
+    Male =
       mean(if_else(m_f == &amp;quot;Male&amp;quot;, mi_pace, NA_real_), na.rm = TRUE),
-    female =
+    Female =
       mean(if_else(m_f == &amp;quot;Female&amp;quot;, mi_pace, NA_real_), na.rm = TRUE)
   ) %&amp;gt;% 
   ungroup() %&amp;gt;%
@@ -136,8 +158,13 @@
   summarise(mi_pace_mean = mean(mi_pace, na.rm = TRUE)) %&amp;gt;%
   ggplot(aes(km_pretty, mi_pace_mean, group = 1)) +
   geom_line(linetype = &amp;quot;dashed&amp;quot;) +
-  geom_point() &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/boston_run_like_a_girl/xxx_run_like_a_girl_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+  geom_point()  + 
+  labs(title = &amp;quot;Boston Averages Paces&amp;quot;, 
+       subtitle = &amp;quot; Figure 1 - Boston Hilly Course Does Not Allow for an Even Paced Race&amp;quot;,
+       x = &amp;quot;Segment&amp;quot;, 
+       y = &amp;quot;Average Pace (Minutes)&amp;quot;)  + 
+  pretty_theme_test&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/boston/Run_Like_A_Girl_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;A word of caution here, pacing above includes people who hit the dreaded wall in the second half of the race. This means that some of the slow down shown will be exagerated, at least somewhat, by these poor souls.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;perfect-pacing-for-boston&#34; class=&#34;section level2&#34;&gt;
@@ -145,8 +172,14 @@
 &lt;p&gt;We have found a fairly consistent pattern when it comes to how recreational runners pace Boston. Relative pace varies predictably across a broad field of runners, as it is influenced by growing fatigue, the significant undulations of the course, the noise of the crowd, the excitement of the start etc. It is a consistent pattern but, presumably, it is not a very optimal one. Certainly one lesson seems to be that, on average, runners start fast, probably too fast, The pay-back is a considerable slowing of pace as the race continues. The pacing range for recreational runners is particularly wide, from starts that are about 8–9% faster than average race-pace, to finishes that are 10–12% slower. This makes for an overall pacing range of 20% or more.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(boston_mean_paces, 
        aes(km_pretty, pace, group = type, color = type)) + 
-  geom_line()&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/boston_run_like_a_girl/xxx_run_like_a_girl_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+  geom_line() +
+  labs(title = &amp;quot;Boston Marathon Across Gender&amp;quot;, 
+       subtitle = &amp;quot; Figure 2 -&amp;quot;,
+       x = &amp;quot;Segment&amp;quot;, 
+       y = &amp;quot;Average Pace (Minutes)&amp;quot;) + 
+  labs(color = &amp;quot;Gender&amp;quot;) +
+  pretty_theme_test&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/boston/Run_Like_A_Girl_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;pace_km &amp;lt;- boston %&amp;gt;% 
   mutate(pace_km = km_42.2 / 42.2195) %&amp;gt;%
   select(boston_key, km_42.2, pace_km)&lt;/code&gt;&lt;/pre&gt;
@@ -169,18 +202,24 @@ boston_percent_overall &amp;lt;- boston_paces_pct %&amp;gt;%
   # CALCULATE AVERAGES BY GROUP: OVERALL, MALE, FEMALE
   group_by(km_pretty) %&amp;gt;%
   summarise(
-    average = mean(relative_pacing, na.rm = TRUE),
-    male =
+    #&amp;#39; average = mean(relative_pacing, na.rm = TRUE),
+    Male =
       mean(if_else(m_f == &amp;quot;Male&amp;quot;, relative_pacing, NA_real_), na.rm = TRUE),
-    female =
+    Female =
       mean(if_else(m_f == &amp;quot;Female&amp;quot;, relative_pacing, NA_real_), na.rm = TRUE)
   ) %&amp;gt;% 
   ungroup() %&amp;gt;%
   gather(&amp;quot;type&amp;quot;, &amp;quot;percent_overall&amp;quot;, - km_pretty)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(boston_percent_overall, 
        aes(km_pretty, percent_overall, group = type, color = type)) + 
-  geom_line()&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/boston_run_like_a_girl/xxx_run_like_a_girl_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+  geom_line() + 
+   labs(title = &amp;quot;Boston Marathon Average Runner Pace Differential&amp;quot;, 
+       subtitle = &amp;quot; Figure 3 - A 14% Pace Differential for Average Boston Runner&amp;quot;,
+       x = &amp;quot;Segment&amp;quot;, 
+       y = &amp;quot;Average Pace (Minutes)&amp;quot;) + 
+  labs(color = &amp;quot;Gender&amp;quot;) +
+  pretty_theme_test&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/boston/Run_Like_A_Girl_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;div id=&#34;pacing-for-a-personal-best&#34; class=&#34;section level5&#34;&gt;
 &lt;h5&gt;Pacing for a Personal-Best&lt;/h5&gt;
 &lt;p&gt;Our dataset includes runners who have run more than one marathon and for these runners we can identify PB times from their set of times; essentially we treat their fastest time among their set of races as their PB. For the purpose of this study we will consider those runners who have run at least 3 Boston marathons. There are almost 10,000 such runners in our dataset and they have run an average of just over 4 Boston Marathons each. For each of these runners we can identify their ‘personal-best’ as their fastest Boston time. Of course this might not be their true personal best, since it depends entirely on the window of data that we have access too, but it at least counts as a good time for these runners at Boston.&lt;/p&gt;
@@ -189,25 +228,31 @@ boston_percent_overall &amp;lt;- boston_paces_pct %&amp;gt;%
   # CALCULATE AVERAGES BY GROUP: OVERALL, MALE, FEMALE
   group_by(km_pretty) %&amp;gt;%
   summarise(
-    average = mean(relative_pacing, na.rm = TRUE),
-    male =
+    #&amp;#39; average = mean(relative_pacing, na.rm = TRUE),
+    Male =
       mean(if_else(m_f == &amp;quot;Male&amp;quot;, relative_pacing, NA_real_), na.rm = TRUE),
-    female =
+    Female =
       mean(if_else(m_f == &amp;quot;Female&amp;quot;, relative_pacing, NA_real_), na.rm = TRUE)
   ) %&amp;gt;%
   ungroup() %&amp;gt;%
   gather(&amp;quot;type&amp;quot;, &amp;quot;percent_returner&amp;quot;, -km_pretty)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(boston_percent_returners, 
        aes(km_pretty, percent_returner, group = type, color = type)) + 
-  geom_line()&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/boston_run_like_a_girl/xxx_run_like_a_girl_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+  geom_line() +
+   labs(title = &amp;quot;Boston Marathon Returner Pace Differential&amp;quot;, 
+       subtitle = &amp;quot; Figure 4 - Returning to Boston Help Your Pace Differential by 3%&amp;quot;,
+       x = &amp;quot;Segment&amp;quot;, 
+       y = &amp;quot;Pace Percentage&amp;quot;) + 
+  labs(color = &amp;quot;Gender&amp;quot;) +
+  pretty_theme_test&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/boston/Run_Like_A_Girl_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Next, we can compute the pacing profiles for these PB runners as before to the get the chart below. On the face of it, we see a similar shape to the pacing profile of the regular runners we looked at earlier: PBs start faster and finish slower than their average race pace, just like regular runners. However, the key difference is that, compared to regular runners, those running a PB start a little slower and finish a little faster. For example, the average PB runner starts only 4% faster than their average race pace, holds this pace for the first 9 miles or so and then starts to skow. But they don’t slow as much as regular runners. Yes, we can still see the effect of the Newton Hills but they slow to only about 5% slower than their average race-pace. In other words, the pace variation for runners completing a PB tends to fall within a range of just 9% (from -4% at the start to 5% at the end) compared to more than 20% from regular runners.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;boston_percent_elites &amp;lt;- boston_paces_pct %&amp;gt;%
   filter(elites == &amp;quot;Elite&amp;quot;) %&amp;gt;%
   # CALCULATE AVERAGES BY GROUP: OVERALL, MALE, FEMALE
   group_by(km_pretty) %&amp;gt;%
   summarise(
-    average = mean(relative_pacing, na.rm = TRUE),
+    #&amp;#39;average = mean(relative_pacing, na.rm = TRUE),
     male =
       mean(if_else(m_f == &amp;quot;Male&amp;quot;, relative_pacing, NA_real_), na.rm = TRUE),
     female =
@@ -220,142 +265,17 @@ boston_percent_overall &amp;lt;- boston_paces_pct %&amp;gt;%
 &lt;div id=&#34;conclusion&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Conclusion&lt;/h2&gt;
 &lt;p&gt;Of course the notion that elites pace perfectly in every race is probably too strong an assumption to make. In any given race there will be many factors that influence their pacing: course conditions, the competition, how they feel on the day etc. However, on average, when pacing is analysed over many runners and a number of years, a strong pattern emerges and it is this pattern that might be important when it comes to informing the pacing of other runners.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(boston_percent_elites, aes(km_pretty, percent_elites, group = type, color = type)) +
-  geom_line()&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/boston_run_like_a_girl/xxx_run_like_a_girl_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(boston_percent_elites, 
+       aes(km_pretty, percent_elites, group = type, color = type)) +
+  geom_line() + 
+   labs(title = &amp;quot;Boston Marathon Elite Pace Differential&amp;quot;, 
+       subtitle = &amp;quot; Figure 5 - Elites Average Less Than a 8% Pace Differential&amp;quot;,
+       x = &amp;quot;Segment&amp;quot;, 
+       y = &amp;quot;Pace Percentage&amp;quot;) + 
+  labs(color = &amp;quot;Gender&amp;quot;) +
+  pretty_theme_test&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/boston/Run_Like_A_Girl_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;The hope is that the pacing tables produced from this profile may allow recreational or first time runners at Boston to replicate this ‘perfect’ pacing profile in their own races and for their running ability and target times. Doing so may help to produce better performance on the day.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;pacing_boston &amp;lt;- function(projected_time = 180){
-  
-  #&amp;#39; DOUBLE CHECK THAT ALL VALUES IN THE FUNCTION ARE NUMBER
-  stopifnot(is.numeric(projected_time))
-  
-  pace_chart &amp;lt;- projected_time %&amp;gt;% 
-    as_tibble() %&amp;gt;%
-    rename(goal_pace_min = value) %&amp;gt;% 
-    mutate(goal_pace_sec = period_to_seconds(minutes(goal_pace_min))) %&amp;gt;%
-    mutate(split_5k_even  = goal_pace_sec * (5/42.2),
-           split_10k_even = goal_pace_sec * (10/42.2),
-           split_15k_even = goal_pace_sec * (15/42.2),
-           split_20k_even = goal_pace_sec * (20/42.2),
-           split_25k_even = goal_pace_sec * (25/42.2),
-           split_30k_even = goal_pace_sec * (30/42.2),
-           split_35k_even = goal_pace_sec * (35/42.2),
-           split_40k_even = goal_pace_sec * (40/42.2)) %&amp;gt;%
-    gather(-goal_pace_min,-goal_pace_sec, key = &amp;quot;split_even&amp;quot;, value = &amp;quot;pace_seconds&amp;quot;) %&amp;gt;%
-    mutate(km_pretty = 
-             paste(&amp;quot;km&amp;quot;, str_replace_all(split_even, &amp;quot;split\\_|k\\_even&amp;quot;, &amp;quot;&amp;quot;), sep = &amp;quot; &amp;quot;)) %&amp;gt;%
-    mutate(km_pretty =  factor(km_pretty, 
-                               levels = c(&amp;quot;km 5&amp;quot;, &amp;quot;km 10&amp;quot;, &amp;quot;km 15&amp;quot;, &amp;quot;km 20&amp;quot;,
-                                          &amp;quot;km 25&amp;quot;, &amp;quot;km 30&amp;quot;, &amp;quot;km 35&amp;quot;, &amp;quot;km 40&amp;quot;, 
-                                          &amp;quot;km 42.2&amp;quot;)))
-  
-  
-  pace_chart_est &amp;lt;- pace_chart %&amp;gt;%
-    left_join(
-      percent_aggregate %&amp;gt;% 
-        filter(type == &amp;quot;female&amp;quot;) %&amp;gt;% 
-        #&amp;#39; REMOVE THE OVERALL RUNNER SINCE WE DONT CARE FOR PEOPLE TO FOLLOW THEIR PACE
-        filter(!(runner_class %in% c(&amp;quot;Overall&amp;quot;, &amp;quot;Returner&amp;quot;))) %&amp;gt;%
-        #&amp;#39; FOR NOW, LETS ONLY HAVE A SINGLE OPTION
-        select(-type) ,
-      by = &amp;quot;km_pretty&amp;quot;) %&amp;gt;%
-    #&amp;#39; CALCULATE ESTIMATED SPLITS BASED ON [[AVERAGE ELITES]]
-    mutate(pace_estimates = pace_seconds + (pace_seconds * (percent_change / 100)))
-  
-  #&amp;#39; CALCULATE 5K SPLITS (POTENTAL RESEARCH PROJECT)
-  pace_chart_goal &amp;lt;- pace_chart_est %&amp;gt;%
-    mutate(split_goal = str_replace_all(split_even, &amp;quot;even&amp;quot;, &amp;quot;mark&amp;quot;)) %&amp;gt;%
-    select(split_goal, runner_class, goal_pace_min, goal_pace_sec, pace_estimates) %&amp;gt;%
-    spread(key = split_goal, value = pace_estimates) %&amp;gt;%
-    mutate(goal_pace_time = as.character(seconds_to_period(goal_pace_sec))) %&amp;gt;%
-    #&amp;#39; ORGANIZE
-    select(goal_pace_time, goal_pace_min, runner_class, split_5k_mark, everything(), goal_pace_sec)
-  
-  pace_chart_5k_splits &amp;lt;- pace_chart_goal %&amp;gt;%
-    mutate_at(.vars = vars(contains(&amp;quot;k&amp;quot;)), seconds_to_period)
-  
-  
-  #&amp;#39; CALCULATE MILE PACES SPLITS 
-  pace_chart_wide &amp;lt;- pace_chart_est %&amp;gt;%
-    arrange(goal_pace_min, km_pretty) %&amp;gt;%
-    group_by(goal_pace_min, runner_class) %&amp;gt;%
-    mutate(pace_estimates_lag = lag(pace_estimates)) %&amp;gt;%
-    ungroup() %&amp;gt;% 
-    mutate(pace_splits = if_else(is.na(pace_estimates_lag),
-                                 pace_estimates, pace_estimates - pace_estimates_lag)) %&amp;gt;%
-    mutate(split_goal = str_replace_all(split_even, &amp;quot;even&amp;quot;, &amp;quot;goal&amp;quot;)) %&amp;gt;%
-    select(split_goal, runner_class, goal_pace_min, goal_pace_sec, pace_splits) %&amp;gt;%
-    spread(key = split_goal, value = pace_splits) %&amp;gt;%
-    mutate(goal_pace_time = as.character(seconds_to_period(goal_pace_sec))) %&amp;gt;%
-    #&amp;#39; ORGANIZE
-    select(goal_pace_time, goal_pace_min, runner_class, goal_pace_sec, split_5k_goal, everything(), goal_pace_sec)
-  
-  pace_chart_5k &amp;lt;- pace_chart_wide  %&amp;gt;%
-    mutate_at(.vars = vars(contains(&amp;quot;k&amp;quot;)), seconds_to_period) %&amp;gt;%
-    rename_all(~ str_replace_all(., &amp;quot;goal$&amp;quot;, &amp;quot;pace&amp;quot;)) %&amp;gt;%
-    mutate(split = &amp;quot;5k&amp;quot;) 
-  
-  pace_chart_mi &amp;lt;- pace_chart_wide %&amp;gt;%
-    mutate_at(.vars = vars(contains(&amp;quot;k&amp;quot;)), ~ seconds_to_period(. / 3.1)) %&amp;gt;%
-    rename_all(~ str_replace_all(., &amp;quot;goal$&amp;quot;, &amp;quot;mi_pace&amp;quot;)) %&amp;gt;%
-    mutate(split = &amp;quot;Mile&amp;quot;)
-  
-  pace_chart_combine &amp;lt;- pace_chart_5k_splits %&amp;gt;%
-    select(goal_pace_time, contains(&amp;quot;mark&amp;quot;)) %&amp;gt;%
-    mutate_at(vars(contains(&amp;quot;mark&amp;quot;)), time_to_character) %&amp;gt;%
-    #&amp;#39; JOIN IN 5K PACE INFORMATION
-    full_join(
-      pace_chart_5k %&amp;gt;%
-        select(goal_pace_time, contains(&amp;quot;k_pace&amp;quot;)) %&amp;gt;%
-        mutate_at(vars(contains(&amp;quot;pace&amp;quot;)), time_to_character),
-    by = &amp;quot;goal_pace_time&amp;quot;
-    ) %&amp;gt;%
-    #&amp;#39; JOIN IN MILE PACE INFORMATION
-    full_join(
-      pace_chart_mi %&amp;gt;%
-        select(goal_pace_time, contains(&amp;quot;mi_pace&amp;quot;)) %&amp;gt;%
-        mutate_at(vars(contains(&amp;quot;mi_pace&amp;quot;)), time_to_character), 
-      by = &amp;quot;goal_pace_time&amp;quot;
-    ) %&amp;gt;% 
-    gather(&amp;quot;split&amp;quot;, &amp;quot;time&amp;quot;, -goal_pace_time) %&amp;gt;%
-    mutate(type = case_when(
-      str_detect(split, &amp;quot;mark&amp;quot;) ~ &amp;quot;Mark&amp;quot;, 
-      str_detect(split, &amp;quot;mi_pace&amp;quot;) ~ &amp;quot;Mile&amp;quot;,
-      str_detect(split, &amp;quot;pace&amp;quot;) ~ &amp;quot;5k&amp;quot;,
-      TRUE ~ NA_character_
-    )) %&amp;gt;%
-    mutate(split = str_extract(split, &amp;quot;[0-9]{1,2}k&amp;quot;)) %&amp;gt;% 
-    mutate(split = factor(split, levels = c(paste0(seq(5,40,5), &amp;quot;k&amp;quot;))),
-           type = factor(type, levels = c(&amp;quot;Mark&amp;quot;, &amp;quot;5k&amp;quot;, &amp;quot;Mile&amp;quot;)))
-  
-  pace_chart_combine &amp;lt;- pace_chart_combine %&amp;gt;% 
-    spread(split, time) %&amp;gt;%
-    select(-goal_pace_time)
-  
-  pace_chart_combine
-}
-
-  
-  
-
-pace_description &amp;lt;- function(projected_time){
-  
-  projected_time %&amp;gt;% 
-    as_tibble() %&amp;gt;%
-    rename(goal_pace_min = value) %&amp;gt;%
-    mutate(goal_pace_sec =  goal_pace_min * 60, 
-           distance = 42.195,
-           goal_pace = 
-             paste(trunc(goal_pace_min / 60),
-                   ifelse(goal_pace_min %% 60 &amp;lt; 10, 
-                          paste0(0, round(goal_pace_min %% 60)), 
-                          as.character(round(goal_pace_min %% 60))), sep = &amp;quot;.&amp;quot;)) %&amp;gt;% #&amp;#39; MINUTES
-    pace_calculator(distance = &amp;quot;distince&amp;quot;, metric = &amp;quot;km&amp;quot;, seconds = &amp;quot;goal_pace_sec&amp;quot;) %&amp;gt;%
-    #&amp;#39; REMOVE UNNESSECARY FIELDS
-    select(goal_pace_min, mi_pace, mph, km_pace, kph)
-  
-  
-}&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -378,10 +298,10 @@ pace_description &amp;lt;- function(projected_time){
     
     <item>
       <title>Pacing Boston</title>
-      <link>/post/boston_pacing/xxx_pacing_boston/</link>
+      <link>/post/boston/pacing_boston/</link>
       <pubDate>Mon, 01 Apr 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/boston_pacing/xxx_pacing_boston/</guid>
+      <guid>/post/boston/pacing_boston/</guid>
       <description>
 
 
@@ -403,7 +323,7 @@ pace_description &amp;lt;- function(projected_time){
 &lt;h3&gt;Segment Paces&lt;/h3&gt;
 &lt;p&gt;To begin, let’s look at the how runners pace the various segments of the race. Since dataset includes timing information for each runner at 5km intervals (approx. every 3.1 miles), which means we can calculate how pacing changes across 9 different segments of the race (5km, 10km, . . ., 35km, 40km, 42.2km).&lt;/p&gt;
 &lt;p&gt;The graph below shows the pace (minutes per mile), for each of the 9 race segments, averaged over all runners (male and female) in our dataset; we refer to this as a pacing profile because it shows how pacing changes across the course. We see how, on average, men start out faster than 8 mins/mile and gradually slow, eventually hitting about 10 mins/mile at the end of the race, before a final sprint to the finish. The profile for women is similar in shape but obviously reflects different actual paces.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/boston_pacing/xxx_pacing_boston_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/boston/Pacing_Boston_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Clearly the average runner slows considerably during the course of the marathon. This is not unusual, especially in Boston, as fatigue and hills take their toll during the second-half of the race. Note,the pacing of the later stages of the race will also be impacted by those runners who hit the wall (HTW); we will return to this presently. Figure 1 also shows the average pacing profile of the top 100 fastest men and women. Obviously these runners are running a much faster race (&amp;lt; 5:30 mins/mile for men and &amp;lt; 6:30 mins/mile for women), but it is also a much more evenly paced race, at least when compared to the average runner.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;the-small-matter-of-hitting-the-wall&#34; class=&#34;section level3&#34;&gt;
@@ -411,7 +331,7 @@ pace_description &amp;lt;- function(projected_time){
 &lt;p&gt;In this work we determine that someone hits the wall if their pace in any of the second-half segments of the race slows by at least 33%, relative to their pace during the first-half of the race, but excluding the first 5km segment. We exclude the first 5km segment because it tends to be associated with fairly erratic pacing, due to the excitement of the start of the race, and, as such, provides a poor baseline against which to judge a runner’s marathon pace. Based on this model of hitting the wall, just over 23% of Boston runners hit the wall —they slow by at least 33% for at least one 5km segment during the second half of the race — with men experiencing a much higher rate of hitting the wall (10%) compared with women (4%).&lt;/p&gt;
 &lt;p&gt;We will return to the issue of hitting the wall in a lot more detail in a future post, for now it is sufficient to know that we have a way to estimate those who hit the wall and, as such, we can separate-out these runners from the pacing profiles to get a clearer picture of how the average runner paces their race, in the absence of a catestrophic pacing event, such as hitting the wall.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;## `geom_smooth()` using method = &amp;#39;loess&amp;#39; and formula &amp;#39;y ~ x&amp;#39;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/boston_pacing/xxx_pacing_boston_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/boston/Pacing_Boston_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;The pacing profiles in Figure 2 do just this: separating runners who hit the wall (HTW) from those who do not. We can see a much more even pacing profile for those who avoid the wall compared to those who hit it. For example, the average male who hits the wall sees their pace slowing to almost 12 mins/mile in the latter stages of the race, compared with just 9 mins/mile for those who do not appear to hit the wall. A similar relative difference in pacing is evident for women, although, it is worth remembering that almost 3-times as many men hit the wall than women.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;relative-pacing-profiles&#34; class=&#34;section level3&#34;&gt;
@@ -419,7 +339,7 @@ pace_description &amp;lt;- function(projected_time){
 &lt;p&gt;So far we have looked at pacing profiles based on actual pacing values, measured in minutes per mile. Another approach is to focus on a relative pacing profile by calculating how each segment’s pace varies from the runner’s average race pace. For example if a runner’s average race pace (calculated over the duration of their race) is 10 mins/mile and they run the first 5km at 9 mins/mile then their relative or percentage pace for this first segment is 90%, since they run at 90% of their average race pace (that is, 10% faster than their average race pace).&lt;/p&gt;
 &lt;p&gt;The average percentage pacing profiles are shown below in Figure 3 for three groups of (male and female) runners: (1) all runners who do not hit the wall; (2) all runners who do hit the wall (HTW); (3) the top 100 fastest runners (Elite). Remember, paces are now percentage paces rather than actual mins/mile and so they are directly coparable across runner groups.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;## `geom_smooth()` using method = &amp;#39;loess&amp;#39; and formula &amp;#39;y ~ x&amp;#39;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/boston_pacing/xxx_pacing_boston_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/boston/Pacing_Boston_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;The most important thing to note is the shape of the pacing profile for those runners who hit the wall, compared to those who do not. The former, start their race, on average, about 15% faster than their (eventual) average race pace. Do remember this average race pace will be impacted by hitting the wall, likely exagerting the pace variations of faster early segments.&lt;/p&gt;
 &lt;p&gt;Regardless, it is clear that starting fast is associated with hitting the wall, as has been previously reported. These runners also slow dramatically in the second-half of the race, slow their pace by more than 20% compared to their average race pace; men slow more than women, relatively speaking.&lt;/p&gt;
 &lt;p&gt;By comparison, those who do not hit the wall, and the fastest runners in particular, run a much more controlled and evenly paced race. They start a little faster than average race pace, but not too much faster, and they finish a little slower than average race pace, but not too much slower. The average runner maintains a pacing profile that is within +/- 8% of their average race pace; for the fastest elites pacing remains within +/- 4–5% of average race pace.&lt;/p&gt;
@@ -429,13 +349,31 @@ pace_description &amp;lt;- function(projected_time){
 &lt;p&gt;Generally speaking, less pace variation is considered to be a sign of a more disciplined runner, and it is usually associated with a better race. Hitting the wall is one example of what happens when pacing goes very wrong, but obviously there is a contiuum of pace variation across the marathon field. One perspective on this is presented in Figure 3, which plots the percentage pace variation versus finish-time to better understand the relationship between pacing and ability. The precise measure of pace variation that we use is something called the coefficient of variation, which is calculated from the 9 segment paces for each runner. Suffice it to say that a high percentage pace variation means that the runner is changing their pace more that a runner with a low pace variation. In other words, the higher the pace variation the more erratic the pacing.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;## `geom_smooth()` using method = &amp;#39;gam&amp;#39; and formula &amp;#39;y ~ s(x, bs = &amp;quot;cs&amp;quot;)&amp;#39;&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## Warning: Removed 2496 rows containing non-finite values (stat_smooth).&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/boston_pacing/xxx_pacing_boston_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/boston/Pacing_Boston_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Generally speaking we can see that pace variation tends to increase steadily with finish-times, suggesting that faster, more able, runners are better able to control their pace. As expected, the fastest runners have very low pace variation values and in general women present with less pace variation than men for a given finish-time, a distinction that is greater when we look at runners who hit the wall.&lt;/p&gt;
 &lt;p&gt;This gender difference in pacing is an important one. In the literature it has been reported that women enjoy more disciplined pacing profiles than men, and while this appears to be the case this year in Boston, it is also true that much of the pacing variation between the genders appears to originate with those who hit the wall. Men who hit the wall tend experience a higher degree of pacing variation (and a larger slow-down) than women and many more men tend to hit the wall, thereby exagerating the pacing difference between the genders when we combine all runners into a single group. By separating those who hit the wall from those who don’t, we can see a more similar pacing regime between the genders when they avoid the wall.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;pacing-ageing&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Pacing &amp;amp; Ageing&lt;/h3&gt;
 &lt;p&gt;Finally, let’s consider the relationship between pace variation and age. The graph below shows the average pace variation for men and women across different ages. Once again we separate out those who hit the wall from those who do not. The pace variation for the latter is all but identical for men and women across the ages. For younger runners in their 20’s pace variation tends to gradually decline into our 30s, before growing again steadily if we continue to race into our 60s and 70s. For those who hit the wall there is a similar effect although younger (55) women tend to suffer from less pace variation when they hit the wall than their male counterparts.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(pacing_variation, 
+       aes(x = age, y = abs(relative_pacing), color = category)) + 
+  geom_smooth() +
+  scale_x_continuous(
+    limits = c(20, 60), 
+    breaks = c(20, 30, 40, 50, 60)
+    ) + 
+  labs(
+    title = &amp;quot;The Relationship Between Pacing and Age&amp;quot;, 
+    subtitle = &amp;quot;Figure 5 - \&amp;quot;You&amp;#39;ll Understand When You&amp;#39;re Older,\&amp;quot; Holds Truth&amp;quot;, 
+    x = &amp;quot;Age&amp;quot;,
+    y = &amp;quot;Average Pace Variation&amp;quot;) + 
+  labs(color = &amp;quot;Sub-Group&amp;quot;) +
+  scale_color_manual(values=c(&amp;quot;firebrick1&amp;quot;, &amp;quot;firebrick4&amp;quot;, &amp;quot;dodgerblue1&amp;quot;, &amp;quot;dodgerblue4&amp;quot;)) +
+  pretty_theme_pace&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## `geom_smooth()` using method = &amp;#39;gam&amp;#39; and formula &amp;#39;y ~ s(x, bs = &amp;quot;cs&amp;quot;)&amp;#39;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning: Removed 38784 rows containing non-finite values (stat_smooth).&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/boston/Pacing_Boston_files/figure-html/unnamed-chunk-12-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;conclusions&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Conclusions&lt;/h2&gt;
@@ -451,10 +389,10 @@ pace_description &amp;lt;- function(projected_time){
     
     <item>
       <title>Running With The Data</title>
-      <link>/post/boston_introduction/xxx_the_runniers_of_boston/</link>
+      <link>/post/boston/the_runners_of_boston/</link>
       <pubDate>Mon, 01 Apr 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/boston_introduction/xxx_the_runniers_of_boston/</guid>
+      <guid>/post/boston/the_runners_of_boston/</guid>
       <description>
 
 
@@ -478,23 +416,23 @@ pace_description &amp;lt;- function(projected_time){
 &lt;div id=&#34;gender-age&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Gender &amp;amp; Age&lt;/h3&gt;
 &lt;p&gt;The bar chart, Figure 1, below shows that overall about 45% of Boston runners are female and the line-graph shows that they have an average age of about 40, some 5 years younger than their male counterparts.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/boston_introduction/xxx_the_runniers_of_boston_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/boston_introduction/xxx_the_runniers_of_boston_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/boston/The_Runners_of_Boston_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/boston/The_Runners_of_Boston_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;The nice thing about the Boston dataset is that it provides precise age information for each runner, as opposed to the age-ranges that are more usual in marathon datasets. Further detail on the distribution of ages is presented in the histograms in Figure 2, which show the relative proportion of runners of each gender and for different ages. For example, we can see a greater proportion of women between the ages of 20 and 42, compared to men. But, from 42 years on, there are proprtionally more men than women.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/boston_introduction/xxx_the_runniers_of_boston_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/boston/The_Runners_of_Boston_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;It is interesting to contrast sharp increase in the proportion of females runners from ages 20 to 28, compared to a more gradual increase for men between the ages of 20 and 45. In both cases, after the age of 45, the proportion of runners participating in Boston drops steadily.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;places-of-origin&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Places of Origin&lt;/h3&gt;
 &lt;p&gt;Where do these runners come from? Unsurprisingly, the large majority (over 60,000) come from the USA, and about a fifth of these from Boston’s home state of Massachusetts. Approximately 1,800 runners come from Canada and after that there is a long tail of countries with different levels of partcipation. All in all, these three years Boston attracted runners from 104 different countries around the world.&lt;/p&gt;
 &lt;p&gt;Let’s take a look at some of these. First, for ease of presentation, we will limit ourselves to countries that have more than 50 runners participating; there are 23 such countries. To avoid the USA and Canada from drowning out the other countries we will exclude both of these from the graphs that follow. The first graph below shows the total number of participants per country for the remaining 21 countries. Great Britain comes out on top, with more than 400 runners, followed by Mexico, Germany, Japan, and Australia.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/boston_introduction/xxx_the_runniers_of_boston_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/boston/The_Runners_of_Boston_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;what-about-the-locals&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;What about the locals?&lt;/h3&gt;
 &lt;p&gt;Since we left out the USA from the above analysis, let’s now take a look at US participation by state and by city; once again, for ease of presentation we will limit ourselves to the top 20 states and cities and for variety, this time, we will show the number of male and female runners. In the first graph below — participation by state — we see a much higher participation level from Massachusetts along with a healthy showing from California, New York, and Texas. Similarly, Boston and Cambridge feature strongly in the next graph — participation by city — with the likes of New York and Chicago, two big marathon cities, also providing plenty of runners.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/boston_introduction/xxx_the_runniers_of_boston_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/boston_introduction/xxx_the_runniers_of_boston_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/boston/The_Runners_of_Boston_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/boston/The_Runners_of_Boston_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;It may be worth noting that while most states and cities provide more men that women to run Boston, Boston itself, and Massachusetts, provide more female runners than males. I’ve added my hometown of Pico Rivera to soley represent.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -506,17 +444,17 @@ pace_description &amp;lt;- function(projected_time){
 &lt;p&gt;To keep things simple — but not too simple — we will consider two different ways to answer this question. The first way is to compute the average finish-time for all runners from a particular country or state. This is effectively the finish-time of the typical runner from that country or state, and may favour countries and states with fewer participants, as these participants may be more experienced marathoners.&lt;/p&gt;
 &lt;p&gt;The second way to evaluate how fast the runners from a given country or state are, is to focus on the fastest finishers — we will look at the top-10 finishers from each country and state — and report their average finish-times. The results of this for countries and states are presented in the two graphs that follow; in both the countries and states are ordered based on the average finish-times of their top-10 fastest runners.&lt;/p&gt;
 &lt;p&gt;When we focus on the finish-time of all runners, Kenya and Ethopia come out on top of the country rankings, with average finish-times of 148 and 154 minutes, respectively; see Figure 8. This is better than most counties fastest-times averages. But when we look at the average finish-time of the fastest (top-10) runners then the US, Japan, and Canada win out, with finish-times of 133, 145, and 148 minutes, respectively.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/boston_introduction/xxx_the_runniers_of_boston_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/boston/The_Runners_of_Boston_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Among US states, Colorado, Pennsylvania, and New Mexico come out on top for the average finish-time of all runners with finish-times of 220 minutes for Colorado and 223 minutes for New Mexico. However, the fastest US runners hail from California, Colorado, and Massachusetts with finish-times of 141, 142, and 143 minutes, on average, for their top-10 finishers, respectively.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/boston_introduction/xxx_the_runniers_of_boston_files/figure-html/unnamed-chunk-12-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/boston_introduction/xxx_the_runniers_of_boston_files/figure-html/unnamed-chunk-13-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/boston/The_Runners_of_Boston_files/figure-html/unnamed-chunk-12-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/boston/The_Runners_of_Boston_files/figure-html/unnamed-chunk-13-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Next, let’s take a look at performance in terms of the finish-times of runners. Men are faster than women on average. For example, in these year event the average finish-time for men was just over 224 minutes compared with 244 minutes for women. The graph below plots the proportion of runners with various finish-times. We can see a greater proportion of male finishers up to the 210 minute mark (3.5 hours), and after this it female runners tend to domainate.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/boston_introduction/xxx_the_runniers_of_boston_files/figure-html/unnamed-chunk-14-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/boston/The_Runners_of_Boston_files/figure-html/unnamed-chunk-14-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;how-does-performance-vary-with-age&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;How does performance vary with age?&lt;/h3&gt;
 &lt;p&gt;This gender gap is preserved when we compare finish-times by age; see the Figure 12 below. For both men and women, the fastest runners tend to be in their 30’s, slightly older for women than for men. After this, as we age, our finish-times suffer. Interestingly, the relative difference between men and women reduces with age; the gender gap appears to close.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/boston_introduction/xxx_the_runniers_of_boston_files/figure-html/unnamed-chunk-15-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/boston/The_Runners_of_Boston_files/figure-html/unnamed-chunk-15-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Thus, as we age, the finish-times of men and women tend to become more and more similar. In future analysis we’ll take a closer look at how each gender runs the course, regardless of time.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -531,10 +469,10 @@ pace_description &amp;lt;- function(projected_time){
     
     <item>
       <title>Berlin in 2.01.39</title>
-      <link>/post/berlin_world_record/berlin_world_record/</link>
+      <link>/post/berlin/berlin_world_record/</link>
       <pubDate>Fri, 15 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/berlin_world_record/berlin_world_record/</guid>
+      <guid>/post/berlin/berlin_world_record/</guid>
       <description>
 
 
@@ -925,22 +863,6 @@ Machine Learning - Titanic&lt;/li&gt;
       <pubDate>Tue, 01 Sep 2015 00:00:00 -0600</pubDate>
       
       <guid>/publication/journal-article/</guid>
-      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
-  &lt;div&gt;
-    &lt;p&gt;Supplementary notes can be added here, including &lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34;&gt;code and math&lt;/a&gt;.&lt;/p&gt;
-
-  &lt;/div&gt;
-&lt;/div&gt;
-
-</description>
-    </item>
-    
-    <item>
-      <title>An example conference paper</title>
-      <link>/publication/conference-paper/</link>
-      <pubDate>Mon, 01 Jul 2013 00:00:00 -0600</pubDate>
-      
-      <guid>/publication/conference-paper/</guid>
       <description>&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     &lt;p&gt;Supplementary notes can be added here, including &lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34;&gt;code and math&lt;/a&gt;.&lt;/p&gt;

@@ -1,0 +1,12 @@
+name: Pacing_Chart
+title: Pacing_Chart
+username:
+account: lpalomer262
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 983001
+bundleId: 2156457
+url: https://lpalomer262.shinyapps.io/Pacing_Chart/
+when: 1560658006.38768
+asMultiple: FALSE
+asStatic: FALSE

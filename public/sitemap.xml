@@ -27,7 +27,13 @@
   
     <url>
     
-      <loc>/post/boston_run_like_a_girl/xxx_run_like_a_girl/</loc>
+      <loc>/post/boston/2019_reflection/</loc>
+      <lastmod>2019-04-20T00:00:00+00:00</lastmod>
+    </url>
+  
+    <url>
+    
+      <loc>/post/boston/run_like_a_girl/</loc>
       <lastmod>2019-04-15T00:00:00+00:00</lastmod>
     </url>
   
@@ -39,19 +45,19 @@
   
     <url>
     
-      <loc>/post/boston_pacing/xxx_pacing_boston/</loc>
+      <loc>/post/boston/pacing_boston/</loc>
       <lastmod>2019-04-01T00:00:00+00:00</lastmod>
     </url>
   
     <url>
     
-      <loc>/post/boston_introduction/xxx_the_runniers_of_boston/</loc>
+      <loc>/post/boston/the_runners_of_boston/</loc>
       <lastmod>2019-04-01T00:00:00+00:00</lastmod>
     </url>
   
     <url>
     
-      <loc>/post/berlin_world_record/berlin_world_record/</loc>
+      <loc>/post/berlin/berlin_world_record/</loc>
       <lastmod>2019-02-15T00:00:00+00:00</lastmod>
     </url>
   
@@ -132,7 +138,7 @@
     <url>
     
       <loc>/tags/academic/</loc>
-      <lastmod>2019-04-15T00:00:00+00:00</lastmod>
+      <lastmod>2019-04-20T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
   
@@ -151,14 +157,14 @@
     <url>
     
       <loc>/categories/boston-marathon/</loc>
-      <lastmod>2019-04-15T00:00:00+00:00</lastmod>
+      <lastmod>2019-04-20T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
   
     <url>
     
       <loc>/categories/</loc>
-      <lastmod>2019-04-15T00:00:00+00:00</lastmod>
+      <lastmod>2019-04-20T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
   
@@ -179,7 +185,7 @@
     <url>
     
       <loc>/post/</loc>
-      <lastmod>2019-04-15T00:00:00+00:00</lastmod>
+      <lastmod>2019-04-20T00:00:00+00:00</lastmod>
     </url>
   
     <url>
@@ -212,7 +218,7 @@
     <url>
     
       <loc>/tags/r-markdown/</loc>
-      <lastmod>2019-04-15T00:00:00+00:00</lastmod>
+      <lastmod>2019-04-20T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
   
@@ -232,7 +238,7 @@
     <url>
     
       <loc>/categories/running/</loc>
-      <lastmod>2019-04-15T00:00:00+00:00</lastmod>
+      <lastmod>2019-04-20T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
   
@@ -264,7 +270,7 @@
     <url>
     
       <loc>/tags/</loc>
-      <lastmod>2019-04-15T00:00:00+00:00</lastmod>
+      <lastmod>2019-04-20T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
   

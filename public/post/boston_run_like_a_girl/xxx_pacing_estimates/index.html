@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.2.0">
+  <meta name="generator" content="Hugo 0.53" />
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Leonardo Palomera">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="testing knitr::opts_chunk$set(echo = TRUE) #&#39; DOWNLOAD NESSESARY DATABASES link &lt;- &quot;../../../../../projects/projects/articles/scripts/Boston/the_boston_marathon/&quot; source(paste0(link, &quot;000_source.R&quot;)) ## Warning: package &#39;dplyr&#39; was built under R version 3.5.1 ## ## Attaching package: &#39;dplyr&#39; ## The following objects are masked from &#39;package:stats&#39;: ## ## filter, lag ## The following objects are masked from &#39;package:base&#39;: ## ## intersect, setdiff, setequal, union ## ## Attaching package: &#39;lubridate&#39; ## The following object is masked from &#39;package:base&#39;: ## ## date ## Warning: package &#39;knitr&#39; was built under R version 3.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/post/boston_run_like_a_girl/xxx_pacing_estimates/">
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+
+    
+
+  
+
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,400italic,700|Roboto+Mono">
+  
+
+  <link rel="stylesheet" href="/styles.css">
+  
+
+  
+  
+  
+
+  
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Twenty-Six.Two">
+  <link rel="feed" href="/index.xml" type="application/rss+xml" title="Twenty-Six.Two">
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="/post/boston_run_like_a_girl/xxx_pacing_estimates/">
+
+  
+  
+  
+  
+    
+    
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="Twenty-Six.Two">
+  <meta property="og:url" content="/post/boston_run_like_a_girl/xxx_pacing_estimates/">
+  <meta property="og:title" content="Pace Function | Twenty-Six.Two">
+  <meta property="og:description" content="testing knitr::opts_chunk$set(echo = TRUE) #&#39; DOWNLOAD NESSESARY DATABASES link &lt;- &quot;../../../../../projects/projects/articles/scripts/Boston/the_boston_marathon/&quot; source(paste0(link, &quot;000_source.R&quot;)) ## Warning: package &#39;dplyr&#39; was built under R version 3.5.1 ## ## Attaching package: &#39;dplyr&#39; ## The following objects are masked from &#39;package:stats&#39;: ## ## filter, lag ## The following objects are masked from &#39;package:base&#39;: ## ## intersect, setdiff, setequal, union ## ## Attaching package: &#39;lubridate&#39; ## The following object is masked from &#39;package:base&#39;: ## ## date ## Warning: package &#39;knitr&#39; was built under R version 3."><meta property="og:image" content="/img/icon-192.png">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2019-04-16T00:00:00&#43;00:00">
+  
+  <meta property="article:modified_time" content="2019-04-16T00:00:00&#43;00:00">
+  
+
+  
+
+  
+
+  <title>Pace Function | Twenty-Six.Two</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" role="textbox" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/">Twenty-Six.Two</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav mr-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#about">
+            
+            <span>Home</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#posts">
+            
+            <span>Posts</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#travel">
+            
+            <span>Interest</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/tutorial/">
+            
+            <span>Science Discovery</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#contact">
+            
+            <span>Contact Information</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+      
+      </ul>
+      <ul class="navbar-nav ml-auto">
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1 itemprop="name">Pace Function</h1>
+
+  
+
+  
+    
+
+
+
+<meta content="2019-04-16 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2019-04-16 00:00:00 &#43;0000 UTC" itemprop="dateModified">
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    <time>Apr 16, 2019</time>
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    5 min read
+  </span>
+  
+
+  
+  
+
+  
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder"></i>
+    
+    <a href="/categories/r/">R</a>, 
+    
+    <a href="/categories/boston-marathon/">Boston Marathon</a>, 
+    
+    <a href="/categories/running/">Running</a>
+    
+  </span>
+  
+  
+
+  
+    
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=Pace%20Function&amp;url=%2fpost%2fboston_run_like_a_girl%2fxxx_pacing_estimates%2f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=%2fpost%2fboston_run_like_a_girl%2fxxx_pacing_estimates%2f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpost%2fboston_run_like_a_girl%2fxxx_pacing_estimates%2f&amp;title=Pace%20Function"
+         target="_blank" rel="noopener">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=%2fpost%2fboston_run_like_a_girl%2fxxx_pacing_estimates%2f&amp;title=Pace%20Function"
+         target="_blank" rel="noopener">
+        <i class="fab fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=Pace%20Function&amp;body=%2fpost%2fboston_run_like_a_girl%2fxxx_pacing_estimates%2f">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style" itemprop="articleBody">
+      
+
+
+<div id="section-testing" class="section level2">
+<h2>testing</h2>
+<pre class="r"><code>knitr::opts_chunk$set(echo = TRUE)
+#&#39; DOWNLOAD NESSESARY DATABASES
+
+
+link &lt;- &quot;../../../../../projects/projects/articles/scripts/Boston/the_boston_marathon/&quot;
+source(paste0(link, &quot;000_source.R&quot;))</code></pre>
+<pre><code>## Warning: package &#39;dplyr&#39; was built under R version 3.5.1</code></pre>
+<pre><code>## 
+## Attaching package: &#39;dplyr&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:stats&#39;:
+## 
+##     filter, lag</code></pre>
+<pre><code>## The following objects are masked from &#39;package:base&#39;:
+## 
+##     intersect, setdiff, setequal, union</code></pre>
+<pre><code>## 
+## Attaching package: &#39;lubridate&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:base&#39;:
+## 
+##     date</code></pre>
+<pre><code>## Warning: package &#39;knitr&#39; was built under R version 3.5.2</code></pre>
+<pre><code>## Loading required package: gsubfn</code></pre>
+<pre><code>## Loading required package: proto</code></pre>
+<pre><code>## Warning in doTryCatch(return(expr), name, parentenv, handler): unable to load shared object &#39;/Library/Frameworks/R.framework/Resources/modules//R_X11.so&#39;:
+##   dlopen(/Library/Frameworks/R.framework/Resources/modules//R_X11.so, 6): Library not loaded: /opt/X11/lib/libSM.6.dylib
+##   Referenced from: /Library/Frameworks/R.framework/Resources/modules//R_X11.so
+##   Reason: image not found</code></pre>
+<pre><code>## Could not load tcltk.  Will use slower R code instead.</code></pre>
+<pre><code>## Loading required package: RSQLite</code></pre>
+<pre><code>## 
+## Attaching package: &#39;reshape2&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:tidyr&#39;:
+## 
+##     smiths</code></pre>
+<pre><code>## Warning: package &#39;shiny&#39; was built under R version 3.5.2</code></pre>
+<pre><code>## 
+## Attaching package: &#39;shiny&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:geosphere&#39;:
+## 
+##     span</code></pre>
+<pre class="r"><code>link &lt;- &quot;../../../../../projects/projects/articles/scripts/Boston/the_boston_marathon/&quot;
+script &lt;- &quot;test&quot;
+source(paste0(link,&quot;./001_functions.R&quot;))
+
+
+data_link &lt;- &quot;../../../../../projects/projects/articles/outputs/data/&quot;
+boston_gxp &lt;- read_rds(paste0(data_link, &quot;020_boston_gxp.rds&quot;))
+
+
+boston_percent_elites &lt;- read_rds(paste0(data_link, &quot;102_percent_elites.rds&quot;))
+
+boston_percent_overall &lt;- read_rds(paste0(data_link, &quot;102_percent_overall.rds&quot;))
+
+boston_percent_returners &lt;- read_rds(paste0(data_link, &quot;102_percent_returners.rds&quot;))
+
+
+percent_aggregate &lt;- bind_rows(
+  boston_percent_overall %&gt;% mutate(runner_class = &quot;Overall&quot;),
+  boston_percent_returners %&gt;% mutate(runner_class = &quot;Returner&quot;),
+  boston_percent_elites %&gt;% mutate(runner_class = &quot;Elite&quot;)) %&gt;%
+  mutate(percent_change = 
+           coalesce(percent_overall, percent_returner, percent_elites)) %&gt;%
+  select(-percent_overall, -percent_returner, -percent_elites)</code></pre>
+<pre class="r"><code># Define UI for application that draws a histogram
+ui &lt;- fluidPage(
+   
+   # Application title
+   titlePanel(&quot;Project Time &quot;),
+   
+   # Sidebar with a slider input for number of bins 
+   #sidebarLayout(
+      #sidebarPanel(
+         sliderInput(&quot;bins&quot;,
+                     &quot;Expected Finishing Time:&quot;,
+                     min = 123,
+                     max = 300,
+                     value = 180)
+      #)
+,
+      
+      # Show a plot of the generated distribution
+     # mainPanel(
+     plotOutput(&quot;coursePlot&quot;),
+     tableOutput(&quot;dispTable&quot;),
+     htmlOutput(&quot;dispText&quot;)
+        
+    #  )
+   )
+#)
+
+# Define server logic required to draw a histogram
+server &lt;- function(input, output) {
+  
+  output$coursePlot &lt;- renderPlot({
+    #&#39; BOSTON COURSE ELEVATION CHART
+    y &lt;- ggplot(boston_gxp, aes(distance_meter_cumsum, elevation)) + 
+      geom_line() + 
+      scale_x_continuous(
+        limits = c(0, 42.2),
+        breaks = c(0, 5, 10, 15, 20, 25, 30, 35, 40, 42.2)) + 
+      labs(
+        title = &quot;Boston Marathon - Elevation Grade&quot;, 
+        subtitle = &quot;Figure 1 - Downhill, Until It&#39;s Not &quot;, 
+        x = &quot;Distance (km)&quot;, 
+        y = &quot;Elevation&quot;) + 
+      pretty_theme_test
+    
+    y
+  }) 
+  
+   output$dispTable &lt;- renderTable({ 
+      x &lt;- pacing_boston(input$bins)
+      x 
+      
+   
+   })
+   
+   output$dispText &lt;- renderUI({
+     xx &lt;- 
+       HTML(&quot;
+         Summary of the Boston Marathon Course
+         &lt;br/&gt;&lt;br/&gt;
+         It’s finally here. The moment that you’ve been working for longer than you remember. As you begin to prepare for the 26.2 mile journey, take a few moments to read through what the elites &amp; myself have to say.
+         &lt;br/&gt;
+         Ryan Hall - Mile 1.5 &lt;br/&gt;
+         As you run though Ashton the course will continues to lose altitude. Do overrun the first couple miles, there is still a long way to go.
+         &lt;br/&gt;&lt;br/&gt;
+         Desiree Linden - Mile 3.1&lt;br/&gt;
+         After the 3rd mile the downhill pitch levels, the course crowds thin, and the field of runners begin to spread. Now is time to take a deep breath and begin to find your rhythm.
+         &lt;br/&gt;&lt;br/&gt;
+         Becca Pizzi - Mile 4.7&lt;br/&gt;
+         As you begin to enter the 3rd town just stick your plans its very early.
+         &lt;br/&gt;&lt;br/&gt;
+         The course begin to roll down and flatten out a bit. Use this time to conserve energy and prepare for the hills to come.
+         &lt;br/&gt;&lt;br/&gt;
+         Greg Meyer - Mile 6.2&lt;br/&gt;
+         The 10k is one of the most crucial points on the Boston Marathon Course. If you are running at a pace faster than your marathon personal best then you may have gone out too fast. You’ll need to adjust going forward but, you have plenty of time.
+         &lt;br/&gt;&lt;br/&gt;
+         Becca Pizzi - Mile 8.5&lt;br/&gt;
+         Through Natick follows a gentle downhill slope until the 10-mile mark. Take advantages of the flat stretches of the course to conserve energy.
+         &lt;br/&gt;&lt;br/&gt;
+         Greg Meyer&lt;br/&gt;
+         It’s a quite area between Natick and Wellesley but that the calm before the storm. Allow yourself to be present because once you hit the Wellesley College it’s going to get load and you won’t be able to hear yourself think.
+         &lt;br/&gt;&lt;br/&gt;
+         Desiree Linden&lt;br/&gt;
+         The Wellesley screen tunnel will raise the hair on your skin, give you the chills, and leave a ring in your ears. It’s a memory that  will sticks with you the rest of your life.
+         &lt;br/&gt;&lt;br/&gt;
+         Greg Meyer - Mile 15 &lt;br/&gt;
+         As you hit mile 15, you’re about a mile away from some of the sharpest drops and steepest climbs. It’s a good place to really gage your energy and if you’re not feeling fresh, just slow down and really take some time to recoup.
+         &lt;br/&gt;&lt;br/&gt;
+         Mile 15.5 &lt;br/&gt;
+         Between 15 &amp; 16 Miles, you’ll have to control yourself going down the lower Newton Hills.
+         &lt;br/&gt;&lt;br/&gt;
+         Mile 16&lt;br/&gt;
+         The Newton Hills begin. You can’t really see it but you can feel it. The crowd is young and screaming and helping you get up and over the first hill.
+         &lt;br/&gt;&lt;br/&gt;
+         20.5 Heartbreak Hill 
+         &lt;br/&gt;&lt;br/&gt;
+         Mile 22 (The Haunted Mile)&lt;br/&gt;
+         Descend into the city where you’ll pass the cemetery and they’ll soon understand why elites have in that very mile than any other mile in the entire race
+         &lt;br/&gt;&lt;br/&gt;
+         Right on Harford left on Boylston St then there’s only 600 meters to the finish. The crowd six people deep will take you through the finish.
+&quot; 
+         
+       )
+     xx
+   })
+   
+}
+
+# Run the application 
+shinyApp(ui = ui, server = server)</code></pre>
+<iframe data-deferred-src="app27eabc6a1285e8910de3ccb556592b12/?w=&amp;__subapp__=1" width="100%" height="400" class="shiny-frame shiny-frame-deferred"></iframe>
+</div>
+
+    </div>
+
+    
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/travel/">Travel</a>
+  
+  <a class="badge badge-light" href="/tags/visualization/">Visualization</a>
+  
+  <a class="badge badge-light" href="/tags/r-markdown/">R Markdown</a>
+  
+</div>
+
+
+
+
+    
+      
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+<div class="media author-card" itemscope itemtype="http://schema.org/Person">
+  
+  
+  <img class="portrait mr-3" src="/author/admin/avatar_hu756ae419dca872ecfcac293f58082c63_65976_250x250_fill_q90_lanczos_center.jpg" itemprop="image" alt="Avatar">
+  
+
+  <div class="media-body">
+    <h5 class="card-title" itemprop="name"><a href="/authors/admin">Leonardo Palomera</a></h5>
+    <h6 class="card-subtitle">Data Scientist</h6>
+    
+    <ul class="network-icon" aria-hidden="true">
+      
+      
+      
+      
+        
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a itemprop="sameAs" href="/#contact" >
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+      
+      
+      
+      
+        
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a itemprop="sameAs" href="https://twitter.com/Lpalomer" target="_blank" rel="noopener">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+      
+      
+      
+      
+        
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a itemprop="sameAs" href="https://github.com/Lpalomer262" target="_blank" rel="noopener">
+          <i class="fab fa-github"></i>
+        </a>
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+
+
+      
+      
+      <div class="article-widget">
+        <div class="hr-light"></div>
+        <h3>Related</h3>
+        <ul>
+          
+          <li><a href="/post/boston_run_like_a_girl/xxx_run_like_a_girl/">Run Like a Girl</a></li>
+          
+          <li><a href="/post/boston_introduction/xxx_the_runniers_of_boston/">Running With The Data</a></li>
+          
+          <li><a href="/post/boston_pacing/xxx_pacing_boston/">Pacing Boston</a></li>
+          
+          <li><a href="/post/berlin_world_record/berlin_world_record/">Berlin in 2.01.39</a></li>
+          
+        </ul>
+      </div>
+      
+    
+
+    
+
+    
+
+
+  </div>
+</article>
+
+<div class="container">
+  <footer class="site-footer">
+  
+  <p class="powered-by">
+    <a href="/privacy/">Privacy Policy</a>
+  </p>
+  
+
+  <p class="powered-by">
+    
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" id="back_to_top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+</div>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha512-+NqPlbbtM1QqiK8ZAo4Yrj2c4lNQoGv8P79DPtKzj++l5jnN39rHA/xsqn8zE9l0uSoxaCdrOgFs6yjyfbBxSg==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha256-VsEqElsCHSGmnmHXGQzvoWjWwoznFSZc6hs7ARLRacQ=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+        
+      
+
+      
+      
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "results found",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.9c79bd36ad5b530cf8825d78d951c339.js"></script>
+
+  </body>
+</html>
+
