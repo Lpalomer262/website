@@ -467,8 +467,11 @@
 <h2>A Comparative Data Analysis of Eliud Kipchoge’s World Record at the 2018 Berlin Marathon</h2>
 <div id="a-brief-overview" class="section level3">
 <h3>A Brief Overview</h3>
-<p>In the time since Eliud Kipchoge’s Breaking2 attempt on the Monza race-track in Italy, which secured him a place in the history books with 2 hours and 25 seconds over the marathon distance, he has seemed inevitable that he would go on to break the currentmarathon world-record, secured held by [Denis Kimetto] (<a href="https://www.iaaf.org/news/report/marathon-world-record-dennis-kimetto-berlin" class="uri">https://www.iaaf.org/news/report/marathon-world-record-dennis-kimetto-berlin</a>) since 2014 with a time of 2:02:57. And so, as Sunday morning approached the talk seemed less about if the current world-record would fall, and more about by how much.</p>
-<p>Since 1998 there have been 7 new male marathon world-records set on Berlin’s fast and flat course, 3 of them since 2010. Would we see a another? Sure enough, as if to order, Eliud Kipchoge served the latest world-record to Berlin crowds, crossing the line in an incredible 2:01:39, smashing the previous record by 1 minute and 18 seconds; we haven’t seen a record breaking margin of more than a minute since Derek Clayton lowered the world record from 2:12:00 to 2:09:37 in 1967; which is currently ranked in the world. It was all the more impressive because the 33-year-old Kenyan achieved it while running the last 17km on his own after the last of his pacers, not to mention the rest of the field, drifted away long before the finish.</p>
+<p>In the time since Eliud Kipchoge’s Breaking2 attempt on the Monza race-track in Italy, which secured him a place in the history books with 2 hours and 25 seconds over the marathon distance, he has seemed inevitable that he would go on to break the current marathon world-record, secured held by [Denis Kimetto] (<a href="https://www.iaaf.org/news/report/marathon-world-record-dennis-kimetto-berlin" class="uri">https://www.iaaf.org/news/report/marathon-world-record-dennis-kimetto-berlin</a>) since 2014 with a time of 2:02:57. And so, as Sunday morning approached the talk seemed less about if the current world-record would fall, and more about by how much.</p>
+<p>Since 1998 there have been 7 new male marathon world-records set on Berlin’s fast and flat course, 3 of them since 2010. Would we see a another? Sure enough, as if to order, Eliud Kipchoge served the latest world-record to Berlin crowds, crossing the line in an incredible 2:01:39, smashing the previous record by 1 minute and 18 seconds; we haven’t seen a record breaking margin of more than a minute since Derek Clayton lowered the world record from 2:12:00 to 2:09:37 in 1967; which is currently ranked 1,203 in the world. It was all the more impressive because the 33-year-old Kenyan achieved it while running the last 17km on his own after the last of his pacers, not to mention the rest of the field, drifted away long before the finish.</p>
+<pre class="r"><code>sub_210 %&gt;% 
+  filter(runnier == &quot;Derek Clayton&quot;) %&gt;% pull(rank)</code></pre>
+<pre><code>## [1] &quot;1203&quot; &quot;2212&quot;</code></pre>
 </div>
 <div id="in-comparison" class="section level3">
 <h3>2:01:39 in Comparison</h3>
@@ -476,24 +479,110 @@
 <pre class="r"><code>#&#39; AN INTERATIVE TO SHARE RESULTS MAYBE BASED IN SHINY ... 
 top_times %&gt;% arrange(rank) %&gt;%
   filter(str_detect(marathon, &quot;Berlin&quot;)) %&gt;% 
-  head(5)</code></pre>
-<pre><code>## # A tibble: 5 x 14
-##    rank runner   home   marathon km_5   km_10  km_15  km_20  km_21.1 km_25
-##   &lt;int&gt; &lt;chr&gt;    &lt;chr&gt;  &lt;chr&gt;    &lt;time&gt; &lt;time&gt; &lt;time&gt; &lt;time&gt; &lt;time&gt;  &lt;tim&gt;
-## 1     1 Eliud K… Kenya  Berlin … 14&#39;24&quot; 29&#39;01&quot; 43&#39;38&quot; 57&#39;56&quot; 01:01   01:12
-## 2     2 Dennis … Kenya  Berlin … 14&#39;42&quot; 29&#39;24&quot; 44&#39;10&quot; 58&#39;36&quot; 01:01   01:13
-## 3     3 Kenenis… Ethio… Berlin … 14&#39;21&quot; 29&#39;00&quot; 43&#39;37&quot; 58&#39;02&quot; 01:01   01:12
-## 4     5 Wilson … Kenya  Berlin … 14&#39;20&quot; 29&#39;00&quot; 43&#39;37&quot; 58&#39;02&quot; 01:01   01:12
-## 5     6 Emmanue… Kenya  Berlin … 14&#39;42&quot; 29&#39;24&quot; 44&#39;09&quot; 58&#39;35&quot; 01:01   01:13
-## # ... with 4 more variables: km_30 &lt;time&gt;, km_35 &lt;time&gt;, km_40 &lt;time&gt;,
-## #   km_42.2 &lt;time&gt;</code></pre>
-<pre class="r"><code>#&#39; NUMBER OF SUB 2:10:00 MARATHONS THAT HAVE OCCURED IN BERLIN
-sub_210 %&gt;% filter(str_detect(race, &quot;Berlin&quot;)) %&gt;% 
-  count() %&gt;% mutate(`%` = n / nrow(sub_210))</code></pre>
-<pre><code>## # A tibble: 1 x 2
-##       n    `%`
-##   &lt;int&gt;  &lt;dbl&gt;
-## 1   141 0.0521</code></pre>
+  head(5) %&gt;% 
+  knitr::kable()</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="right">rank</th>
+<th align="left">runner</th>
+<th align="left">home</th>
+<th align="left">marathon</th>
+<th align="left">km_5</th>
+<th align="left">km_10</th>
+<th align="left">km_15</th>
+<th align="left">km_20</th>
+<th align="left">km_21.1</th>
+<th align="left">km_25</th>
+<th align="left">km_30</th>
+<th align="left">km_35</th>
+<th align="left">km_40</th>
+<th align="left">km_42.2</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">1</td>
+<td align="left">Eliud Kipchoge</td>
+<td align="left">Kenya</td>
+<td align="left">Berlin 2018</td>
+<td align="left">00:14:24</td>
+<td align="left">00:29:01</td>
+<td align="left">00:43:38</td>
+<td align="left">00:57:56</td>
+<td align="left">01:01:06</td>
+<td align="left">01:12:24</td>
+<td align="left">01:26:45</td>
+<td align="left">01:41:01</td>
+<td align="left">01:55:32</td>
+<td align="left">02:01:39</td>
+</tr>
+<tr class="even">
+<td align="right">2</td>
+<td align="left">Dennis Kimetto</td>
+<td align="left">Kenya</td>
+<td align="left">Berlin 2014</td>
+<td align="left">00:14:42</td>
+<td align="left">00:29:24</td>
+<td align="left">00:44:10</td>
+<td align="left">00:58:36</td>
+<td align="left">01:01:45</td>
+<td align="left">01:13:08</td>
+<td align="left">01:27:38</td>
+<td align="left">01:41:47</td>
+<td align="left">01:56:29</td>
+<td align="left">02:02:57</td>
+</tr>
+<tr class="odd">
+<td align="right">3</td>
+<td align="left">Kenenisa Bekele</td>
+<td align="left">Ethiopia</td>
+<td align="left">Berlin 2016</td>
+<td align="left">00:14:21</td>
+<td align="left">00:29:00</td>
+<td align="left">00:43:37</td>
+<td align="left">00:58:02</td>
+<td align="left">01:01:11</td>
+<td align="left">01:12:47</td>
+<td align="left">01:27:30</td>
+<td align="left">01:42:01</td>
+<td align="left">01:56:55</td>
+<td align="left">02:03:03</td>
+</tr>
+<tr class="even">
+<td align="right">5</td>
+<td align="left">Wilson Kipsang</td>
+<td align="left">Kenya</td>
+<td align="left">Berlin 2016</td>
+<td align="left">00:14:20</td>
+<td align="left">00:29:00</td>
+<td align="left">00:43:37</td>
+<td align="left">00:58:02</td>
+<td align="left">01:01:11</td>
+<td align="left">01:12:47</td>
+<td align="left">01:27:26</td>
+<td align="left">01:41:56</td>
+<td align="left">01:56:56</td>
+<td align="left">02:03:13</td>
+</tr>
+<tr class="odd">
+<td align="right">6</td>
+<td align="left">Emmanuel Matai</td>
+<td align="left">Kenya</td>
+<td align="left">Berlin 2014</td>
+<td align="left">00:14:42</td>
+<td align="left">00:29:24</td>
+<td align="left">00:44:09</td>
+<td align="left">00:58:35</td>
+<td align="left">01:01:46</td>
+<td align="left">01:13:08</td>
+<td align="left">01:27:37</td>
+<td align="left">01:41:48</td>
+<td align="left">01:56:36</td>
+<td align="left">02:03:13</td>
+</tr>
+</tbody>
+</table>
 <p>Figure 2 shows the pacing (in decimal mins/km) for all 4 WRs across each of the 5km segments of the race (5 km, 10 km, …, 40km), and the final 2.195km segment. In each case the dashed line reflects the average pace for the runner in question. Based on the timing data released by the Berlin Marathon, Kipchoge ran the first 5 km in 14 mins, 24 seconds, or anout 2:53 mins/km, and he ran between 2:52 mins/km and 2:56 mins/km until the final 2.195 km stretch, which he dispatched at just under 2:48 mins/km pace, faster than any of last three male WRs managed in Berlin.</p>
 <pre class="r"><code>berlin_top &lt;- top_times %&gt;% arrange(rank) %&gt;%
   filter(str_detect(marathon, &quot;Berlin&quot;)) %&gt;% 
@@ -523,11 +612,11 @@ ggplot(aes(split_num, mi_pace)) +
   #&#39; IT WOULD BE NICE FOR THE RUNNIER TO BE RANKED IN DISTANCE
   facet_wrap(~ runner, ncol = 6) + 
    labs(title = &quot;Berlin&#39;s Top Runners&quot;, 
-       subtitle = &quot;Figure 1 - Less than 3 Seconds Distinguishes the World&#39;s Best Marathoners&quot;, 
+       subtitle = &quot;Figure 1 - Less than 3 Seconds Per Mile Distinguishes the World&#39;s Best Marathoners&quot;, 
        x = &quot;Kilometer Splits&quot;,
        y = &quot;Per Mile Pace&quot;) +
   pretty_theme_avg_pace</code></pre>
-<p><img src="/post/berlin_world_record/Berlin_World_Record_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p><img src="/post/berlin/Berlin_World_Record_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
 </div>
 <div id="by-the-splits" class="section level3">
 <h3>2:01:39 by the Splits</h3>
@@ -565,7 +654,7 @@ ggplot(aes(split_num, mi_pace)) +
   scale_fill_manual(values=c(&quot;#0062B4FF&quot;, &quot;#0062B4FF&quot;, &quot;#FF4C4CFF&quot;, &quot;#FF0000FF&quot;, &quot;#4883B4FF&quot;, &quot;#FF9999FF&quot;)) + 
   pretty_theme</code></pre>
 <pre><code>## Warning: Ignoring unknown parameters: legend</code></pre>
-<p><img src="/post/berlin_world_record/Berlin_World_Record_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p><img src="/post/berlin/Berlin_World_Record_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
 </div>
 <div id="from-behind" class="section level3">
 <h3>2:01:39 from Behind</h3>
@@ -598,12 +687,12 @@ berlin_wr_pace_long %&gt;%
   geom_line(aes(linetype = runner)) +
   geom_point() + 
   labs(title = &quot;Seconds Behind a World Record&quot;, 
-       subtitle = &quot;Figure 3 - Nobody had a Virtual Chance After Half Marathon&quot;, 
+       subtitle = &quot;Figure 3 - Kipchoge Seperates Himself from the Virtual Pack After the Half Marathon&quot;, 
        x = &quot;Kilometer Split&quot;,
        y = &quot;Seconds to a World Record&quot;) +
   labs(linetype = &quot;Runner&quot;) +
   pretty_theme_seconds</code></pre>
-<p><img src="/post/berlin_world_record/Berlin_World_Record_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p><img src="/post/berlin/Berlin_World_Record_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
 <p>Using Kipchoge’s WR run as the baseline, Figure 6 shows the number of minutes each recent world-record holder was behind Kipchoge at the end of each 5 km race segment (and at the finish-line) in this virtual race. Kipchoge leads from the start, stays in front, and gradually but steadily extends his lead after the 15km mark. Kipsang stays in touch with Kipchoge during the first 15km of the race, getting to within just over 7 seconds by the end of the 15 km mark. But after this, begins to drop back. Meanwhile, Kimetto, after spending the first 20 km in 4th position (by 20 km he is 40 seconds behind Kipchoge), moves into second place and starts to recover some ground to get within 35 seconds of Kipchoge by the end of 35 km. Despite the beginnings of what might have been a late surge by Kimetto, Kipchoge is too strong and extends his now unassailable lead all the way to the end, finishing a full 78 seconds ahead of Kimetto, just over 94 seconds ahead of Kipsang, and almost 119 seconds ahead of Musyoki. To put this another way, we can estimate how far behind (in distance rather than time) each of Kimetto, Kipsang, and Musyoki would have been when Kipchoge crossed the line, based on their average race paces. The results of this are shown in Figure 7: Kimetto would have finished 446m (almost half a kilometer) behind Kipchoge; Kipsang would have been just under 600m behind; and Musyoki would have been 675m back. Not even even close!</p>
 <pre class="r"><code>berlin_mps &lt;- berlin_top %&gt;%
   group_by(runner) %&gt;%
@@ -628,7 +717,7 @@ berlin_wr_pace_long %&gt;%
        y = &quot;Meter to a World Record&quot;) +
   coord_flip() + 
   pretty_theme_meters</code></pre>
-<p><img src="/post/berlin_world_record/Berlin_World_Record_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p><img src="/post/berlin/Berlin_World_Record_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
 <p>By any objective measure Kipchoge’s Berlin world-record race was nothing short of stunning. He obliterated Kimetto’s 2014 record, set on the same course, and his incredibly disciplined negative split is all the more impressive because he did it largely on his own, after dropping the last of his pacers shortly after the halfway point. It seems right and proper that on September 16th 2018 the fastest marathoner also ran the fastest marathon.</p>
 </div>
 </div>

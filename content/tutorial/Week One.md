@@ -18,7 +18,7 @@ type: docs
 ### Monday July 1st, 2019
 
 #### AM: Instruction to Statistics
-* Introduction
+* [Introduction](https://docs.google.com/forms/d/e/1FAIpQLSeqdWzYcE4bzfC09L4xm-YM5nxAZ0_YsNX6rBgzBet6dJe6lA/viewform?usp=sf_link)
 * The Data Science Venn Diagram
 * Class Survey
 * Statistical Principles
@@ -26,7 +26,7 @@ type: docs
 #### PM: Introduction to Programming
 * Data Fundamentals - Presentation Slides
 * Introduction to R – Presentation Slides
-* (Data Camp) Introduction to R
+* (Data Camp) [Introduction to R](https://www.datacamp.com/groups/shared_links/ae3bc65cbbfd9bb6ec24b9714510a23ee2f2aa5c)
 
 
 ### Tuesday July 2nd, 2019
@@ -45,7 +45,7 @@ type: docs
 
 #### PM: Begin Introduction to Economics 
 * Decision Theory
-   + (Break) Why the World Cup Is a n Economist’s Dream (Ep. 6)
+   + (Break) Why the World Cup Is an Economist’s Dream (Ep. 6)
    + Penalty Kicks Visualization
 
 ### Thursday July 4th, 2019

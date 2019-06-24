@@ -106,15 +106,14 @@
       <description>
 
 
-&lt;p&gt;As of today April 2019, I have finished six marathons. No matter how the preceding 26.2 miles have played out, I’m always thankful that my body has withstood the distance and my mind has managed its aversion to suffering. It also feels good to stop. Unlike each of the six marathons I’d run before, my feeling upon crossing the finish line in this year’s Boston Marathon was joy.&lt;/p&gt;
-&lt;p&gt;Running a marathon is a little bit like coaching a group of synchronized swimmers: there are endless variables to manipulate and coordinate, and when they all come together, it’s a beautiful thing. But one small blip can throw the whole performance off. Some elements of marathoning—like pacing plans, racing flats, and fueling strategies—are under the control of the racer and easily fine-tuned in advance.&lt;/p&gt;
-&lt;p&gt;Others—like weather conditions, side stitches, and an erratic pace fuel by adrenaline—are maddeningly out of our control. All we can do is prepare our best, hope for minimal surprises on race day, and manage those that arise as well as we can.&lt;/p&gt;
-&lt;p&gt;Boston is such a memorable course, but I can’t say I remember much of it. Of course, the Wellesley Scream Tunnel, tuning left on Boylston St, creasing Heartbreak Hill are instances in which I remember contemplating but nothing special. My most memorable moments are as followed.&lt;/p&gt;
+&lt;p&gt;As of April 20th 2019, I’ve finished my sixth marathon. No matter how the preceding 26.2 miles have played out, I’ve always been thankful that my body has withstood the distance and my mind has managed its aversion to suffering. It also feels good to stop. Unlike each of the six marathons I’d run before, my feeling upon crossing the finish line in this year’s Boston Marathon was absolute joy.&lt;/p&gt;
+&lt;p&gt;Running a “ideal” marathon is a little bit like coaching a group of synchronized swimmers: there are endless variables to manipulate and coordinate. When it all come together, it’s a beautiful thing. But one small blip can throw the whole performance off. Some elements of marathoning—like pacing plans, racing flats, and fueling strategies—are under the control of the racer and easily fine-tuned in advance. Others—like weather conditions, side stitches, and an erratic pace fuel by adrenaline—are maddeningly out of our control. All we can do is prepare our best, hope for minimal surprises on race day, and manage those that arise as well as we can.&lt;/p&gt;
+&lt;p&gt;The same reasons that make the marathon so hard to nail, and so crushing when we don’t, make a good marathon immensely satisfying. It’s not often that all of the main variables align exactly when they need to: a healthy, fit, and rested body; a crisp, still day; similarly matched competitors to work and battle with; a well-executed race plan; and minimal road bumps over a 26.2-mile. I was happy to cross the finish line at 2:45:33, a personal best of nearly 10 minutes.&lt;/p&gt;
+&lt;p&gt;Boston is such a memorable course, but I can’t say I remember much of it. Of course, the Wellesley Scream Tunnel, tuning left on Boylston St, and creasing Heartbreak Hill are instances in which I remember contemplating but nothing special. My most memorable moments are as followed.&lt;/p&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;&lt;p&gt;During the first nutrition stations, I fumbled a Cliff “Shot” Energy. Looking back, mentally, that moment could have crushed my concentration and focus going forward. To my surprise, seconds later I notice a “Shot” dangling in front of me. The runner next must have heard my heavy sigh as I fell back in line with the pack. After some none verbal exchanges of expressions, I accepted his gift and we back to racing. Fortunately, we finished seconds apart and I was able to properly thank him, a hug and un-coherent few words.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;During the first nutrition stations, I fumbled a Cliff “Shot” Energy. Looking back, mentally, that moment could have crushed my concentration and focus going forward. To my surprise, seconds later I notice a “Shot” dangling in front of me. The runner next must have heard my heavy sigh as I fell back in line with the pack. After some non-verbal exchanges of expressions, I accepted his gift and we back to racing. Fortunately, we finished seconds apart and I was able to properly thank him, a hug and un-coherent few words.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;I felt strong through the hillier sections Boston has to offer. And with all due respect to “Heartbreak Hill,” it wasn’t as tough as people said. I do however remember Wayne Leonard, a project manager whom I’ve worked with since moving to Denver, running alongside me. His attempt to take a picture while sprinting uphill was comical to say the least. I think for the first time during the race, I smiled and knew the worst sections were behind me.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;The same reasons that make the marathon so hard to nail, and so crushing when we don’t, make a good marathon immensely satisfying. It’s not often that all of the main variables align exactly when they need to: a healthy, fit, and rested body; a crisp, still day; similarly matched competitors to work and battle with; a well-executed race plan; and minimal road bumps over a 26.2-mile. I was happy to cross the finish line at 2:45:33, a personal best of nearly 10 minutes.&lt;/p&gt;
 &lt;p&gt;A special thanks to &lt;a href=&#34;https://www.instagram.com/luisreyguevara/&#34;&gt;Luis Guevara&lt;/a&gt; and &lt;a href=&#34;https://www.instagram.com/corredaniel/&#34;&gt;Daniel Herrera&lt;/a&gt; for making a memorable course and scratching one of six off the bucket list.&lt;/p&gt;
 </description>
     </item>
@@ -388,7 +387,7 @@ boston_percent_overall &amp;lt;- boston_paces_pct %&amp;gt;%
     </item>
     
     <item>
-      <title>Running With The Data</title>
+      <title>Running With The Data, Boston Marathon</title>
       <link>/post/boston/the_runners_of_boston/</link>
       <pubDate>Mon, 01 Apr 2019 00:00:00 +0000</pubDate>
       
@@ -407,11 +406,11 @@ boston_percent_overall &amp;lt;- boston_paces_pct %&amp;gt;%
 &lt;/div&gt;
 &lt;div id=&#34;introduction&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;With the Boston Marathon quickly approching I thought I would write up a few posts on the data generated by the thousands of runners who completed the punishing course during the years: 2015, 2016, 2017. The data was generously provided by &lt;a href=&#34;https://www.kaggle.com/rojour/boston-results&#34;&gt;Kaggle&lt;/a&gt;. Combined, the dataset contains Boston Marathon finishing times for over 75,000 participants. A small fraction of records have been excluded (&amp;lt;1%) because they contained missing timing data or other anomalies. Each observations includes information such as the gender and age of the runner, their country, state, and/or city of origin, their overall finish-time, and the split-times for 5km intervals along the course.&lt;/p&gt;
+&lt;p&gt;With the Boston Marathon quickly approching I thought I would write up a few posts on the data generated by the thousands of runners who completed the punishing course during the years: 2015, 2016, andw 2017. The data was generously provided by &lt;a href=&#34;https://www.kaggle.com/rojour/boston-results&#34;&gt;Kaggle&lt;/a&gt;. Combined, the dataset contains Boston Marathon finishing times for over 75,000 participants. A small fraction of records have been excluded (&amp;lt;1%) because they contained missing timing data or other anomalies. Each observations includes information such as the gender and age of the runner, their country, state, and/or city of origin, their overall finish-time, and the split-times for 5km intervals along the course.&lt;/p&gt;
 &lt;p&gt;This will be the first of a sequence of posts over the next few weeks. In it I will focus on the runners of the Boston Marathon looking at factors such as gender, age, and place of origin and how they influence performance. Later posts will consider pacing, hitting the wall, Boston qualification times, among other topics, which are hopefull of interest to marathon runners and data-geeks alike.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;look-whos-runnning&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Look Who’s Runnning&lt;/h2&gt;
+&lt;div id=&#34;look-whos-running&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Look Who’s Running&lt;/h2&gt;
 &lt;p&gt;Let’s start by looking at the runners themselves, their gender, age, and places of origin.&lt;/p&gt;
 &lt;div id=&#34;gender-age&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Gender &amp;amp; Age&lt;/h3&gt;
@@ -480,8 +479,11 @@ boston_percent_overall &amp;lt;- boston_paces_pct %&amp;gt;%
 &lt;h2&gt;A Comparative Data Analysis of Eliud Kipchoge’s World Record at the 2018 Berlin Marathon&lt;/h2&gt;
 &lt;div id=&#34;a-brief-overview&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;A Brief Overview&lt;/h3&gt;
-&lt;p&gt;In the time since Eliud Kipchoge’s Breaking2 attempt on the Monza race-track in Italy, which secured him a place in the history books with 2 hours and 25 seconds over the marathon distance, he has seemed inevitable that he would go on to break the currentmarathon world-record, secured held by [Denis Kimetto] (&lt;a href=&#34;https://www.iaaf.org/news/report/marathon-world-record-dennis-kimetto-berlin&#34; class=&#34;uri&#34;&gt;https://www.iaaf.org/news/report/marathon-world-record-dennis-kimetto-berlin&lt;/a&gt;) since 2014 with a time of 2:02:57. And so, as Sunday morning approached the talk seemed less about if the current world-record would fall, and more about by how much.&lt;/p&gt;
-&lt;p&gt;Since 1998 there have been 7 new male marathon world-records set on Berlin’s fast and flat course, 3 of them since 2010. Would we see a another? Sure enough, as if to order, Eliud Kipchoge served the latest world-record to Berlin crowds, crossing the line in an incredible 2:01:39, smashing the previous record by 1 minute and 18 seconds; we haven’t seen a record breaking margin of more than a minute since Derek Clayton lowered the world record from 2:12:00 to 2:09:37 in 1967; which is currently ranked in the world. It was all the more impressive because the 33-year-old Kenyan achieved it while running the last 17km on his own after the last of his pacers, not to mention the rest of the field, drifted away long before the finish.&lt;/p&gt;
+&lt;p&gt;In the time since Eliud Kipchoge’s Breaking2 attempt on the Monza race-track in Italy, which secured him a place in the history books with 2 hours and 25 seconds over the marathon distance, he has seemed inevitable that he would go on to break the current marathon world-record, secured held by [Denis Kimetto] (&lt;a href=&#34;https://www.iaaf.org/news/report/marathon-world-record-dennis-kimetto-berlin&#34; class=&#34;uri&#34;&gt;https://www.iaaf.org/news/report/marathon-world-record-dennis-kimetto-berlin&lt;/a&gt;) since 2014 with a time of 2:02:57. And so, as Sunday morning approached the talk seemed less about if the current world-record would fall, and more about by how much.&lt;/p&gt;
+&lt;p&gt;Since 1998 there have been 7 new male marathon world-records set on Berlin’s fast and flat course, 3 of them since 2010. Would we see a another? Sure enough, as if to order, Eliud Kipchoge served the latest world-record to Berlin crowds, crossing the line in an incredible 2:01:39, smashing the previous record by 1 minute and 18 seconds; we haven’t seen a record breaking margin of more than a minute since Derek Clayton lowered the world record from 2:12:00 to 2:09:37 in 1967; which is currently ranked 1,203 in the world. It was all the more impressive because the 33-year-old Kenyan achieved it while running the last 17km on his own after the last of his pacers, not to mention the rest of the field, drifted away long before the finish.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;sub_210 %&amp;gt;% 
+  filter(runnier == &amp;quot;Derek Clayton&amp;quot;) %&amp;gt;% pull(rank)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;1203&amp;quot; &amp;quot;2212&amp;quot;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;in-comparison&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;2:01:39 in Comparison&lt;/h3&gt;
@@ -489,24 +491,110 @@ boston_percent_overall &amp;lt;- boston_paces_pct %&amp;gt;%
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#&amp;#39; AN INTERATIVE TO SHARE RESULTS MAYBE BASED IN SHINY ... 
 top_times %&amp;gt;% arrange(rank) %&amp;gt;%
   filter(str_detect(marathon, &amp;quot;Berlin&amp;quot;)) %&amp;gt;% 
-  head(5)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## # A tibble: 5 x 14
-##    rank runner   home   marathon km_5   km_10  km_15  km_20  km_21.1 km_25
-##   &amp;lt;int&amp;gt; &amp;lt;chr&amp;gt;    &amp;lt;chr&amp;gt;  &amp;lt;chr&amp;gt;    &amp;lt;time&amp;gt; &amp;lt;time&amp;gt; &amp;lt;time&amp;gt; &amp;lt;time&amp;gt; &amp;lt;time&amp;gt;  &amp;lt;tim&amp;gt;
-## 1     1 Eliud K… Kenya  Berlin … 14&amp;#39;24&amp;quot; 29&amp;#39;01&amp;quot; 43&amp;#39;38&amp;quot; 57&amp;#39;56&amp;quot; 01:01   01:12
-## 2     2 Dennis … Kenya  Berlin … 14&amp;#39;42&amp;quot; 29&amp;#39;24&amp;quot; 44&amp;#39;10&amp;quot; 58&amp;#39;36&amp;quot; 01:01   01:13
-## 3     3 Kenenis… Ethio… Berlin … 14&amp;#39;21&amp;quot; 29&amp;#39;00&amp;quot; 43&amp;#39;37&amp;quot; 58&amp;#39;02&amp;quot; 01:01   01:12
-## 4     5 Wilson … Kenya  Berlin … 14&amp;#39;20&amp;quot; 29&amp;#39;00&amp;quot; 43&amp;#39;37&amp;quot; 58&amp;#39;02&amp;quot; 01:01   01:12
-## 5     6 Emmanue… Kenya  Berlin … 14&amp;#39;42&amp;quot; 29&amp;#39;24&amp;quot; 44&amp;#39;09&amp;quot; 58&amp;#39;35&amp;quot; 01:01   01:13
-## # ... with 4 more variables: km_30 &amp;lt;time&amp;gt;, km_35 &amp;lt;time&amp;gt;, km_40 &amp;lt;time&amp;gt;,
-## #   km_42.2 &amp;lt;time&amp;gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#&amp;#39; NUMBER OF SUB 2:10:00 MARATHONS THAT HAVE OCCURED IN BERLIN
-sub_210 %&amp;gt;% filter(str_detect(race, &amp;quot;Berlin&amp;quot;)) %&amp;gt;% 
-  count() %&amp;gt;% mutate(`%` = n / nrow(sub_210))&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## # A tibble: 1 x 2
-##       n    `%`
-##   &amp;lt;int&amp;gt;  &amp;lt;dbl&amp;gt;
-## 1   141 0.0521&lt;/code&gt;&lt;/pre&gt;
+  head(5) %&amp;gt;% 
+  knitr::kable()&lt;/code&gt;&lt;/pre&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;right&#34;&gt;rank&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;runner&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;home&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;marathon&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;km_5&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;km_10&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;km_15&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;km_20&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;km_21.1&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;km_25&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;km_30&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;km_35&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;km_40&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;km_42.2&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Eliud Kipchoge&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Kenya&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Berlin 2018&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;00:14:24&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;00:29:01&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;00:43:38&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;00:57:56&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;01:01:06&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;01:12:24&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;01:26:45&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;01:41:01&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;01:55:32&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;02:01:39&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;right&#34;&gt;2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Dennis Kimetto&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Kenya&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Berlin 2014&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;00:14:42&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;00:29:24&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;00:44:10&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;00:58:36&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;01:01:45&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;01:13:08&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;01:27:38&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;01:41:47&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;01:56:29&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;02:02:57&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;right&#34;&gt;3&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Kenenisa Bekele&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Ethiopia&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Berlin 2016&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;00:14:21&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;00:29:00&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;00:43:37&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;00:58:02&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;01:01:11&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;01:12:47&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;01:27:30&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;01:42:01&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;01:56:55&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;02:03:03&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;right&#34;&gt;5&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Wilson Kipsang&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Kenya&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Berlin 2016&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;00:14:20&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;00:29:00&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;00:43:37&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;00:58:02&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;01:01:11&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;01:12:47&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;01:27:26&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;01:41:56&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;01:56:56&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;02:03:13&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;right&#34;&gt;6&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Emmanuel Matai&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Kenya&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Berlin 2014&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;00:14:42&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;00:29:24&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;00:44:09&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;00:58:35&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;01:01:46&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;01:13:08&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;01:27:37&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;01:41:48&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;01:56:36&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;02:03:13&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 &lt;p&gt;Figure 2 shows the pacing (in decimal mins/km) for all 4 WRs across each of the 5km segments of the race (5 km, 10 km, …, 40km), and the final 2.195km segment. In each case the dashed line reflects the average pace for the runner in question. Based on the timing data released by the Berlin Marathon, Kipchoge ran the first 5 km in 14 mins, 24 seconds, or anout 2:53 mins/km, and he ran between 2:52 mins/km and 2:56 mins/km until the final 2.195 km stretch, which he dispatched at just under 2:48 mins/km pace, faster than any of last three male WRs managed in Berlin.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;berlin_top &amp;lt;- top_times %&amp;gt;% arrange(rank) %&amp;gt;%
   filter(str_detect(marathon, &amp;quot;Berlin&amp;quot;)) %&amp;gt;% 
@@ -536,11 +624,11 @@ ggplot(aes(split_num, mi_pace)) +
   #&amp;#39; IT WOULD BE NICE FOR THE RUNNIER TO BE RANKED IN DISTANCE
   facet_wrap(~ runner, ncol = 6) + 
    labs(title = &amp;quot;Berlin&amp;#39;s Top Runners&amp;quot;, 
-       subtitle = &amp;quot;Figure 1 - Less than 3 Seconds Distinguishes the World&amp;#39;s Best Marathoners&amp;quot;, 
+       subtitle = &amp;quot;Figure 1 - Less than 3 Seconds Per Mile Distinguishes the World&amp;#39;s Best Marathoners&amp;quot;, 
        x = &amp;quot;Kilometer Splits&amp;quot;,
        y = &amp;quot;Per Mile Pace&amp;quot;) +
   pretty_theme_avg_pace&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/berlin_world_record/Berlin_World_Record_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/berlin/Berlin_World_Record_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;by-the-splits&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;2:01:39 by the Splits&lt;/h3&gt;
@@ -578,7 +666,7 @@ ggplot(aes(split_num, mi_pace)) +
   scale_fill_manual(values=c(&amp;quot;#0062B4FF&amp;quot;, &amp;quot;#0062B4FF&amp;quot;, &amp;quot;#FF4C4CFF&amp;quot;, &amp;quot;#FF0000FF&amp;quot;, &amp;quot;#4883B4FF&amp;quot;, &amp;quot;#FF9999FF&amp;quot;)) + 
   pretty_theme&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## Warning: Ignoring unknown parameters: legend&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/berlin_world_record/Berlin_World_Record_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/berlin/Berlin_World_Record_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;from-behind&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;2:01:39 from Behind&lt;/h3&gt;
@@ -611,12 +699,12 @@ berlin_wr_pace_long %&amp;gt;%
   geom_line(aes(linetype = runner)) +
   geom_point() + 
   labs(title = &amp;quot;Seconds Behind a World Record&amp;quot;, 
-       subtitle = &amp;quot;Figure 3 - Nobody had a Virtual Chance After Half Marathon&amp;quot;, 
+       subtitle = &amp;quot;Figure 3 - Kipchoge Seperates Himself from the Virtual Pack After the Half Marathon&amp;quot;, 
        x = &amp;quot;Kilometer Split&amp;quot;,
        y = &amp;quot;Seconds to a World Record&amp;quot;) +
   labs(linetype = &amp;quot;Runner&amp;quot;) +
   pretty_theme_seconds&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/berlin_world_record/Berlin_World_Record_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/berlin/Berlin_World_Record_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Using Kipchoge’s WR run as the baseline, Figure 6 shows the number of minutes each recent world-record holder was behind Kipchoge at the end of each 5 km race segment (and at the finish-line) in this virtual race. Kipchoge leads from the start, stays in front, and gradually but steadily extends his lead after the 15km mark. Kipsang stays in touch with Kipchoge during the first 15km of the race, getting to within just over 7 seconds by the end of the 15 km mark. But after this, begins to drop back. Meanwhile, Kimetto, after spending the first 20 km in 4th position (by 20 km he is 40 seconds behind Kipchoge), moves into second place and starts to recover some ground to get within 35 seconds of Kipchoge by the end of 35 km. Despite the beginnings of what might have been a late surge by Kimetto, Kipchoge is too strong and extends his now unassailable lead all the way to the end, finishing a full 78 seconds ahead of Kimetto, just over 94 seconds ahead of Kipsang, and almost 119 seconds ahead of Musyoki. To put this another way, we can estimate how far behind (in distance rather than time) each of Kimetto, Kipsang, and Musyoki would have been when Kipchoge crossed the line, based on their average race paces. The results of this are shown in Figure 7: Kimetto would have finished 446m (almost half a kilometer) behind Kipchoge; Kipsang would have been just under 600m behind; and Musyoki would have been 675m back. Not even even close!&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;berlin_mps &amp;lt;- berlin_top %&amp;gt;%
   group_by(runner) %&amp;gt;%
@@ -641,7 +729,7 @@ berlin_wr_pace_long %&amp;gt;%
        y = &amp;quot;Meter to a World Record&amp;quot;) +
   coord_flip() + 
   pretty_theme_meters&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/berlin_world_record/Berlin_World_Record_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/berlin/Berlin_World_Record_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;By any objective measure Kipchoge’s Berlin world-record race was nothing short of stunning. He obliterated Kimetto’s 2014 record, set on the same course, and his incredibly disciplined negative split is all the more impressive because he did it largely on his own, after dropping the last of his pacers shortly after the halfway point. It seems right and proper that on September 16th 2018 the fastest marathoner also ran the fastest marathon.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -661,7 +749,7 @@ berlin_wr_pace_long %&amp;gt;%
 &lt;h4 id=&#34;am-instruction-to-statistics&#34;&gt;AM: Instruction to Statistics&lt;/h4&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Introduction&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.google.com/forms/d/e/1FAIpQLSeqdWzYcE4bzfC09L4xm-YM5nxAZ0_YsNX6rBgzBet6dJe6lA/viewform?usp=sf_link&#34; target=&#34;_blank&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;The Data Science Venn Diagram&lt;/li&gt;
 &lt;li&gt;Class Survey&lt;/li&gt;
 &lt;li&gt;Statistical Principles&lt;/li&gt;
@@ -672,7 +760,7 @@ berlin_wr_pace_long %&amp;gt;%
 &lt;ul&gt;
 &lt;li&gt;Data Fundamentals - Presentation Slides&lt;/li&gt;
 &lt;li&gt;Introduction to R – Presentation Slides&lt;/li&gt;
-&lt;li&gt;(Data Camp) Introduction to R&lt;/li&gt;
+&lt;li&gt;(Data Camp) &lt;a href=&#34;https://www.datacamp.com/groups/shared_links/ae3bc65cbbfd9bb6ec24b9714510a23ee2f2aa5c&#34; target=&#34;_blank&#34;&gt;Introduction to R&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&#34;tuesday-july-2nd-2019&#34;&gt;Tuesday July 2nd, 2019&lt;/h3&gt;
@@ -706,7 +794,7 @@ berlin_wr_pace_long %&amp;gt;%
 &lt;li&gt;Decision Theory
 
 &lt;ul&gt;
-&lt;li&gt;(Break) Why the World Cup Is a n Economist’s Dream (Ep. 6)&lt;/li&gt;
+&lt;li&gt;(Break) Why the World Cup Is an Economist’s Dream (Ep. 6)&lt;/li&gt;
 &lt;li&gt;Penalty Kicks Visualization&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -815,8 +903,6 @@ Machine Learning - Titanic&lt;/li&gt;
 &lt;li&gt;Exposition Presentation&lt;/li&gt;
 &lt;li&gt;Final Refelections&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;head(mtcars)&lt;/p&gt;
 </description>
     </item>
     

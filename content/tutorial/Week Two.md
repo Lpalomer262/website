@@ -52,5 +52,3 @@ Machine Learning - Titanic
 #### PM: 
 * Exposition Presentation
 * Final Refelections 
-
-head(mtcars)

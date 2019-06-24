@@ -35,12 +35,13 @@ berlin_best  <- c("Eliud Kipchoge", "Dennis Kimetto", "Kenenisa Bekele",
 
 ### A Brief Overview
 
-In the time since Eliud Kipchoge’s Breaking2 attempt on the Monza race-track in Italy, which secured him a place in the history books with 2 hours and 25 seconds over the marathon distance, he has seemed inevitable that he would go on to break the currentmarathon world-record, secured held by [Denis Kimetto] (https://www.iaaf.org/news/report/marathon-world-record-dennis-kimetto-berlin) since 2014 with a time of 2:02:57. And so, as Sunday morning approached the talk seemed less about if the current world-record would fall, and more about by how much.
+In the time since Eliud Kipchoge’s Breaking2 attempt on the Monza race-track in Italy, which secured him a place in the history books with 2 hours and 25 seconds over the marathon distance, he has seemed inevitable that he would go on to break the current marathon world-record, secured held by [Denis Kimetto] (https://www.iaaf.org/news/report/marathon-world-record-dennis-kimetto-berlin) since 2014 with a time of 2:02:57. And so, as Sunday morning approached the talk seemed less about if the current world-record would fall, and more about by how much.
 
-Since 1998 there have been 7 new male marathon world-records set on Berlin’s fast and flat course, 3 of them since 2010. Would we see a another? Sure enough, as if to order, Eliud Kipchoge served the latest world-record to Berlin crowds, crossing the line in an incredible 2:01:39, smashing the previous record by 1 minute and 18 seconds; we haven’t seen a record breaking margin of more than a minute since Derek Clayton lowered the world record from 2:12:00 to 2:09:37 in 1967; which is currently ranked `r sub_210 %>% filter(runnier == "Derek Clayton", time == "2:09:37") %>% pull(rank)` in the world. It was all the more impressive because the 33-year-old Kenyan achieved it while running the last 17km on his own after the last of his pacers, not to mention the rest of the field, drifted away long before the finish.
+Since 1998 there have been 7 new male marathon world-records set on Berlin’s fast and flat course, 3 of them since 2010. Would we see a another? Sure enough, as if to order, Eliud Kipchoge served the latest world-record to Berlin crowds, crossing the line in an incredible 2:01:39, smashing the previous record by 1 minute and 18 seconds; we haven’t seen a record breaking margin of more than a minute since Derek Clayton lowered the world record from 2:12:00 to 2:09:37 in 1967; which is currently ranked 1,203 in the world. It was all the more impressive because the 33-year-old Kenyan achieved it while running the last 17km on his own after the last of his pacers, not to mention the rest of the field, drifted away long before the finish.
 
 ```{r}
-
+sub_210 %>% 
+  filter(runnier == "Derek Clayton") %>% pull(rank)
 ```
 
 
@@ -52,8 +53,12 @@ How does Kipchoge’s new record compare with previous WRs? The great thing abou
 #' AN INTERATIVE TO SHARE RESULTS MAYBE BASED IN SHINY ... 
 top_times %>% arrange(rank) %>%
   filter(str_detect(marathon, "Berlin")) %>% 
-  head(5)
+  head(5) %>% 
+  knitr::kable()
 
+```
+
+```{r include=FALSE}
 #' NUMBER OF SUB 2:10:00 MARATHONS THAT HAVE OCCURED IN BERLIN
 sub_210 %>% filter(str_detect(race, "Berlin")) %>% 
   count() %>% mutate(`%` = n / nrow(sub_210))
@@ -93,7 +98,7 @@ ggplot(aes(split_num, mi_pace)) +
   #' IT WOULD BE NICE FOR THE RUNNIER TO BE RANKED IN DISTANCE
   facet_wrap(~ runner, ncol = 6) + 
    labs(title = "Berlin's Top Runners", 
-       subtitle = "Figure 1 - Less than 3 Seconds Distinguishes the World's Best Marathoners", 
+       subtitle = "Figure 1 - Less than 3 Seconds Per Mile Distinguishes the World's Best Marathoners", 
        x = "Kilometer Splits",
        y = "Per Mile Pace") +
   pretty_theme_avg_pace
@@ -172,7 +177,7 @@ berlin_wr_pace_long %>%
   geom_line(aes(linetype = runner)) +
   geom_point() + 
   labs(title = "Seconds Behind a World Record", 
-       subtitle = "Figure 3 - Nobody had a Virtual Chance After Half Marathon", 
+       subtitle = "Figure 3 - Kipchoge Seperates Himself from the Virtual Pack After the Half Marathon", 
        x = "Kilometer Split",
        y = "Seconds to a World Record") +
   labs(linetype = "Runner") +
