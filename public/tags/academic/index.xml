@@ -61,5 +61,14 @@
       <description>A Comparative Data Analysis of Eliud Kipchoge’s World Record at the 2018 Berlin Marathon A Brief Overview In the time since Eliud Kipchoge’s Breaking2 attempt on the Monza race-track in Italy, which secured him a place in the history books with 2 hours and 25 seconds over the marathon distance, he has seemed inevitable that he would go on to break the current marathon world-record, secured held by [Denis Kimetto] (https://www.</description>
     </item>
     
+    <item>
+      <title>Code For Denver</title>
+      <link>/post/codefordenver/</link>
+      <pubDate>Fri, 15 Feb 1991 00:00:00 +0000</pubDate>
+      
+      <guid>/post/codefordenver/</guid>
+      <description># STUDENT NAME KEY -------------------------------------------------------- #&amp;#39; STUDENT DATABASE student_link &amp;lt;- &amp;quot;http://gsndev.com/gsndb/my/student/&amp;quot; student_key &amp;lt;- jsonlite::fromJSON(txt = student_link, flatten = TRUE) %&amp;gt;% as_tibble() %&amp;gt;% rename(student_name = studentName) # STUDENT INFORMATION ----------------------------------------------------- json_links&amp;lt;- paste0(&amp;quot;http://gsndev.com/gsndb/my/student/&amp;quot;, seq(1:2), &amp;quot;/&amp;quot;) load_info &amp;lt;- function(link){ json_data &amp;lt;- jsonlite::fromJSON(txt = link, flatten = TRUE) %&amp;gt;% as_tibble() #&amp;#39; EXTRACT COMMON VARIABLES student_info &amp;lt;- json_data %&amp;gt;% select(studentId:reasonInProgram) %&amp;gt;% left_join(student_key %&amp;gt;% select(studentId, student_name), by = &amp;quot;studentId&amp;quot;) } load_grades &amp;lt;- function(link){ json_data &amp;lt;- jsonlite::fromJSON(txt = link, flatten = TRUE) %&amp;gt;% as_tibble() #&amp;#39; GRADES grade &amp;lt;- json_data$gradeSet %&amp;gt;% data.</description>
+    </item>
+    
   </channel>
 </rss>

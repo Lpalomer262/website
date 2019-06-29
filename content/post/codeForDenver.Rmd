@@ -1,0 +1,259 @@
+---
+title: Code For Denver
+author: Leonardo D. Palomera
+date: '1991-02-15'
+categories:
+  - R
+tags:
+  - Academic
+  - R Markdown
+  - Visualization
+output: html_document
+subtitle: Code For Denver
+summary: Educational Visulzation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+source(file = "../../../../projects/projects/cfd/scripts/000_source.R")
+
+
+#' install.packages("jsonlite")
+library(jsonlite)
+```
+
+
+```{r include = TRUE}
+
+# STUDENT NAME KEY --------------------------------------------------------
+#' STUDENT DATABASE
+student_link <- "http://gsndev.com/gsndb/my/student/"
+student_key <-  jsonlite::fromJSON(txt = student_link, flatten = TRUE) %>% 
+  as_tibble() %>%
+  rename(student_name = studentName)
+
+# STUDENT INFORMATION -----------------------------------------------------
+json_links<- paste0("http://gsndev.com/gsndb/my/student/", seq(1:2), "/")
+
+
+load_info <- function(link){
+  json_data <- 
+    jsonlite::fromJSON(txt = link, flatten = TRUE) %>% 
+    as_tibble() 
+  
+  #' EXTRACT COMMON VARIABLES
+  student_info <- json_data %>% select(studentId:reasonInProgram) %>% 
+    left_join(student_key %>% select(studentId, student_name),
+              by = "studentId")
+  
+}
+
+
+load_grades <- function(link){
+  json_data <- 
+    jsonlite::fromJSON(txt = link, flatten = TRUE) %>% 
+    as_tibble() 
+  
+  #' GRADES
+  grade <- json_data$gradeSet %>% 
+    data.frame() %>% as_tibble() %>%
+    mutate(grade = as.numeric(grade)) %>%
+    #' ADD SUMMER AND WINTER 
+    mutate(term = ifelse(str_detect(courseTerm, "FLL"), "Fall", "Spring"),
+           term = factor(term, levels = c("Fall", "Spring")),
+           courseTermId = factor(courseTermId),
+           year = as.numeric(str_extract(courseTerm, "[0-9]{4}"))) %>% 
+    left_join(student_key %>% select(studentId, student_name),
+              by = "studentId")
+  
+}
+
+
+load_notes<- function(link){
+  json_data <- 
+    jsonlite::fromJSON(txt = link, flatten = TRUE) %>% 
+    as_tibble() 
+  
+  #' TEACHERS NOTES
+  notes <- json_data$noteSet %>% 
+    
+    data.frame() %>% as_tibble() %>%
+    mutate(createdUpdated = ymd_hms(createdUpdated)) %>% 
+    left_join(student_key %>% select(studentId, student_name),
+              by = "studentId")
+} 
+
+
+
+load_attendence<- function(link){
+  json_data <- 
+    jsonlite::fromJSON(txt = link, flatten = TRUE) %>% 
+    as_tibble() 
+  
+  #' ATTENDENCE
+  attendance <- json_data$attendanceSet %>% data.frame() %>% as_tibble() %>%
+    mutate(attendanceEntryDate = ymd_hms(attendanceEntryDate)) %>% 
+    mutate_at(
+      vars(c("totalUnexabs", "totalExabs", 
+             "totalTardies", "avgDailyAttendance")),
+      as.numeric) %>% 
+    left_join(student_key %>% select(studentId, student_name),
+              by = "studentId") 
+} 
+
+#' LOAD ALL INFORMATION
+attendence <- map_df(json_links, load_attendence)
+student_info <- map_df(json_links, load_info)
+#' notes <- map_df(json_links[2], load_notes)
+
+
+# GRADES ------------------------------------------------------------------
+
+grades <- map_df(json_links, load_grades) 
+
+grades_long <- grades %>%
+  #filter(studentId == 1) %>%
+  group_by(studentId, student_name, year, term, 
+           courseTermId, #' REPLACE WITH
+           courseName, finalGradeForTerm) %>%
+  summarise(
+    max_grade = max(grade, na.rm = TRUE)
+  ) %>% 
+  ungroup() %>%
+  arrange(year, term) %>%
+  group_by(courseName) %>%
+  mutate(avg_grade = mean(max_grade, na.rm = TRUE)) %>%
+  ungroup()
+
+
+
+# VARIABLE ----------------------------------------------------------------
+student_ids <- distinct(student_key, student_name) %>% pull()
+academic_term <- c("Fall", "Spring", "Winter", "Summer")
+academic_year <- c(2017, 2018)
+
+# Define UI for application that draws a histogram
+ui <- fluidPage(
+   
+   # Application title
+   titlePanel("Denver Unified School District"),
+   
+   # Sidebar with a slider input for number of bins 
+   sidebarLayout(
+      sidebarPanel(
+        #'VARIABLE INPUT - STUDENT NAME
+         selectInput(inputId = 'student_names',
+                     label = 'Student Name:', 
+                     choices = student_ids, 
+                     selected = NULL,
+                     #' WOULDN'T MAKE SENSE TO HAVE MULTIPLE
+                     multiple = FALSE
+                     ),
+         #' VARIABLE INPUT - ACADEMIC YEAR
+         selectInput(inputId = 'academic_year', 
+                     label = 'Academic Year', 
+                     choices = academic_year,
+                     selected = "2018",
+                     multiple = FALSE),
+         #' VARIABLE INPUT - ACADEMIC TERM
+         selectInput(inputId = 'academic_term',
+                     label = 'Academic Term', 
+                     choices = academic_term,
+                     selected = "Spring",
+                     multiple = FALSE)
+         
+         
+      ),
+      
+      # Show a plot of the generated distribution
+      mainPanel(
+         plotOutput("distPlot"),
+         tableOutput("table_grades"),
+         plotOutput("plot_attendence")
+      )
+   )
+)
+
+# Define server logic required to draw a histogram
+server <- function(input, output) {
+   
+   output$distPlot <- renderPlot({
+     #' VISUALIZE ALL GRADES ACCROSS VARIOUS SEMESTERS
+     grades_long %>% 
+       filter(student_name == input$student_names) %>%
+       ggplot(aes(x = courseTermId, y = max_grade)) +
+       stat_mean_line(color = "red", aes(courseTermId, avg_grade)) +
+       geom_point() + 
+       facet_wrap(~courseName) +
+       pretty_theme +
+       labs(
+         title = "Average Grades by Subject", 
+         subtitle = "[[Sub-Title]]",
+         x = "Course", 
+         y = "Average") -> grades_graph
+     
+     #' EXPORT VISULIZATION
+     print(grades_graph)
+    
+   })
+   
+   
+   output$table_grades <- renderTable({
+     
+     last_grades <- grades_long %>%
+       filter(student_name == input$student_names) %>%
+       #' THIS SHOULD BE REPLACED BY THE LASTEST DATA
+       dplyr::filter(year == input$academic_year) %>%
+       dplyr::filter(term == input$academic_term)
+     
+     #' TABLE BASES ON LAST GRADES
+     last_grades <- last_grades %>%
+       select(-avg_grade) %>%
+       spread(courseName, max_grade) %>%
+       select(-studentId, -year, -term, -courseTermId,
+              #' YOU MIGHT WANT TO KEEP THIS FLAG
+              -finalGradeForTerm, -student_name)
+     
+     last_grades 
+     
+   })
+   
+   
+   output$plot_attendence <- renderPlot({
+     
+     
+     attendence %>%
+       filter(student_name == input$student_names) %>%
+       select(student_name, attendanceEntryDate, totalUnexabs:totalTardies) %>%
+       gather(-student_name, -attendanceEntryDate, key = "type", value = "days") %>%
+       mutate(type_pretty = case_when(
+         type == "totalExabs"   ~ "Excused Absents",
+         type == "totalTardies" ~ "Tardies",
+         type == "totalUnexabs" ~ "Unexcused Absents",
+         TRUE                   ~ NA_character_
+       )) %>%
+       ggplot(aes(x = type_pretty, y = days, 
+                 # color = type_pretty, 
+                  fill = type_pretty)) +
+       geom_bar(stat = "identity") + 
+       facet_wrap(~ attendanceEntryDate) + 
+       pretty_theme_attendence +
+       labs(
+         title = "Quarterly Attendence", 
+         subtitle = "[[Sub-Title]]",
+         x = "Months", 
+         y = "Total") + 
+       labs(fill = "Attendence Type") -> attendence_graph
+     
+     print(attendence_graph)
+     
+   })
+   
+}
+
+# Run the application 
+shinyApp(ui = ui, server = server)
+
+
+```

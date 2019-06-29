@@ -1,0 +1,12 @@
+name: codeForDenver
+title: codeForDenver
+username:
+account: lpalomer262
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 1004177
+bundleId: 2187055
+url: https://lpalomer262.shinyapps.io/codeForDenver/
+when: 1561772431.96248
+asMultiple: FALSE
+asStatic: FALSE
