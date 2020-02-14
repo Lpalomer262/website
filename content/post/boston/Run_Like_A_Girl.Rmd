@@ -55,9 +55,6 @@ digit <- read_rds("../../../../../projects/projects/articles/outputs/data/011_bo
 In this post we present a similar analysis for the Boston course. This time it is based on more than 70,000 individual race-records for Boston runners, from the period 2014–2016, excluding 2013. These race-records include 5km (approx. 3.1 miles) split-times and therefore allow us to analyse pacing at regular intervals.
 
 
-To start, the chart below shows the average pacing (minutes per mile) for non-elite (recreational/regular) runners. The ‘ribbon plot’ shows the average pace per race segment (the marked centre line) and the average pacing for men and women. The chart also shows the course profile. As an aside the pacing ribbon has been left-shifted to the halfway point of each race segment for better visual alignment. For example, the first marker, which is plotted at the 2.5km (1.5m) mark actually reflects the pacing for the segment from the startline to the 5km/3.1m point.
-
-
 ```{r echo=FALSE, include=TRUE, eval=TRUE}
 ggplot(boston_gxp, aes(distance_meter_cumsum, elevation)) + 
   geom_line() + 
@@ -72,6 +69,10 @@ ggplot(boston_gxp, aes(distance_meter_cumsum, elevation)) +
   pretty_theme_test
 
 ```
+
+
+
+To start, the chart below shows the average pacing (minutes per mile) for non-elite (recreational/regular) runners. The ‘ribbon plot’ shows the average pace per race segment (the marked centre line) and the average pacing for men and women. The chart also shows the course profile. As an aside the pacing ribbon has been left-shifted to the halfway point of each race segment for better visual alignment. For example, the first marker, which is plotted at the 2.5km (1.5m) mark actually reflects the pacing for the segment from the startline to the 5km/3.1m point.
 
 
 
