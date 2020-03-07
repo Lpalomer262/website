@@ -14,8 +14,7 @@ toc: yes
 type: docs
 ---
 
-Welcome to the University of Colorado - Boulder's Artificial Intelligence and Big Data course with [Science Discovery](https://www.colorado.edu/sciencediscovery/programs/high-school-stem-academies-cu-boulder)
+Welcome to the University of Denver - [Data Analytics Boot Camp course](https://bootcamp.du.edu/data/).
 
 
-Ever wonder how the Netflix recommendation engine works or how Amazon.com determines what items “you may also like?” All these things are driven by training a computer how to learn using the large datasets. The data science course is a practical introduction to the interdisciplinary field of data science and machine learning which is at the intersection of computer science, statistics, and business. You will learn to use R to help you acquire, parse and model your data. A significant portion of the course will be a hands-on approach to the fundamental modeling techniques and machine learning algorithms that enable you to build robust predictive models of real-world data and test their validity.
-
+The program is rigorous, fast-paced, and focused on the practical technical skills needed to solve data problems. Throughout the course, you’ll gain proficiencies on a host of marketable technologies like Excel, Python, JavaScript, SQL Databases, Tableau, and more. Plus, you’ll have an impressive professional portfolio and the confidence you need to succeed in the data-driven economy.

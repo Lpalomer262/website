@@ -36,6 +36,48 @@
     </item>
     
     <item>
+      <title>Unit One</title>
+      <link>/tutorial/week-one/</link>
+      <pubDate>Mon, 09 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tutorial/week-one/</guid>
+      <description>
+
+&lt;h3 id=&#34;monday-march-9th-2020&#34;&gt;Monday, March 9th 2020&lt;/h3&gt;
+
+&lt;h4 id=&#34;zen-of-data&#34;&gt;Zen of Data&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Gain an understanding of the course structure and general direction of the program&lt;/li&gt;
+&lt;li&gt;Be exposed to high-level analytic strategies and tools.&lt;/li&gt;
+&lt;li&gt;Introduce themselves and complete icebreaker activities.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;wendesday-march-11th-2020&#34;&gt;Wendesday, March 11th 2020&lt;/h3&gt;
+
+&lt;h4 id=&#34;egad-it-s-excel&#34;&gt;Egad It&amp;rsquo;s Excel!&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Students will feel fully proficient in basic Excel navigation and functionality&lt;/li&gt;
+&lt;li&gt;Students will gain familiarity with the value of Pivot Tables and the steps for their utilization.&lt;/li&gt;
+&lt;li&gt;Students will gain comfort utilizing VLookups and HLookups&lt;/li&gt;
+&lt;li&gt;Students will understand how to implement conditional formatting based on logical rules&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;saturday-march-14th-2020&#34;&gt;Saturday, March 14th 2020&lt;/h3&gt;
+
+&lt;h4 id=&#34;charting-a-new-course-with-excel&#34;&gt;Charting a New Course With Excel&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Students will create, modify, and stylize basic charts from scratch using Microsoft Excel.&lt;/li&gt;
+&lt;li&gt;Students will comfortable creating scatter plots and trend lines.&lt;/li&gt;
+&lt;li&gt;Students will have a firm understanding of how to create charts that contain filtered data.&lt;/li&gt;
+&lt;li&gt;Students will know how to create regressions and calculate moving averages using Excel.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Bucket List</title>
       <link>/travel/2019-05-27-bucket-list/</link>
       <pubDate>Mon, 27 May 2019 00:00:00 +0000</pubDate>
@@ -51,11 +93,13 @@
 &lt;li&gt;Step foot on every continent&lt;/li&gt;
 &lt;li&gt;Running of the Bulls - Pamplona, Spain&lt;/li&gt;
 &lt;li&gt;Move / Work in a different country&lt;/li&gt;
+&lt;li&gt;Cycle accross a country (US, New Zealand)&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 &lt;div id=&#34;running&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Running&lt;/h2&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;p&gt;1.2024 US Olympic Marathon Trials Qualifiers&lt;/p&gt;
+&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;Finish all Abbott World Marathon Majors&lt;/li&gt;
 &lt;/ol&gt;
 &lt;ul&gt;
@@ -66,6 +110,9 @@
 &lt;li&gt;Chicago&lt;/li&gt;
 &lt;li&gt;New York City&lt;/li&gt;
 &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;random&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Random&lt;/h2&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -115,167 +162,6 @@
 &lt;li&gt;&lt;p&gt;I felt strong through the hillier sections Boston has to offer. And with all due respect to “Heartbreak Hill,” it wasn’t as tough as people said. I do however remember Wayne Leonard, a project manager whom I’ve worked with since moving to Denver, running alongside me. His attempt to take a picture while sprinting uphill was comical to say the least. I think for the first time during the race, I smiled and knew the worst sections were behind me.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;A special thanks to &lt;a href=&#34;https://www.instagram.com/luisreyguevara/&#34;&gt;Luis Guevara&lt;/a&gt; and &lt;a href=&#34;https://www.instagram.com/corredaniel/&#34;&gt;Daniel Herrera&lt;/a&gt; for making a memorable course and scratching one of six off the bucket list.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Run Like a Girl</title>
-      <link>/post/boston/run_like_a_girl/</link>
-      <pubDate>Mon, 15 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/post/boston/run_like_a_girl/</guid>
-      <description>
-
-
-&lt;div id=&#34;tldr&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;TLDR;&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;An analysis of more than 75,000 Boston Marathon race-records during the period 2014–2016;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;How do runners pace the Boston Marathon? Where are the fastest and slowest sections of the race?&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;How does the pacing of elites compare to recreational runners and those running a personal-best?&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Putting what we learn into practice, we create optimal pacing charts for recreational runners that are tailored for Boston.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;introduction&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;In this post we present a similar analysis for the Boston course. This time it is based on more than 70,000 individual race-records for Boston runners, from the period 2014–2016, excluding 2013. These race-records include 5km (approx. 3.1 miles) split-times and therefore allow us to analyse pacing at regular intervals.&lt;/p&gt;
-&lt;p&gt;To start, the chart below shows the average pacing (minutes per mile) for non-elite (recreational/regular) runners. The ‘ribbon plot’ shows the average pace per race segment (the marked centre line) and the average pacing for men and women. The chart also shows the course profile. As an aside the pacing ribbon has been left-shifted to the halfway point of each race segment for better visual alignment. For example, the first marker, which is plotted at the 2.5km (1.5m) mark actually reflects the pacing for the segment from the startline to the 5km/3.1m point.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/boston/Run_Like_A_Girl_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;boston_mean_paces &amp;lt;- 
-  boston_long_5k_42.2k %&amp;gt;% group_by(km_pretty) %&amp;gt;%
-  summarise(
-    #&amp;#39; average = mean(mi_pace, na.rm = TRUE),
-    Male =
-      mean(if_else(m_f == &amp;quot;Male&amp;quot;, mi_pace, NA_real_), na.rm = TRUE),
-    Female =
-      mean(if_else(m_f == &amp;quot;Female&amp;quot;, mi_pace, NA_real_), na.rm = TRUE)
-  ) %&amp;gt;% 
-  ungroup() %&amp;gt;%
-  gather(&amp;quot;type&amp;quot;, &amp;quot;pace&amp;quot;, -km_pretty)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;On average we can see that the typical Boston marathoner starts at a pace of about 8 minutes and 15 seconds per mile but gradually slows to finish up running at around 10 minutes per mile by the end of the race; most do manage a final ‘sprint’ of sorts to the finish-line. The steep starting descent clearly doesn’t help when it comes to runners controlling their opening pace and fast-starts are known to be problematic later in the race. It’s a hilly course in general but the real hills start around the 15 mile mark and this shows the pacing above, with pacing slowing consistently througout the Newton Hills and beyond. Clearly, the average Boston runner starts outs fast and then spends the rest of their race paying for it as they gradually slow, completing a positive split with the second half of the race approximately 14% slower than then first.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;boston_long_5k_42.2k %&amp;gt;% group_by(km_pretty) %&amp;gt;% 
-  summarise(mi_pace_mean = mean(mi_pace, na.rm = TRUE)) %&amp;gt;%
-  ggplot(aes(km_pretty, mi_pace_mean, group = 1)) +
-  geom_line(linetype = &amp;quot;dashed&amp;quot;) +
-  geom_point()  + 
-  labs(title = &amp;quot;Boston Averages Paces&amp;quot;, 
-       subtitle = &amp;quot; Figure 1 - Boston Hilly Course Does Not Allow for an Even Paced Race&amp;quot;,
-       x = &amp;quot;Segment&amp;quot;, 
-       y = &amp;quot;Average Pace (Minutes)&amp;quot;)  + 
-  pretty_theme_test&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/boston/Run_Like_A_Girl_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;A word of caution here, pacing above includes people who hit the dreaded wall in the second half of the race. This means that some of the slow down shown will be exagerated, at least somewhat, by these poor souls.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;perfect-pacing-for-boston&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Perfect pacing for Boston&lt;/h2&gt;
-&lt;p&gt;We have found a fairly consistent pattern when it comes to how recreational runners pace Boston. Relative pace varies predictably across a broad field of runners, as it is influenced by growing fatigue, the significant undulations of the course, the noise of the crowd, the excitement of the start etc. It is a consistent pattern but, presumably, it is not a very optimal one. Certainly one lesson seems to be that, on average, runners start fast, probably too fast, The pay-back is a considerable slowing of pace as the race continues. The pacing range for recreational runners is particularly wide, from starts that are about 8–9% faster than average race-pace, to finishes that are 10–12% slower. This makes for an overall pacing range of 20% or more.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(boston_mean_paces, 
-       aes(km_pretty, pace, group = type, color = type)) + 
-  geom_line() +
-  labs(title = &amp;quot;Boston Marathon Across Gender&amp;quot;, 
-       subtitle = &amp;quot; Figure 2 -&amp;quot;,
-       x = &amp;quot;Segment&amp;quot;, 
-       y = &amp;quot;Average Pace (Minutes)&amp;quot;) + 
-  labs(color = &amp;quot;Gender&amp;quot;) +
-  pretty_theme_test&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/boston/Run_Like_A_Girl_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;pace_km &amp;lt;- boston %&amp;gt;% 
-  mutate(pace_km = km_42.2 / 42.2195) %&amp;gt;%
-  select(boston_key, km_42.2, pace_km)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;This begs the question: what is the optimal pacing profile for Boston? The conventional wisdom is that more even pacing is the way to go and so there is considerable room for improvement for the average runner in this regard. Easier said than done! And surely perfectly even pacing on a hilly course like Boston is not optimal anyway? To arrive an an optimal pacing profile we might start by isolating the pacing profiles of the very best runners, and to do this we will consider two groups of strong runners: those running a personal best (PB), regardless of finish-time, and elites.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;boston_paces_pct &amp;lt;- boston_long_5k_42.2k %&amp;gt;% 
-  left_join(
-    pace_km, by = &amp;quot;boston_key&amp;quot;
-  ) %&amp;gt;%
-  #&amp;#39; CALCULATE RELATIVE PERCENTAGE PER KM
-  mutate(
-    pace_5k_mean = 5 * pace_km,
-    relative_pacing = ((split_sec -  pace_5k_mean) / pace_5k_mean) * 100,
-    relative_pacing = 
-      if_else(km == &amp;quot;km_42.2&amp;quot;,
-              ((split_sec - (2.195 * pace_km)) /
-                (2.195 * pace_km)) * 100,
-              relative_pacing))
-
-boston_percent_overall &amp;lt;- boston_paces_pct %&amp;gt;%
-  # CALCULATE AVERAGES BY GROUP: OVERALL, MALE, FEMALE
-  group_by(km_pretty) %&amp;gt;%
-  summarise(
-    #&amp;#39; average = mean(relative_pacing, na.rm = TRUE),
-    Male =
-      mean(if_else(m_f == &amp;quot;Male&amp;quot;, relative_pacing, NA_real_), na.rm = TRUE),
-    Female =
-      mean(if_else(m_f == &amp;quot;Female&amp;quot;, relative_pacing, NA_real_), na.rm = TRUE)
-  ) %&amp;gt;% 
-  ungroup() %&amp;gt;%
-  gather(&amp;quot;type&amp;quot;, &amp;quot;percent_overall&amp;quot;, - km_pretty)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(boston_percent_overall, 
-       aes(km_pretty, percent_overall, group = type, color = type)) + 
-  geom_line() + 
-   labs(title = &amp;quot;Boston Marathon Average Runner Pace Differential&amp;quot;, 
-       subtitle = &amp;quot; Figure 3 - A 14% Pace Differential for Average Boston Runner&amp;quot;,
-       x = &amp;quot;Segment&amp;quot;, 
-       y = &amp;quot;Average Pace (Minutes)&amp;quot;) + 
-  labs(color = &amp;quot;Gender&amp;quot;) +
-  pretty_theme_test&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/boston/Run_Like_A_Girl_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;div id=&#34;pacing-for-a-personal-best&#34; class=&#34;section level5&#34;&gt;
-&lt;h5&gt;Pacing for a Personal-Best&lt;/h5&gt;
-&lt;p&gt;Our dataset includes runners who have run more than one marathon and for these runners we can identify PB times from their set of times; essentially we treat their fastest time among their set of races as their PB. For the purpose of this study we will consider those runners who have run at least 3 Boston marathons. There are almost 10,000 such runners in our dataset and they have run an average of just over 4 Boston Marathons each. For each of these runners we can identify their ‘personal-best’ as their fastest Boston time. Of course this might not be their true personal best, since it depends entirely on the window of data that we have access too, but it at least counts as a good time for these runners at Boston.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;boston_percent_returners &amp;lt;- boston_paces_pct %&amp;gt;%
-  inner_join(boston_returners, by = &amp;quot;boston_key&amp;quot;) %&amp;gt;%
-  # CALCULATE AVERAGES BY GROUP: OVERALL, MALE, FEMALE
-  group_by(km_pretty) %&amp;gt;%
-  summarise(
-    #&amp;#39; average = mean(relative_pacing, na.rm = TRUE),
-    Male =
-      mean(if_else(m_f == &amp;quot;Male&amp;quot;, relative_pacing, NA_real_), na.rm = TRUE),
-    Female =
-      mean(if_else(m_f == &amp;quot;Female&amp;quot;, relative_pacing, NA_real_), na.rm = TRUE)
-  ) %&amp;gt;%
-  ungroup() %&amp;gt;%
-  gather(&amp;quot;type&amp;quot;, &amp;quot;percent_returner&amp;quot;, -km_pretty)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(boston_percent_returners, 
-       aes(km_pretty, percent_returner, group = type, color = type)) + 
-  geom_line() +
-   labs(title = &amp;quot;Boston Marathon Returner Pace Differential&amp;quot;, 
-       subtitle = &amp;quot; Figure 4 - Returning to Boston Help Your Pace Differential by 3%&amp;quot;,
-       x = &amp;quot;Segment&amp;quot;, 
-       y = &amp;quot;Pace Percentage&amp;quot;) + 
-  labs(color = &amp;quot;Gender&amp;quot;) +
-  pretty_theme_test&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/boston/Run_Like_A_Girl_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;Next, we can compute the pacing profiles for these PB runners as before to the get the chart below. On the face of it, we see a similar shape to the pacing profile of the regular runners we looked at earlier: PBs start faster and finish slower than their average race pace, just like regular runners. However, the key difference is that, compared to regular runners, those running a PB start a little slower and finish a little faster. For example, the average PB runner starts only 4% faster than their average race pace, holds this pace for the first 9 miles or so and then starts to skow. But they don’t slow as much as regular runners. Yes, we can still see the effect of the Newton Hills but they slow to only about 5% slower than their average race-pace. In other words, the pace variation for runners completing a PB tends to fall within a range of just 9% (from -4% at the start to 5% at the end) compared to more than 20% from regular runners.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;boston_percent_elites &amp;lt;- boston_paces_pct %&amp;gt;%
-  filter(elites == &amp;quot;Elite&amp;quot;) %&amp;gt;%
-  # CALCULATE AVERAGES BY GROUP: OVERALL, MALE, FEMALE
-  group_by(km_pretty) %&amp;gt;%
-  summarise(
-    #&amp;#39;average = mean(relative_pacing, na.rm = TRUE),
-    male =
-      mean(if_else(m_f == &amp;quot;Male&amp;quot;, relative_pacing, NA_real_), na.rm = TRUE),
-    female =
-      mean(if_else(m_f == &amp;quot;Female&amp;quot;, relative_pacing, NA_real_), na.rm = TRUE)
-  ) %&amp;gt;% 
-  ungroup() %&amp;gt;%
-  gather(&amp;quot;type&amp;quot;, &amp;quot;percent_elites&amp;quot;, - km_pretty)&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;conclusion&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Conclusion&lt;/h2&gt;
-&lt;p&gt;Of course the notion that elites pace perfectly in every race is probably too strong an assumption to make. In any given race there will be many factors that influence their pacing: course conditions, the competition, how they feel on the day etc. However, on average, when pacing is analysed over many runners and a number of years, a strong pattern emerges and it is this pattern that might be important when it comes to informing the pacing of other runners.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(boston_percent_elites, 
-       aes(km_pretty, percent_elites, group = type, color = type)) +
-  geom_line() + 
-   labs(title = &amp;quot;Boston Marathon Elite Pace Differential&amp;quot;, 
-       subtitle = &amp;quot; Figure 5 - Elites Average Less Than a 8% Pace Differential&amp;quot;,
-       x = &amp;quot;Segment&amp;quot;, 
-       y = &amp;quot;Pace Percentage&amp;quot;) + 
-  labs(color = &amp;quot;Gender&amp;quot;) +
-  pretty_theme_test&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/boston/Run_Like_A_Girl_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;The hope is that the pacing tables produced from this profile may allow recreational or first time runners at Boston to replicate this ‘perfect’ pacing profile in their own races and for their running ability and target times. Doing so may help to produce better performance on the day.&lt;/p&gt;
-&lt;/div&gt;
 </description>
     </item>
     
@@ -737,171 +623,42 @@ berlin_wr_pace_long %&amp;gt;%
     </item>
     
     <item>
-      <title>Week One</title>
-      <link>/tutorial/week-one/</link>
-      <pubDate>Sun, 09 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/tutorial/week-one/</guid>
-      <description>
-
-&lt;h3 id=&#34;monday-july-1st-2019&#34;&gt;Monday July 1st, 2019&lt;/h3&gt;
-
-&lt;h4 id=&#34;am-instruction-to-statistics&#34;&gt;AM: Instruction to Statistics&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.google.com/forms/d/e/1FAIpQLSeqdWzYcE4bzfC09L4xm-YM5nxAZ0_YsNX6rBgzBet6dJe6lA/viewform?usp=sf_link&#34; target=&#34;_blank&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;The Data Science Venn Diagram&lt;/li&gt;
-&lt;li&gt;Class Survey&lt;/li&gt;
-&lt;li&gt;Statistical Principles&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&#34;pm-introduction-to-programming&#34;&gt;PM: Introduction to Programming&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Data Fundamentals - Presentation Slides&lt;/li&gt;
-&lt;li&gt;Introduction to R – Presentation Slides&lt;/li&gt;
-&lt;li&gt;(Data Camp) &lt;a href=&#34;https://www.datacamp.com/groups/shared_links/ae3bc65cbbfd9bb6ec24b9714510a23ee2f2aa5c&#34; target=&#34;_blank&#34;&gt;Introduction to R&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;tuesday-july-2nd-2019&#34;&gt;Tuesday July 2nd, 2019&lt;/h3&gt;
-
-&lt;h4 id=&#34;am-continue-introduction-to-programming&#34;&gt;AM: Continue Introduction to Programming&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;(Data Camp) Importing Data in R (Part 1)&lt;/li&gt;
-&lt;li&gt;Working Environments&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&#34;pm-continue-introduction-to-programming&#34;&gt;PM: Continue Introduction to Programming&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;(Data Camp) Introduction to the Tidyverse&lt;/li&gt;
-&lt;li&gt;Presentation on the Tidyverse – Hadley Wickham&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;wednesday-july-3rd-2019&#34;&gt;Wednesday July 3rd, 2019&lt;/h3&gt;
-
-&lt;h4 id=&#34;am-continue-introduction-to-programming-1&#34;&gt;AM: Continue Introduction to Programming&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;(Data Camp) Data Visualization with ggplot2 (Part 1)&lt;/li&gt;
-&lt;li&gt;Women’s World Cup Semi-Final&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&#34;pm-begin-introduction-to-economics&#34;&gt;PM: Begin Introduction to Economics&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Decision Theory
-
-&lt;ul&gt;
-&lt;li&gt;(Break) Why the World Cup Is an Economist’s Dream (Ep. 6)&lt;/li&gt;
-&lt;li&gt;Penalty Kicks Visualization&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;thursday-july-4th-2019&#34;&gt;Thursday July 4th, 2019&lt;/h3&gt;
-
-&lt;h4 id=&#34;independence-day-no-class&#34;&gt;Independence Day - No Class&lt;/h4&gt;
-
-&lt;h4 id=&#34;optional-data-camp-data-visualization-with-ggplot2-part-2&#34;&gt;Optional - (Data Camp) Data Visualization with ggplot2 (Part 2)&lt;/h4&gt;
-
-&lt;h3 id=&#34;friday-july-5th-2019&#34;&gt;Friday July 5th, 2019&lt;/h3&gt;
-
-&lt;h4 id=&#34;am-continue-introduction-to-economics&#34;&gt;AM: Continue Introduction to Economics&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;(Video) A beautiful Mind&lt;/li&gt;
-&lt;li&gt;Lecture on Correlation &amp;amp; Regression&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&#34;pm-week-wrap-up&#34;&gt;PM: Week Wrap Up&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Finish Up Unfinished Section&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Week Two</title>
+      <title>Unit Two</title>
       <link>/tutorial/week-two/</link>
       <pubDate>Sun, 09 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>/tutorial/week-two/</guid>
       <description>
 
-&lt;h3 id=&#34;monday-july-8th-2019&#34;&gt;Monday July 8th, 2019&lt;/h3&gt;
+&lt;h3 id=&#34;monday-march-16th-2020&#34;&gt;Monday, March 16th 2020&lt;/h3&gt;
 
-&lt;h4 id=&#34;am-introduction-to-data-science&#34;&gt;AM: Introduction to Data Science&lt;/h4&gt;
+&lt;h4 id=&#34;vba-vibes&#34;&gt;VBA Vibes&lt;/h4&gt;
 
 &lt;ul&gt;
-&lt;li&gt;(Movie) Titanic
-Machine Learning - Titanic&lt;/li&gt;
+&lt;li&gt;Students will understand the fundamental building blocks of all programming languages: variables, arrays, conditionals, loops, and functions&lt;/li&gt;
+&lt;li&gt;Students will understand how to create simple VBA macros to trigger pop ups and change cell values&lt;/li&gt;
+&lt;li&gt;Students will gain practice in writing VBA subroutines that utilize variables and conditionals&lt;/li&gt;
+&lt;li&gt;Students will begin to develop their essential coding skills of syntax recollection, pattern recognition, problem decomposition, and debugging&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&#34;pm-communicating-data&#34;&gt;PM: Communicating Data&lt;/h4&gt;
+&lt;h3 id=&#34;wendesday-march-18th-2020&#34;&gt;Wendesday, March 18th 2020&lt;/h3&gt;
+
+&lt;h4 id=&#34;lesson-plan-vexing-vba&#34;&gt;Lesson Plan - Vexing VBA&lt;/h4&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Introduction to Web Design in R
-
-&lt;ul&gt;
-&lt;li&gt;Resume Building Workshop&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;(Movie) Moneyball&lt;/li&gt;
+&lt;li&gt;Students will understand the basic syntax of a VBA for loop&lt;/li&gt;
+&lt;li&gt;Students will understand how to utilize for-loops in conjunction with conditionals to direct logic flow&lt;/li&gt;
+&lt;li&gt;Students will understand the value of a nested for-loop and gain basic proficiency in their use&lt;/li&gt;
+&lt;li&gt;Students will refine their fundamental coding skills (syntax recollection, pattern recognition, problem decomposition, and debugging)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;tuesday-july-9th-2019&#34;&gt;Tuesday July 9th, 2019&lt;/h3&gt;
+&lt;h3 id=&#34;saturday-march-21th-2020&#34;&gt;Saturday, March 21th 2020&lt;/h3&gt;
 
-&lt;h4 id=&#34;continue-introduction-to-data-science&#34;&gt;Continue Introduction to Data Science&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Tidy Tuesday (Instructors Choice of Options)
+&lt;h4 id=&#34;getting-real-with-vba&#34;&gt;Getting Real with VBA&lt;/h4&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Kobe Bryant Shot Selection&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Visualization&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;wednesday-july-10th-2019&#34;&gt;Wednesday July 10th, 2019&lt;/h3&gt;
-
-&lt;h4 id=&#34;am-continue-introduction-to-web-design-in-r&#34;&gt;AM: Continue – Introduction to Web Design in R&lt;/h4&gt;
-
-&lt;h4 id=&#34;pm-continue-introduction-to-statistics&#34;&gt;PM: Continue Introduction to Statistics&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;TBD (Netflix Algorithm)&lt;/li&gt;
-&lt;li&gt;SVD v. PCA&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;thursday-july-11th-2019&#34;&gt;Thursday July 11th, 2019&lt;/h3&gt;
-
-&lt;h4 id=&#34;am&#34;&gt;AM:&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Practice PCA Independently.&lt;/li&gt;
-&lt;li&gt;Write own Narrative&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&#34;pm-finalize-introduction-to-web-design-in-r&#34;&gt;PM: Finalize – Introduction to Web Design in R&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Publish Site to the Web&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;friday-july-12th-2019&#34;&gt;Friday July 12th, 2019&lt;/h3&gt;
-
-&lt;h4 id=&#34;am-1&#34;&gt;AM:&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Exposition Prep &amp;amp; Set-Up&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&#34;pm&#34;&gt;PM:&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Exposition Presentation&lt;/li&gt;
-&lt;li&gt;Final Refelections&lt;/li&gt;
+&lt;li&gt;Students will be comfortable formatting spreadsheets using VBA code&lt;/li&gt;
+&lt;li&gt;Students will understand how to loop through a table using VBA code and check for changes in values&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
@@ -949,6 +706,22 @@ Machine Learning - Titanic&lt;/li&gt;
       <pubDate>Tue, 01 Sep 2015 00:00:00 -0600</pubDate>
       
       <guid>/publication/journal-article/</guid>
+      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    &lt;p&gt;Supplementary notes can be added here, including &lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34;&gt;code and math&lt;/a&gt;.&lt;/p&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title>An example conference paper</title>
+      <link>/publication/conference-paper/</link>
+      <pubDate>Mon, 01 Jul 2013 00:00:00 -0600</pubDate>
+      
+      <guid>/publication/conference-paper/</guid>
       <description>&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     &lt;p&gt;Supplementary notes can be added here, including &lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34;&gt;code and math&lt;/a&gt;.&lt;/p&gt;

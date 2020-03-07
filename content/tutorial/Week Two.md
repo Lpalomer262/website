@@ -1,12 +1,12 @@
 ---
-title: Week Two
+title: Unit Two
 author: Leonardo Palomera
 date: '2018-09-09'
 categories:
   - R
   - Science Discovery
 draft: no
-linktitle: Week Two Agenda
+linktitle: Unit Two
 menu:
   tutorial:
     parent: Schedual
@@ -15,40 +15,25 @@ toc: yes
 type: docs
 ---
 
-### Monday July 8th, 2019
-#### AM: Introduction to Data Science
- * (Movie) Titanic
-Machine Learning - Titanic
 
-#### PM: Communicating Data
-* Introduction to Web Design in R
-   + Resume Building Workshop 
-* (Movie) Moneyball
 
-### Tuesday July 9th, 2019
-#### Continue Introduction to Data Science
-* Tidy Tuesday (Instructors Choice of Options)
-   +  Kobe Bryant Shot Selection
-* Visualization
+### Monday, March 16th 2020
+#### VBA Vibes
+* Students will understand the fundamental building blocks of all programming languages: variables, arrays, conditionals, loops, and functions
+* Students will understand how to create simple VBA macros to trigger pop ups and change cell values
+* Students will gain practice in writing VBA subroutines that utilize variables and conditionals
+* Students will begin to develop their essential coding skills of syntax recollection, pattern recognition, problem decomposition, and debugging
 
-### Wednesday July 10th, 2019
-#### AM: Continue – Introduction to Web Design in R 
-#### PM: Continue Introduction to Statistics
-* TBD (Netflix Algorithm)
-* SVD v. PCA
 
-### Thursday July 11th, 2019
-#### AM:
-* Practice PCA Independently.
-* Write own Narrative
+### Wendesday, March 18th 2020
+####  Lesson Plan - Vexing VBA
+* Students will understand the basic syntax of a VBA for loop
+* Students will understand how to utilize for-loops in conjunction with conditionals to direct logic flow
+* Students will understand the value of a nested for-loop and gain basic proficiency in their use
+* Students will refine their fundamental coding skills (syntax recollection, pattern recognition, problem decomposition, and debugging)
 
-#### PM: Finalize – Introduction to Web Design in R
-* Publish Site to the Web
 
-### Friday July 12th, 2019
-#### AM: 
-* Exposition Prep & Set-Up
-
-#### PM: 
-* Exposition Presentation
-* Final Refelections 
+### Saturday, March 21th 2020
+####  Getting Real with VBA
+* Students will be comfortable formatting spreadsheets using VBA code
+* Students will understand how to loop through a table using VBA code and check for changes in values

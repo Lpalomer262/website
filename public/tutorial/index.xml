@@ -12,21 +12,21 @@
     
     
     <item>
-      <title>Week One</title>
+      <title>Unit One</title>
       <link>/tutorial/week-one/</link>
-      <pubDate>Sun, 09 Sep 2018 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 09 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>/tutorial/week-one/</guid>
-      <description>Monday July 1st, 2019 AM: Instruction to Statistics  Introduction The Data Science Venn Diagram Class Survey Statistical Principles  PM: Introduction to Programming  Data Fundamentals - Presentation Slides Introduction to R – Presentation Slides (Data Camp) Introduction to R  Tuesday July 2nd, 2019 AM: Continue Introduction to Programming  (Data Camp) Importing Data in R (Part 1) Working Environments  PM: Continue Introduction to Programming  (Data Camp) Introduction to the Tidyverse Presentation on the Tidyverse – Hadley Wickham  Wednesday July 3rd, 2019 AM: Continue Introduction to Programming  (Data Camp) Data Visualization with ggplot2 (Part 1) Women’s World Cup Semi-Final  PM: Begin Introduction to Economics  Decision Theory  (Break) Why the World Cup Is an Economist’s Dream (Ep.</description>
+      <description>Monday, March 9th 2020 Zen of Data  Gain an understanding of the course structure and general direction of the program Be exposed to high-level analytic strategies and tools. Introduce themselves and complete icebreaker activities.  Wendesday, March 11th 2020 Egad It&amp;rsquo;s Excel!  Students will feel fully proficient in basic Excel navigation and functionality Students will gain familiarity with the value of Pivot Tables and the steps for their utilization.</description>
     </item>
     
     <item>
-      <title>Week Two</title>
+      <title>Unit Two</title>
       <link>/tutorial/week-two/</link>
       <pubDate>Sun, 09 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>/tutorial/week-two/</guid>
-      <description>Monday July 8th, 2019 AM: Introduction to Data Science  (Movie) Titanic Machine Learning - Titanic  PM: Communicating Data  Introduction to Web Design in R  Resume Building Workshop  (Movie) Moneyball  Tuesday July 9th, 2019 Continue Introduction to Data Science  Tidy Tuesday (Instructors Choice of Options)  Kobe Bryant Shot Selection  Visualization  Wednesday July 10th, 2019 AM: Continue – Introduction to Web Design in R PM: Continue Introduction to Statistics  TBD (Netflix Algorithm) SVD v.</description>
+      <description> Monday, March 16th 2020 VBA Vibes  Students will understand the fundamental building blocks of all programming languages: variables, arrays, conditionals, loops, and functions Students will understand how to create simple VBA macros to trigger pop ups and change cell values Students will gain practice in writing VBA subroutines that utilize variables and conditionals Students will begin to develop their essential coding skills of syntax recollection, pattern recognition, problem decomposition, and debugging  Wendesday, March 18th 2020 Lesson Plan - Vexing VBA  Students will understand the basic syntax of a VBA for loop Students will understand how to utilize for-loops in conjunction with conditionals to direct logic flow Students will understand the value of a nested for-loop and gain basic proficiency in their use Students will refine their fundamental coding skills (syntax recollection, pattern recognition, problem decomposition, and debugging)  Saturday, March 21th 2020 Getting Real with VBA  Students will be comfortable formatting spreadsheets using VBA code Students will understand how to loop through a table using VBA code and check for changes in values  </description>
     </item>
     
     <item>

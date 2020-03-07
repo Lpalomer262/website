@@ -17,6 +17,7 @@ date_format = "Jan 2006"
 #   Required fields are `title`, `company`, and `date_start`.
 #   Leave `date_end` empty if it's your current employer.
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
+
 [[experience]]
   title = "Senior Consultant"
   company = "Ankura"
@@ -25,6 +26,7 @@ date_format = "Jan 2006"
   date_start = "2018-08-10"
   date_end = ""
   description = """
+  
 At Ankura, previously, [Navigant Inc.](https://www.navigant.com), Leonardo specializes in data analytics to answer a wide variety of questions at the forefront of a given corporate lawsuit in statistics, economics, and data management. In litigation consulting, Leonardo gets to look backwards and offer a detailed analysis of what happened. On the technical side, Leonardo uses R statistics software daily at Ankura to develop algorithms, bring structure to formless data, and perform a wide variety of economic and statistical analyses.
 
 * Communicate with clients daily to discuss analyses, structure work plans and budgets, and develop case strategy.
@@ -33,7 +35,19 @@ At Ankura, previously, [Navigant Inc.](https://www.navigant.com), Leonardo speci
  
 * Develop personalized functions and algorithms in R for broad company use to expedite a plethora of processes, including structuring, aggregating, and visualizing data.
  
+"""
+
+[[experience]]
+  title = "Data Analytics Adjunct Lecturer"
+  company = "University of Denver"
+  company_url = "https://bootcamp.du.edu/data/"
+  location = "Denver, Colorado"
+  date_start = "2020-03-01"
+  date_end = ""
+  description = """
+  Leonardo, a part-time lectures at the University of Denver'sData Analytics Boot Camp. This is a part-time 24-week program that will empower students to gain the knowledge and skills to conduct robust analytics on a host of real-world problems.
   """
+
 
 
 [[experience]]

@@ -9,18 +9,24 @@ output: html_document
 
 Creating a bucket list of places you want to go to or things you want to do can be very helpful tool towards attaining your life goals. 
 
+
 ## Travel 
 
 1. Step foot on every continent
 2. Running of the Bulls - Pamplona, Spain
 3. Move / Work in a different country
+4. Cycle accross a country (US, New Zealand)
 
 
 ## Running
-1. Finish all Abbott World Marathon Majors
+1.2024 US Olympic Marathon Trials Qualifiers
+
+2. Finish all Abbott World Marathon Majors
 + Tokyo
 + London
 + ~~Boston~~
 + Berlin
 + Chicago
 + New York City
+
+## Random

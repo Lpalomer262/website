@@ -1,12 +1,12 @@
 ---
-title: Week One
+title: Unit One
 author: Leonardo Palomera
-date: '2018-09-09'
+date: '2020-03-09'
 categories:
-  - R
-  - Science Discovery
+  - Data Science
+  - Excel
 draft: no
-linktitle: Week One Agenda
+linktitle: Unit One
 menu:
   tutorial:
     parent: Schedual
@@ -15,48 +15,25 @@ toc: yes
 type: docs
 ---
 
-### Monday July 1st, 2019
-
-#### AM: Instruction to Statistics
-* [Introduction](https://docs.google.com/forms/d/e/1FAIpQLSeqdWzYcE4bzfC09L4xm-YM5nxAZ0_YsNX6rBgzBet6dJe6lA/viewform?usp=sf_link)
-* The Data Science Venn Diagram
-* Class Survey
-* Statistical Principles
-
-#### PM: Introduction to Programming
-* Data Fundamentals - Presentation Slides
-* Introduction to R – Presentation Slides
-* (Data Camp) [Introduction to R](https://www.datacamp.com/groups/shared_links/ae3bc65cbbfd9bb6ec24b9714510a23ee2f2aa5c)
+### Monday, March 9th 2020
+#### Zen of Data
+* Gain an understanding of the course structure and general direction of the program
+* Be exposed to high-level analytic strategies and tools.
+* Introduce themselves and complete icebreaker activities.
 
 
-### Tuesday July 2nd, 2019
-#### AM: Continue Introduction to Programming
-* (Data Camp) Importing Data in R (Part 1)
-* Working Environments
-
-#### PM: Continue Introduction to Programming
-* (Data Camp) Introduction to the Tidyverse
-* Presentation on the Tidyverse – Hadley Wickham 
-
-### Wednesday July 3rd, 2019
-#### AM: Continue Introduction to Programming
-* (Data Camp) Data Visualization with ggplot2 (Part 1)
-* Women’s World Cup Semi-Final
-
-#### PM: Begin Introduction to Economics 
-* Decision Theory
-   + (Break) Why the World Cup Is an Economist’s Dream (Ep. 6)
-   + Penalty Kicks Visualization
-
-### Thursday July 4th, 2019
-#### Independence Day - No Class
-#### Optional - (Data Camp) Data Visualization with ggplot2 (Part 2)
+### Wendesday, March 11th 2020
+####  Egad It's Excel!
+* Students will feel fully proficient in basic Excel navigation and functionality
+* Students will gain familiarity with the value of Pivot Tables and the steps for their utilization.
+* Students will gain comfort utilizing VLookups and HLookups
+* Students will understand how to implement conditional formatting based on logical rules
 
 
-### Friday July 5th, 2019
-#### AM: Continue Introduction to Economics
-* (Video) A beautiful Mind
-* Lecture on Correlation & Regression
+### Saturday, March 14th 2020
+####  Charting a New Course With Excel
 
-#### PM: Week Wrap Up
-* Finish Up Unfinished Section
+* Students will create, modify, and stylize basic charts from scratch using Microsoft Excel.
+* Students will comfortable creating scatter plots and trend lines.
+* Students will have a firm understanding of how to create charts that contain filtered data.
+* Students will know how to create regressions and calculate moving averages using Excel.

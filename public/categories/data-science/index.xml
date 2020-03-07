@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data Science on Twenty-Six.Two</title>
+    <link>/categories/data-science/</link>
+    <description>Recent content in Data Science on Twenty-Six.Two</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 09 Mar 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/data-science/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Unit One</title>
+      <link>/tutorial/week-one/</link>
+      <pubDate>Mon, 09 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tutorial/week-one/</guid>
+      <description>Monday, March 9th 2020 Zen of Data  Gain an understanding of the course structure and general direction of the program Be exposed to high-level analytic strategies and tools. Introduce themselves and complete icebreaker activities.  Wendesday, March 11th 2020 Egad It&amp;rsquo;s Excel!  Students will feel fully proficient in basic Excel navigation and functionality Students will gain familiarity with the value of Pivot Tables and the steps for their utilization.</description>
+    </item>
+    
+  </channel>
+</rss>

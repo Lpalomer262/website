@@ -22,18 +22,6 @@
     </item>
     
     <item>
-      <title>Run Like a Girl</title>
-      <link>/post/boston/run_like_a_girl/</link>
-      <pubDate>Mon, 15 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/post/boston/run_like_a_girl/</guid>
-      <description>TLDR;  An analysis of more than 75,000 Boston Marathon race-records during the period 2014–2016;
- How do runners pace the Boston Marathon? Where are the fastest and slowest sections of the race?
- How does the pacing of elites compare to recreational runners and those running a personal-best?
- Putting what we learn into practice, we create optimal pacing charts for recreational runners that are tailored for Boston.</description>
-    </item>
-    
-    <item>
       <title>Pacing Boston</title>
       <link>/post/boston/pacing_boston/</link>
       <pubDate>Mon, 01 Apr 2019 00:00:00 +0000</pubDate>
@@ -60,15 +48,6 @@
       
       <guid>/post/berlin/berlin_world_record/</guid>
       <description>A Comparative Data Analysis of Eliud Kipchoge’s World Record at the 2018 Berlin Marathon A Brief Overview In the time since Eliud Kipchoge’s Breaking2 attempt on the Monza race-track in Italy, which secured him a place in the history books with 2 hours and 25 seconds over the marathon distance, he has seemed inevitable that he would go on to break the current marathon world-record, secured held by [Denis Kimetto] (https://www.</description>
-    </item>
-    
-    <item>
-      <title>Code For Denver</title>
-      <link>/post/codefordenver/</link>
-      <pubDate>Fri, 15 Feb 1991 00:00:00 +0000</pubDate>
-      
-      <guid>/post/codefordenver/</guid>
-      <description># STUDENT NAME KEY -------------------------------------------------------- #&amp;#39; STUDENT DATABASE student_link &amp;lt;- &amp;quot;http://gsndev.com/gsndb/my/student/&amp;quot; student_key &amp;lt;- jsonlite::fromJSON(txt = student_link, flatten = TRUE) %&amp;gt;% as_tibble() %&amp;gt;% rename(student_name = studentName) # STUDENT INFORMATION ----------------------------------------------------- json_links&amp;lt;- paste0(&amp;quot;http://gsndev.com/gsndb/my/student/&amp;quot;, seq(1:2), &amp;quot;/&amp;quot;) load_info &amp;lt;- function(link){ json_data &amp;lt;- jsonlite::fromJSON(txt = link, flatten = TRUE) %&amp;gt;% as_tibble() #&amp;#39; EXTRACT COMMON VARIABLES student_info &amp;lt;- json_data %&amp;gt;% select(studentId:reasonInProgram) %&amp;gt;% left_join(student_key %&amp;gt;% select(studentId, student_name), by = &amp;quot;studentId&amp;quot;) } load_grades &amp;lt;- function(link){ json_data &amp;lt;- jsonlite::fromJSON(txt = link, flatten = TRUE) %&amp;gt;% as_tibble() #&amp;#39; GRADES grade &amp;lt;- json_data$gradeSet %&amp;gt;% data.</description>
     </item>
     
   </channel>

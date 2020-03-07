@@ -29,15 +29,9 @@
 #'   weight = 40
 
 [[main]]
-  name = "Science Discovery"
+  name = "University of Denver"
   url = "/tutorial/"
   weight = 50
-
-
-[[main]]
-  name = "University of Denver"
-  url = "/denver_university/"
-  weight = 60
 
 [[main]]
   name = "Contact Information"

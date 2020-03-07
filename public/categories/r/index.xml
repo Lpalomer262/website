@@ -27,7 +27,8 @@
       
       <guid>/travel/2019-05-27-bucket-list/</guid>
       <description> Creating a bucket list of places you want to go to or things you want to do can be very helpful tool towards attaining your life goals.
-Travel Step foot on every continent Running of the Bulls - Pamplona, Spain Move / Work in a different country   Running Finish all Abbott World Marathon Majors   Tokyo London Boston Berlin Chicago New York City   </description>
+Travel Step foot on every continent Running of the Bulls - Pamplona, Spain Move / Work in a different country Cycle accross a country (US, New Zealand)   Running 1.2024 US Olympic Marathon Trials Qualifiers
+Finish all Abbott World Marathon Majors   Tokyo London Boston Berlin Chicago New York City   Random  </description>
     </item>
     
     <item>
@@ -47,18 +48,6 @@ Travel Step foot on every continent Running of the Bulls - Pamplona, Spain Move 
       
       <guid>/post/boston/2019_reflection/</guid>
       <description>As of April 20th 2019, I’ve finished my sixth marathon. No matter how the preceding 26.2 miles have played out, I’ve always been thankful that my body has withstood the distance and my mind has managed its aversion to suffering. It also feels good to stop. Unlike each of the six marathons I’d run before, my feeling upon crossing the finish line in this year’s Boston Marathon was absolute joy.</description>
-    </item>
-    
-    <item>
-      <title>Run Like a Girl</title>
-      <link>/post/boston/run_like_a_girl/</link>
-      <pubDate>Mon, 15 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/post/boston/run_like_a_girl/</guid>
-      <description>TLDR;  An analysis of more than 75,000 Boston Marathon race-records during the period 2014–2016;
- How do runners pace the Boston Marathon? Where are the fastest and slowest sections of the race?
- How does the pacing of elites compare to recreational runners and those running a personal-best?
- Putting what we learn into practice, we create optimal pacing charts for recreational runners that are tailored for Boston.</description>
     </item>
     
     <item>
@@ -96,35 +85,17 @@ Travel Step foot on every continent Running of the Bulls - Pamplona, Spain Move 
       <pubDate>Sun, 09 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>/tutorial/</guid>
-      <description>Welcome to the University of Colorado - Boulder&amp;rsquo;s Artificial Intelligence and Big Data course with Science Discovery
-Ever wonder how the Netflix recommendation engine works or how Amazon.com determines what items “you may also like?” All these things are driven by training a computer how to learn using the large datasets. The data science course is a practical introduction to the interdisciplinary field of data science and machine learning which is at the intersection of computer science, statistics, and business.</description>
+      <description>Welcome to the University of Denver - Data Analytics Boot Camp course.
+The program is rigorous, fast-paced, and focused on the practical technical skills needed to solve data problems. Throughout the course, you’ll gain proficiencies on a host of marketable technologies like Excel, Python, JavaScript, SQL Databases, Tableau, and more. Plus, you’ll have an impressive professional portfolio and the confidence you need to succeed in the data-driven economy.</description>
     </item>
     
     <item>
-      <title>Week One</title>
-      <link>/tutorial/week-one/</link>
-      <pubDate>Sun, 09 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/tutorial/week-one/</guid>
-      <description>Monday July 1st, 2019 AM: Instruction to Statistics  Introduction The Data Science Venn Diagram Class Survey Statistical Principles  PM: Introduction to Programming  Data Fundamentals - Presentation Slides Introduction to R – Presentation Slides (Data Camp) Introduction to R  Tuesday July 2nd, 2019 AM: Continue Introduction to Programming  (Data Camp) Importing Data in R (Part 1) Working Environments  PM: Continue Introduction to Programming  (Data Camp) Introduction to the Tidyverse Presentation on the Tidyverse – Hadley Wickham  Wednesday July 3rd, 2019 AM: Continue Introduction to Programming  (Data Camp) Data Visualization with ggplot2 (Part 1) Women’s World Cup Semi-Final  PM: Begin Introduction to Economics  Decision Theory  (Break) Why the World Cup Is an Economist’s Dream (Ep.</description>
-    </item>
-    
-    <item>
-      <title>Week Two</title>
+      <title>Unit Two</title>
       <link>/tutorial/week-two/</link>
       <pubDate>Sun, 09 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>/tutorial/week-two/</guid>
-      <description>Monday July 8th, 2019 AM: Introduction to Data Science  (Movie) Titanic Machine Learning - Titanic  PM: Communicating Data  Introduction to Web Design in R  Resume Building Workshop  (Movie) Moneyball  Tuesday July 9th, 2019 Continue Introduction to Data Science  Tidy Tuesday (Instructors Choice of Options)  Kobe Bryant Shot Selection  Visualization  Wednesday July 10th, 2019 AM: Continue – Introduction to Web Design in R PM: Continue Introduction to Statistics  TBD (Netflix Algorithm) SVD v.</description>
-    </item>
-    
-    <item>
-      <title>Code For Denver</title>
-      <link>/post/codefordenver/</link>
-      <pubDate>Fri, 15 Feb 1991 00:00:00 +0000</pubDate>
-      
-      <guid>/post/codefordenver/</guid>
-      <description># STUDENT NAME KEY -------------------------------------------------------- #&amp;#39; STUDENT DATABASE student_link &amp;lt;- &amp;quot;http://gsndev.com/gsndb/my/student/&amp;quot; student_key &amp;lt;- jsonlite::fromJSON(txt = student_link, flatten = TRUE) %&amp;gt;% as_tibble() %&amp;gt;% rename(student_name = studentName) # STUDENT INFORMATION ----------------------------------------------------- json_links&amp;lt;- paste0(&amp;quot;http://gsndev.com/gsndb/my/student/&amp;quot;, seq(1:2), &amp;quot;/&amp;quot;) load_info &amp;lt;- function(link){ json_data &amp;lt;- jsonlite::fromJSON(txt = link, flatten = TRUE) %&amp;gt;% as_tibble() #&amp;#39; EXTRACT COMMON VARIABLES student_info &amp;lt;- json_data %&amp;gt;% select(studentId:reasonInProgram) %&amp;gt;% left_join(student_key %&amp;gt;% select(studentId, student_name), by = &amp;quot;studentId&amp;quot;) } load_grades &amp;lt;- function(link){ json_data &amp;lt;- jsonlite::fromJSON(txt = link, flatten = TRUE) %&amp;gt;% as_tibble() #&amp;#39; GRADES grade &amp;lt;- json_data$gradeSet %&amp;gt;% data.</description>
+      <description> Monday, March 16th 2020 VBA Vibes  Students will understand the fundamental building blocks of all programming languages: variables, arrays, conditionals, loops, and functions Students will understand how to create simple VBA macros to trigger pop ups and change cell values Students will gain practice in writing VBA subroutines that utilize variables and conditionals Students will begin to develop their essential coding skills of syntax recollection, pattern recognition, problem decomposition, and debugging  Wendesday, March 18th 2020 Lesson Plan - Vexing VBA  Students will understand the basic syntax of a VBA for loop Students will understand how to utilize for-loops in conjunction with conditionals to direct logic flow Students will understand the value of a nested for-loop and gain basic proficiency in their use Students will refine their fundamental coding skills (syntax recollection, pattern recognition, problem decomposition, and debugging)  Saturday, March 21th 2020 Getting Real with VBA  Students will be comfortable formatting spreadsheets using VBA code Students will understand how to loop through a table using VBA code and check for changes in values  </description>
     </item>
     
   </channel>
